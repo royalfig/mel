@@ -1,0 +1,63 @@
+{
+  "name": "ghost-starter-with-rollup",
+  "version": "1.0.0",
+  "description": "A Ghost custom theme starter with Rollup and SCSS",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development npx rollup -c",
+    "watch": "NODE_ENV=development npx rollup -c -w",
+    "build": "NODE_ENV=production npx rollup -c",
+    "zip": "npm run build && node zip",
+    "check": "gscan smart.zip -z"
+  },
+  "config": {
+    "posts_per_page": 15,
+    "images_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 740
+      },
+      "l": {
+        "width": 1024
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
+  },
+  "keywords": [
+    "Ghost"
+  ],
+  "author": "Ryan Feigenbaum",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "adm-zip": "^0.5.9",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "gscan": "^4.10.0",
+    "postcss": "^8.3.11",
+    "rollup": "^2.58.3",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-order": "^5.0.0"
+  }
+}
