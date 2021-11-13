@@ -1,0 +1,32 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero__title {
+  color: var(--base-800);
+  text-transform: uppercase;
+}
+
+.hero__description {
+  margin-top: var(--sp-1);
+  color: var(--base-600);
+  font-size: var(--h6);
+}
+
+.hero__right {
+  position: relative;
+}
+
+.hero__right::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-image: radial-gradient(#fff 80%, transparent);
+  filter: blur(100px);
+  mix-blend-mode: lighten;
+}
