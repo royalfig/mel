@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, var(--lg)) 1fr;
+  padding: 1rem;
+}
+
+.container__inner {
+  grid-column: 2 / 3;
+}

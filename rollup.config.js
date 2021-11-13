@@ -1,8 +1,9 @@
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
-import scss from 'rollup-plugin-scss';
-import postcss from 'postcss';
-import autoprefixer from 'autoprefixer';
+import postcss from 'rollup-plugin-postcss';
+import atImport from 'postcss-import';
+import postcssPresetEnv from 'postcss-preset-env';
+import cssnano from 'cssnano';
 import { terser } from 'rollup-plugin-terser';
 
 export default [
@@ -16,34 +17,14 @@ export default [
     plugins: [
       resolve(),
       babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
-      scss({
-        output: 'assets/built/app.css',
-        sourceMap: true,
-        processor: () => postcss([autoprefixer()]),
-        watch: 'src/scss',
-        outputStyle:
-          process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded',
-      }),
-      process.env.NODE_ENV === 'production' && terser(),
-    ],
-  },
-  {
-    input: 'src/js/post/index.js',
-    output: {
-      file: 'assets/built/post.js',
-      format: 'iife',
-      sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
-    },
-    plugins: [
-      resolve(),
-      babel({ babelHelpers: 'bundled' }),
-      scss({
-        output: 'assets/built/post.css',
-        sourceMap: true,
-        processor: () => postcss([autoprefixer()]),
-        watch: 'src/scss',
-        outputStyle:
-          process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded',
+      postcss({
+        extract: true,
+        plugins: [
+          atImport,
+          postcssPresetEnv({ features: { 'nesting-rules': true } }),
+          process.env.NODE_ENV === 'production' &&
+            cssnano({ preset: 'default' }),
+        ],
       }),
       process.env.NODE_ENV === 'production' && terser(),
     ],

@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-1);
+}
+.navbar__left {
+  flex-shrink: 0;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  font-weight: var(--wgt-400);
+  color: var(--base-900);
+}
+
+.navbar__logo > img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: var(--sp-p25);
+}
+
+/* Ghost navigation styles */
+.nav {
+  display: inline-flex;
+  font-weight: var(--wgt-100);
+  color: var(--base-700);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style-type: none;
+  font-size: var(--small);
+}
+
+.nav li:not(:last-child) {
+  margin-right: var(--sp-1);
+}

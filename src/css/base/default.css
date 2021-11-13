@@ -1,0 +1,12 @@
+html {
+  font-family: var(--f-family);
+  font-size: 1rem;
+  font-size: clamp(
+    1rem,
+    0.8660714285714286rem + 0.33482142857142855vw,
+    1.1875rem
+  );
+  line-height: 1.6;
+  color: var(--base-900);
+  background-color: var(--base-50);
+}
