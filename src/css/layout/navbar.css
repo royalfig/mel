@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--sp-1);
+  margin-bottom: var(--space-after);
 }
 .navbar__left {
   flex-shrink: 0;
@@ -29,11 +29,20 @@
   color: var(--base-700);
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: var(--letter-spacing);
   list-style-type: none;
   font-size: var(--small);
+  transition: color var(--transition);
 }
 
-.nav li:not(:last-child) {
+.nav li {
   margin-right: var(--sp-1);
+}
+
+.nav a:hover {
+  color: var(--base-500);
+}
+
+.navbar .btn {
+  font-size: var(--small);
 }

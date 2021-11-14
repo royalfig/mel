@@ -1,0 +1,21 @@
+.header {
+  margin-bottom: var(--space-after);
+}
+.header h2 {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  position: relative;
+}
+
+.header h2::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: calc(100% + (100vw - 1024px / 2));
+  background: linear-gradient(to right, transparent, var(--pink), var(--green));
+  content: '';
+  z-index: -1;
+  opacity: 0.5;
+}

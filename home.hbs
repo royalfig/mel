@@ -1,15 +1,30 @@
 {{!< default}}
 
-<div class="container__inner">
+<section class="container__inner">
     <div class="hero">
         <div class="hero__left">
             <h1 class="hero__title">{{@site.title}}</h1>
             <p class="hero__description">
                 {{@site.description}}
             </p>
+            <div class="input__container">
+                <input />
+                <a class="btn btn--outline" href="#">Sign Up</a>
+            </div>
         </div>
         <div class="hero__right">
-
+            <img class="hero__img" src="{{@site.cover_image}}" alt="{{@site.title}}">
         </div>
     </div>
-</div>
+</section>
+
+<section class="container__inner">
+    <header class="header">
+        <h2>What's On Special</h2>
+    </header>
+    <div class="card__container">
+        {{#foreach posts}}
+            {{> "card"}}
+        {{/foreach}}
+    </div>
+</section>

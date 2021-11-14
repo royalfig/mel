@@ -6,4 +6,5 @@
 
 .container__inner {
   grid-column: 2 / 3;
+  margin-bottom: var(--space-after);
 }

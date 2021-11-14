@@ -1,0 +1,29 @@
+.input__container {
+  display: inline-flex;
+  width: 100%;
+}
+
+input,
+.input,
+input + .btn {
+  padding: var(--sp-p5);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.2;
+  color: inherit;
+  background-color: var(--base-50);
+  border: 1px solid var(--base-400);
+  border-radius: var(--radius);
+}
+input,
+.input {
+  flex-grow: 1;
+  padding-right: 2rem;
+}
+
+input + .btn {
+  display: inline-block;
+  flex-grow: 0;
+  background-color: var(--base-300);
+  transform: translateX(-2rem);
+}

@@ -8,5 +8,9 @@ html {
   );
   line-height: 1.6;
   color: var(--base-900);
-  background-color: var(--base-50);
+  background-color: var(--base-100);
+}
+
+body {
+  overflow-x: hidden;
 }

@@ -9,7 +9,7 @@
 }
 
 .hero__description {
-  margin-top: var(--sp-1);
+  margin: var(--sp-1) 0;
   color: var(--base-600);
   font-size: var(--h6);
 }
@@ -26,7 +26,13 @@
   width: 100%;
   height: 100%;
   content: '';
-  background-image: radial-gradient(#fff 80%, transparent);
-  filter: blur(100px);
+  background-image: var(--radial);
+  filter: blur(20px);
   mix-blend-mode: lighten;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: var(--blend);
 }

@@ -8,7 +8,8 @@
 
 a,
 :link,
-:visited {
+:visited,
+.link {
   color: currentColor;
   text-decoration: inherit;
 }

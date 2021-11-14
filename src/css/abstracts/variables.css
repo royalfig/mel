@@ -7,6 +7,8 @@
   --sp-1p5: 1.5rem;
   --sp-1p75: 1.75rem;
   --sp-2: 2rem;
+  --sp-3: 3rem;
+  --space-after: 3rem;
 
   /* Typography */
   --wgt-100: 100;
@@ -25,6 +27,7 @@
   --h6: 1.15rem;
   --p: 1rem;
   --small: 0.8rem;
+  --letter-spacing: 2px;
 
   /* Breakpoints */
   --sm: 640px;
@@ -32,6 +35,13 @@
   --lg: 1024px;
   --xl: 1280px;
   --xxl: 1536px;
+
+  /* Radius  */
+  --radius: 1em;
+  --radius-small: 0.25em;
+
+  /* Transition */
+  --transition: 0.3s;
 
   /* Color */
   /* Light Mode Default */
@@ -48,6 +58,9 @@
   --max: #fff;
   --green: #7ef11f;
   --purple: #9828f3;
+  --radial: radial-gradient(#f8fafc, transparent);
+  --blend: darken;
+  --pink: #b9226f;
 
   @media (prefers-color-scheme: dark) {
     --base-50: #0f172a;
@@ -63,5 +76,8 @@
     --max: var(--base-100);
     --green: #7ef11f;
     --purple: #9828f3;
+    --radial: radial-gradient(#334155, transparent);
+    --blend: lighten;
+    --pink: #b9226f;
   }
 }
