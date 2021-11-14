@@ -19,24 +19,24 @@
   width: 30px;
   height: 30px;
   object-fit: cover;
-  margin-right: var(--sp-p25);
+  margin-right: 0.25rem;
 }
 
 /* Ghost navigation styles */
 .nav {
   display: inline-flex;
+  font-size: var(--small);
   font-weight: var(--wgt-100);
   color: var(--base-700);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   list-style-type: none;
-  font-size: var(--small);
   transition: color var(--transition);
 }
 
 .nav li {
-  margin-right: var(--sp-1);
+  margin-right: 1rem;
 }
 
 .nav a:hover {

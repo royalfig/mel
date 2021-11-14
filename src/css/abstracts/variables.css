@@ -1,22 +1,9 @@
 :root {
   /* Spacing */
-  --sp-p25: 0.25rem;
-  --sp-p5: 0.5rem;
-  --sp-1: 1rem;
-  --sp-1p25: 1.25rem;
-  --sp-1p5: 1.5rem;
-  --sp-1p75: 1.75rem;
-  --sp-2: 2rem;
-  --sp-3: 3rem;
-  --space-after: 3rem;
+  --space-after: 5rem;
+  --icon: 0.25em;
 
   /* Typography */
-  --wgt-100: 100;
-  --wgt-400: 400;
-  --wgt-500: 500;
-  --wgt-700: 700;
-  --wgt-900: 900;
-
   --f-family: 'IBM Plex Sans';
 
   --h1: 3.052rem;
@@ -30,11 +17,11 @@
   --letter-spacing: 2px;
 
   /* Breakpoints */
-  --sm: 640px;
+  --sm: 576px;
   --md: 768px;
-  --lg: 1024px;
-  --xl: 1280px;
-  --xxl: 1536px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
 
   /* Radius  */
   --radius: 1em;
@@ -47,20 +34,34 @@
   /* Light Mode Default */
   --base-50: #f8fafc;
   --base-100: #f1f5f9;
-  --base-200: #e2e8f0;
-  --base-300: #cbd5e1;
+  --base-200: rgb(226, 232, 240);
+  --base-300: rgb(203, 213, 225);
   --base-400: #94a3b8;
   --base-500: #64748b;
   --base-600: #475569;
   --base-700: #334155;
   --base-800: #1e293b;
-  --base-900: #0f172a;
+  --base-900: rgb(15, 23, 42);
   --max: #fff;
   --green: #7ef11f;
   --purple: #9828f3;
   --radial: radial-gradient(#f8fafc, transparent);
   --blend: darken;
   --pink: #b9226f;
+
+  --shadow-on-home: 0.7px 0.7px 2.2px rgba(15, 23, 42, 0.02),
+    1.7px 1.7px 5.3px rgba(15, 23, 42, 0.028),
+    3.1px 3.1px 10px rgba(15, 23, 42, 0.035),
+    5.6px 5.6px 17.9px rgba(15, 23, 42, 0.042),
+    10.4px 10.4px 33.4px rgba(15, 23, 42, 0.05),
+    25px 25px 80px rgba(15, 23, 42, 0.07);
+
+  --shadow-on-home-lg: 2.8px 2.8px 2.2px rgba(15, 23, 42, 0.02),
+    6.7px 6.7px 5.3px rgba(15, 23, 42, 0.028),
+    12.5px 12.5px 10px rgba(15, 23, 42, 0.035),
+    22.3px 22.3px 17.9px rgba(15, 23, 42, 0.042),
+    41.8px 41.8px 33.4px rgba(15, 23, 42, 0.05),
+    100px 100px 80px rgba(15, 23, 42, 0.07);
 
   @media (prefers-color-scheme: dark) {
     --base-50: #0f172a;

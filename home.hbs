@@ -1,30 +1,52 @@
 {{!< default}}
-
-<section class="container__inner">
-    <div class="hero">
-        <div class="hero__left">
-            <h1 class="hero__title">{{@site.title}}</h1>
-            <p class="hero__description">
-                {{@site.description}}
-            </p>
-            <div class="input__container">
-                <input />
-                <a class="btn btn--outline" href="#">Sign Up</a>
+<div class="container">
+    <div class="container__inner">
+        <div class="hero">
+            <div class="hero__left">
+                <h1 class="hero__title">{{@site.title}}</h1>
+                <p class="hero__description">
+                    {{@site.description}}
+                </p>
+                <div class="input__container">
+                    <input />
+                    <a class="btn btn--outline" href="#">Sign Up</a>
+                </div>
+            </div>
+            <div class="hero__right">
+                <img class="hero__img" src="{{@site.cover_image}}" alt="{{@site.title}}">
             </div>
         </div>
-        <div class="hero__right">
-            <img class="hero__img" src="{{@site.cover_image}}" alt="{{@site.title}}">
+    </div>
+</div>
+
+<header class="header">
+    <h2>What's On Special</h2>
+    <div class="header__line"></div>
+</header>
+
+<div class="container">
+    <div class="container__inner">
+        <div class="card__container">
+            {{#foreach posts}}
+                {{#if featured}}
+                    {{> "card"}}    
+                {{/if}}
+            {{/foreach}}
         </div>
     </div>
-</section>
+</div>
 
-<section class="container__inner">
-    <header class="header">
-        <h2>What's On Special</h2>
-    </header>
-    <div class="card__container">
+<header class="header">
+    <h2>What's Fresh</h2>
+    <div class="header__line"></div>
+</header>
+
+<div class="container">
+    <div class="container__inner">
         {{#foreach posts}}
-            {{> "card"}}
+            {{^if featured}}
+                {{> "list"}}
+            {{/if}}
         {{/foreach}}
     </div>
-</section>
+</div>

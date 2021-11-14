@@ -9,9 +9,9 @@
 }
 
 .hero__description {
-  margin: var(--sp-1) 0;
-  color: var(--base-600);
+  margin: 1rem 0;
   font-size: var(--h6);
+  color: var(--base-600);
 }
 
 .hero__right {

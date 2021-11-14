@@ -6,7 +6,7 @@
 input,
 .input,
 input + .btn {
-  padding: var(--sp-p5);
+  padding: 0.5rem;
   font-family: inherit;
   font-size: inherit;
   line-height: 1.2;

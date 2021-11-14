@@ -1,65 +1,102 @@
-.card__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
+@media (min-width: 768px) {
+  .card__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
 }
+
 .card {
-  display: block;
   position: relative;
-  height: 20rem;
-  border-radius: var(--radius-small);
+  display: block;
+  height: 22rem;
   overflow: hidden;
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-on-home);
+  transition: box-shadow var(--transition);
+}
+.card:hover {
+  box-shadow: var(--shadow-on-home-lg);
+  transition: box-shadow var(--transition);
+}
+
+.card:hover .icon {
+  transform: translateX(100%) scaleY(1.3);
 }
 
 .card__bg {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   content: '';
+  object-fit: cover;
 }
 
 .card__body {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
   height: 100%;
-  position: relative;
-  background: rgba(0 0 0 / 0.85);
+  padding: 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0 0 0 / 0.65),
+    rgba(0 0 0 / 0.85)
+  );
 }
 
 .card__date {
-  font-weight: var(--wgt-100);
-  text-transform: uppercase;
-  color: var(--base-700);
-  letter-spacing: var(--letter-spacing);
   font-size: var(--small);
+  font-weight: var(--wgt-100);
+  color: #e2e8f0;
   text-align: right;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
 }
 
 .card__title {
+  height: 5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #f8fafc;
+  /* stylelint-disable */
+  display: -webkit-box;
+  /* stylelint-enable */
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .card__excerpt {
+  /* stylelint-disable */
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  line-clamp: 3;
-  text-overflow: hidden;
+  /* stylelint-enable */
+  margin-bottom: 1rem;
   overflow: hidden;
+  font-size: var(--small);
   line-height: 1.2rem;
   color: var(--base-600);
-  font-size: var(--small);
-  margin-bottom: 1rem;
+  color: #e2e8f0;
+  text-overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .card__more {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 100;
+  color: #f8fafc;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
+}
+
+.icon {
+  margin-left: var(--icon);
+  transition: transform var(--transition);
 }

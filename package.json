@@ -11,7 +11,8 @@
     "watch": "NODE_ENV=development npx rollup -c -w",
     "build": "NODE_ENV=production npx rollup -c",
     "zip": "npm run build && node zip",
-    "check": "gscan smart.zip -z"
+    "check": "gscan smart.zip -z",
+    "css": "npx stylelint 'src/css/**/*.css' --fix"
   },
   "config": {
     "posts_per_page": 15,

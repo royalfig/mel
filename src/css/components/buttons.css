@@ -1,18 +1,18 @@
 .btn {
-  border-radius: 1em;
+  padding: 0.15em 1em;
   font-family: inherit;
   font-size: inherit;
-  border: 1px solid;
+  line-height: inherit;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
-  padding: 0.15em 1em;
-  line-height: inherit;
+  border: 1px solid;
+  border-radius: var(--radius);
 }
 
 .btn--solid {
+  color: var(--base-50);
   background-color: var(--base-900);
   border-color: var(--base-900);
-  color: var(--base-50);
   transition: background-color var(--transition), border-color var(--transition);
 }
 
@@ -25,7 +25,7 @@
 }
 
 .btn--outline:hover {
-  background-color: var(--base-900);
   color: var(--base-50);
+  background-color: var(--base-900);
   border-color: var(--base-90);
 }
