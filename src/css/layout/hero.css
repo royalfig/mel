@@ -1,6 +1,7 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .hero__title {
@@ -16,6 +17,7 @@
 
 .hero__right {
   position: relative;
+  /* z-index: -1; */
 }
 
 .hero__right::after {
@@ -32,7 +34,9 @@
 }
 
 .hero__img {
+  /* width: 125%; */
   width: 100%;
   height: auto;
   mix-blend-mode: var(--blend);
+  /* transform: translateX(-25%); */
 }

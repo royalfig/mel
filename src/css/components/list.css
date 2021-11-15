@@ -11,7 +11,8 @@
   border-top: 1px solid var(--base-300);
 }
 
-.list__container:last-child {
+.list__container:last-of-type {
+  margin-bottom: 1rem;
   border-bottom: 1px solid var(--base-300);
 }
 
@@ -21,6 +22,10 @@
   border-color: transparent;
   border-radius: var(--radius-small);
   box-shadow: var(--shadow-on-home);
+}
+
+.list__container:hover + .list__container {
+  border-color: transparent;
 }
 
 .list__date {

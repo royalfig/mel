@@ -17,8 +17,8 @@
 }
 
 .btn--solid:hover {
-  background-color: var(--base-700);
-  border-color: var(--base-700);
+  background-color: var(--blue);
+  border-color: var(--blue);
 }
 .btn-outline {
   transition: color var(--transition);
@@ -26,6 +26,6 @@
 
 .btn--outline:hover {
   color: var(--base-50);
-  background-color: var(--base-900);
-  border-color: var(--base-90);
+  background-color: var(--blue);
+  border-color: var(--blue);
 }

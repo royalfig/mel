@@ -37,7 +37,7 @@
   --base-200: rgb(226, 232, 240);
   --base-300: rgb(203, 213, 225);
   --base-400: #94a3b8;
-  --base-500: #64748b;
+  --base-500: hsl(215, 16%, 47%);
   --base-600: #475569;
   --base-700: #334155;
   --base-800: #1e293b;
@@ -47,7 +47,8 @@
   --purple: #9828f3;
   --radial: radial-gradient(#f8fafc, transparent);
   --blend: darken;
-  --pink: #b9226f;
+  --pink: hsl(329, 69%, 43%);
+  --blue: hsl(215, 86%, 47%);
 
   --shadow-on-home: 0.7px 0.7px 2.2px rgba(15, 23, 42, 0.02),
     1.7px 1.7px 5.3px rgba(15, 23, 42, 0.028),
@@ -56,12 +57,12 @@
     10.4px 10.4px 33.4px rgba(15, 23, 42, 0.05),
     25px 25px 80px rgba(15, 23, 42, 0.07);
 
-  --shadow-on-home-lg: 2.8px 2.8px 2.2px rgba(15, 23, 42, 0.02),
-    6.7px 6.7px 5.3px rgba(15, 23, 42, 0.028),
-    12.5px 12.5px 10px rgba(15, 23, 42, 0.035),
-    22.3px 22.3px 17.9px rgba(15, 23, 42, 0.042),
-    41.8px 41.8px 33.4px rgba(15, 23, 42, 0.05),
-    100px 100px 80px rgba(15, 23, 42, 0.07);
+  --shadow-on-home-lg: 0.8px 1.1px 2.2px rgba(15, 23, 42, 0.02),
+    2px 2.7px 5.3px rgba(15, 23, 42, 0.028),
+    3.8px 5px 10px rgba(15, 23, 42, 0.035),
+    6.7px 8.9px 17.9px rgba(15, 23, 42, 0.042),
+    12.5px 16.7px 33.4px rgba(15, 23, 42, 0.05),
+    30px 40px 80px rgba(15, 23, 42, 0.07);
 
   @media (prefers-color-scheme: dark) {
     --base-50: #0f172a;
@@ -79,6 +80,20 @@
     --purple: #9828f3;
     --radial: radial-gradient(#334155, transparent);
     --blend: lighten;
-    --pink: #b9226f;
+    --pink: hsl(329, 69%, 73%);
+    --blue: hsl(215, 86%, 77%);
+
+    --shadow-on-home: 0.7px 0.7px 2.2px rgba(0, 0, 0, 0.02),
+      1.7px 1.7px 5.3px rgba(0, 0, 0, 0.028),
+      3.1px 3.1px 10px rgba(0, 0, 0, 0.035),
+      5.6px 5.6px 17.9px rgba(0, 0, 0, 0.042),
+      10.4px 10.4px 33.4px rgba(0, 0, 0, 0.05),
+      25px 25px 80px rgba(0, 0, 0, 0.07);
+
+    --shadow-on-home-lg: 0.8px 1.1px 2.2px rgba(0, 0, 0, 0.02),
+      2px 2.7px 5.3px rgba(0, 0, 0, 0.028), 3.8px 5px 10px rgba(0, 0, 0, 0.035),
+      6.7px 8.9px 17.9px rgba(0, 0, 0, 0.042),
+      12.5px 16.7px 33.4px rgba(0, 0, 0, 0.05),
+      30px 40px 80px rgba(0, 0, 0, 0.07);
   }
 }

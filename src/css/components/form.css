@@ -15,10 +15,20 @@ input + .btn {
   border: 1px solid var(--base-400);
   border-radius: var(--radius);
 }
+
 input,
 .input {
   flex-grow: 1;
   padding-right: 2rem;
+}
+
+input:focus-visible {
+  outline: none;
+  border-color: var(--blue);
+}
+
+input:focus-visible + .btn {
+  border-color: var(--blue);
 }
 
 input + .btn {
