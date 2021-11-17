@@ -15,10 +15,6 @@
   box-shadow: var(--shadow-on-home);
   transition: box-shadow var(--transition);
 }
-.card:hover {
-  box-shadow: var(--shadow-on-home-lg);
-  transition: box-shadow var(--transition);
-}
 
 .card:hover .icon {
   transform: translateX(100%) scaleY(1.3);
