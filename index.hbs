@@ -1,6 +1,27 @@
 {{!< default}}
 
-<div class="container__inner">
+<header class="header">
+    <h2>{{#is "tag"}}
+            {{#tag}}{{name}}{{/tag}}
+        {{/is}}
+        {{#is "index"}}
+            {{@site.title}}
+        {{/is}}
+        {{#is "author"}}
+            {{#author}}{{name}}{{/author}}
+        {{/is}}
+        {{#is "paged"}}{{pagination.page}}{{/is}}
+    </h2>
+    <div class="header__line"></div>
+</header>
 
-
+<div class="container">
+    <div class="container__inner">
+        {{#foreach posts}}
+            {{^if featured}}
+                {{> "list"}}
+            {{/if}}
+        {{/foreach}}
+        {{pagination}}
+    </div>
 </div>

@@ -1,2 +1,13 @@
 .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
+.pagination__link--newer,
+.pagination__link--older {
+  display: inline-flex;
+  align-items: center;
+  color: var(--base-600);
 }

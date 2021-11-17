@@ -1,5 +1,13 @@
 {{!< default}}
 
 {{#post}}
-    <h1>{{title}}</h1>
+    <header class="post__header">
+        <h1>{{title}}</h1>
+
+    </header>
+    <div class="container {{post_class}}">
+        <div class="container__inner">
+            {{content}}
+        </div>
+    </div>
 {{/post}}

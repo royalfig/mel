@@ -23,8 +23,8 @@ input,
 }
 
 input:focus-visible {
-  outline: none;
   border-color: var(--blue);
+  outline: none;
 }
 
 input:focus-visible + .btn {

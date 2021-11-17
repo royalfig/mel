@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}" {{#is "home"}}style="background-color: var(--base-200)"{{/is}}>
+<html lang="{{@site.locale}}">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,8 @@
     {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
 
 </main>
+
+{{> "footer"}}
 
 {{ghost_foot}}
 {{!-- Outputs important scripts - should always be included before closing body tag --}}
