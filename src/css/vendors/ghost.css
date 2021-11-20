@@ -1,13 +1,17 @@
-.kg-width-wide {
-  grid-column: wide-start / wide-end;
+.kg-card {
+  margin: 2rem 0;
 }
+/* .kg-width-wide {
+  grid-column: 2 / 5;
+  transform: translateX(calc((100vw - var(--lg)) / -4));
+} */
 
 .kg-width-full {
-  grid-column: full-start / full-end;
+  grid-column: 1 / -1;
 }
 
-.kg-width-full img {
-  width: 100%;
+.kg-width-full figcaption {
+  transform: translateX(calc((100% - var(--lg)) / 2));
 }
 
 .kg-embed-card {
@@ -18,7 +22,8 @@
 }
 
 .kg-image-card img {
-  margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Galleries
@@ -146,19 +151,3 @@
 
 /* Card captions
 /* ---------------------------------------------------------- */
-
-.kg-width-full.kg-card-hascaption {
-  display: grid;
-  grid-template-columns: inherit;
-}
-
-.kg-width-wide.kg-card-hascaption img {
-  grid-column: wide-start / wide-end;
-}
-.kg-width-full.kg-card-hascaption img {
-  grid-column: 1 / -1;
-}
-
-.kg-width-full.kg-card-hascaption figcaption {
-  grid-column: main-start / main-end;
-}

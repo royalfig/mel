@@ -2,12 +2,64 @@
 
 {{#post}}
     <header class="post__header">
-        <h1>{{title}}</h1>
-
-    </header>
-    <div class="container {{post_class}}">
-        <div class="container__inner">
-            {{content}}
+        <div class="post__header-banner"></div>
+        <div class="post__header-left">
+            <h1 class="post__title">{{title}}</h1>
+            <p class="post__excerpt">{{excerpt}}</p>
+            {{#primary_author}}
+                <div class="post__author">
+                <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
+                <div class="post__author-right">
+                    
+                    <a class="post__author--name" href="{{url}}">{{name}}</a>
+                    <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
+                    
+                </div>
+                </div>
+            {{/primary_author}}
+            
         </div>
+        <div class="post__header-right">
+            <img class="post__feature-image" src="{{feature_image}}" alt="" >
+        </div>
+    </header>
+    <div class="post__grid {{post_class}}">
+        <div class="toc">
+            <p><strong>Table of Contents</strong></p>
+        </div>
+        {{content}}
     </div>
 {{/post}}
+
+{{!-- Related --}}
+        {{#get "posts" limit="5" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |related|}}
+            {{#if related}}
+
+<header class="header">
+    <h2>Next Course</h2>
+    <div class="header__line"></div>
+</header>
+
+<div class="container">
+    <div class="container__inner">
+                {{#foreach related}}
+                    {{> "list"}}
+                {{/foreach}}
+    </div>
+</div>
+            {{/if}}
+        {{/get}}
+
+    <script>
+        const headings = document.querySelectorAll
+        ('h2, h3, h4, h5, h6')
+        const toc = document.querySelector('.toc')
+        headings.forEach(el => {
+            
+            const a = document.createElement('a')
+            a.setAttribute("class", 'toc-' + el.tagName.toLowerCase())
+            a.setAttribute('href', '#'+el.id)
+            a.textContent = el.textContent;
+            toc.append(a)
+        })
+    </script>

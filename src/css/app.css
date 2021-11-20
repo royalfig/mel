@@ -18,7 +18,9 @@
 @import './layout/navbar.css';
 @import './layout/hero.css';
 @import './layout/footer.css';
+
 @import './pages/post-content.css';
+@import './pages/post.css';
 
 /* Vendor */
 @import './vendors/ghost.css';

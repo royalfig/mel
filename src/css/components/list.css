@@ -17,13 +17,19 @@
 }
 
 .list__container:hover {
-  padding: 1rem;
-  background-color: var(--base-200);
+  /* padding: 1rem; */
+  background-color: var(--base-50);
   border-color: transparent;
-  border-radius: var(--radius-small);
+  /* border-radius: var(--radius-small); */
   box-shadow: var(--shadow-on-home);
 }
+.list__container:hover .list__date {
+  transform: translateX(1rem);
+}
 
+.list__container:hover .list__read-time {
+  transform: translateX(-1rem);
+}
 .list__container:hover + .list__container {
   border-color: transparent;
 }
@@ -35,6 +41,7 @@
   color: var(--pink);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
+  transition: transform var(--transition);
 }
 
 .list__title {
@@ -47,4 +54,5 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
+  transition: transform var(--transition);
 }

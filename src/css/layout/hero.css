@@ -15,6 +15,10 @@
   color: var(--base-600);
 }
 
+.hero__description:last-of-type {
+  margin-bottom: var(--space-after);
+}
+
 .hero__right {
   position: relative;
   /* z-index: -1; */

@@ -3,5 +3,13 @@
 .post h4,
 .post h5,
 .post h6 {
-  margin: 3rem 0 1rem;
+  margin: 1em 0 0.5em;
+  font-weight: 700;
+}
+
+figcaption {
+  /* text-align: center; */
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: var(--small);
 }
