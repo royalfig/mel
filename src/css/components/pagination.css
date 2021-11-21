@@ -9,5 +9,4 @@
 .pagination__link--older {
   display: inline-flex;
   align-items: center;
-  color: var(--base-600);
 }

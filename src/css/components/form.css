@@ -11,8 +11,8 @@ input + .btn {
   font-size: inherit;
   line-height: 1.2;
   color: inherit;
-  background-color: var(--base-50);
-  border: 1px solid var(--base-400);
+  background-color: var(--surface);
+  border: 1px solid var(--mid);
   border-radius: var(--radius);
 }
 
@@ -34,6 +34,7 @@ input:focus-visible + .btn {
 input + .btn {
   display: inline-block;
   flex-grow: 0;
-  background-color: var(--base-300);
+  /* background-color: var(--mid); */
   transform: translateX(-2rem);
+  /* color: var(--surface); */
 }

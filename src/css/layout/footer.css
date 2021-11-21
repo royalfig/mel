@@ -6,11 +6,12 @@
   display: grid;
   font-size: var(--small);
   font-weight: 100;
-  color: var(--base-500);
+  color: var(--text-light);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+  align-items: center;
 }
 
 .footer__grid--center {
@@ -19,4 +20,8 @@
 
 .footer__grid--right {
   justify-self: end;
+}
+
+.footer__grid--right > a:not(:last-child) {
+  margin-right: 0.25em;
 }

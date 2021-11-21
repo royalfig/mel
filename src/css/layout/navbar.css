@@ -11,8 +11,6 @@
 .navbar__logo {
   display: flex;
   align-items: center;
-  font-weight: var(--wgt-400);
-  color: var(--base-900);
 }
 
 .navbar__logo > img {
@@ -26,8 +24,8 @@
 .nav {
   display: inline-flex;
   font-size: var(--small);
-  font-weight: var(--wgt-100);
-  color: var(--base-700);
+  font-weight: 100;
+  color: var(--text-dark);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);

@@ -8,17 +8,17 @@
 }
 
 .list__container:not(:first-child) {
-  border-top: 1px solid var(--base-300);
+  border-top: 1px solid var(--mid-light);
 }
 
 .list__container:last-of-type {
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--base-300);
+  border-bottom: 1px solid var(--mid-light);
 }
 
 .list__container:hover {
   /* padding: 1rem; */
-  background-color: var(--base-50);
+  background-color: var(--surface-light);
   border-color: transparent;
   /* border-radius: var(--radius-small); */
   box-shadow: var(--shadow-on-home);
@@ -38,7 +38,7 @@
   padding-right: 2rem;
   font-size: var(--small);
   font-weight: 100;
-  color: var(--pink);
+  color: var(--blue);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   transition: transform var(--transition);

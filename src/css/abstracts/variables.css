@@ -32,23 +32,32 @@
 
   /* Color */
   /* Light Mode Default */
-  --base-50: #f8fafc;
-  --base-100: #f1f5f9;
-  --base-200: rgb(226, 232, 240);
-  --base-300: rgb(203, 213, 225);
-  --base-400: #94a3b8;
-  --base-500: hsl(215, 16%, 47%);
-  --base-600: #475569;
-  --base-700: #334155;
-  --base-800: #1e293b;
-  --base-900: rgb(15, 23, 42);
-  --max: #fff;
-  --green: #7ef11f;
-  --purple: #9828f3;
-  --radial: radial-gradient(#f8fafc, transparent);
-  --blend: darken;
+  --base-100: #f8fafc;
+  --base-200: #f1f5f9;
+  --base-300: #e2e8f0;
+  --base-400: #cbd5e1;
+  --base-500: #94a3b8;
+
+  --text-light: #1e293b;
+  --text: #0f172a;
+  --text-dark: hsl(222, 47%, 6%);
+
+  --surface-light: hsl(210, 40%, 100%);
+  --surface: #f8fafc;
+  --surface-dark: #f1f5f9;
+
+  --mid-light: #e2e8f0;
+  --mid: #65758b;
+  --mid-dark: #475569;
+
+  --text-100: #65758b;
+  --text-200: #475569;
+  --text-300: #334155;
+  --text-400: #1e293b;
+  --text-500: #0f172a;
+
   --pink: hsl(329, 69%, 43%);
-  --blue: hsl(215, 86%, 47%);
+  --blue: #1167df;
 
   --shadow-on-home: 0.7px 0.7px 2.2px rgba(15, 23, 42, 0.02),
     1.7px 1.7px 5.3px rgba(15, 23, 42, 0.028),
@@ -65,21 +74,27 @@
     30px 40px 80px rgba(15, 23, 42, 0.07);
 
   @media (prefers-color-scheme: dark) {
-    --base-50: #0f172a;
-    --base-100: #1e293b;
-    --base-200: #334155;
-    --base-300: #475569;
-    --base-400: #64748b;
-    --base-500: #94a3b8;
-    --base-600: #cbd5e1;
-    --base-700: #e2e8f0;
-    --base-800: #f1f5f9;
-    --base-900: #f8fafc;
-    --max: var(--base-100);
-    --green: #7ef11f;
-    --purple: #9828f3;
-    --radial: radial-gradient(#334155, transparent);
-    --blend: lighten;
+    --text-500: #f8fafc;
+    --text-400: #f1f5f9;
+    --text-300: #e2e8f0;
+    --text-200: #cbd5e1;
+
+    --mid-light: #334155;
+    --mid: #65758b;
+    --mid-dark: #94a3b8;
+
+    --base-300: #334155;
+    --base-200: #1e293b;
+    --base-100: #0f172a;
+
+    --surface-light: #1e293b;
+    --surface: #0f172a;
+    --surface-dark: hsl(222, 47%, 6%);
+
+    --text-light: hsl(210, 40%, 100%);
+    --text: #f8fafc;
+    --text-dark: #f1f5f9;
+
     --pink: hsl(329, 69%, 73%);
     --blue: hsl(215, 86%, 77%);
 

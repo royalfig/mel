@@ -24,10 +24,8 @@
         </div>
     </header>
     <div class="post__grid {{post_class}}">
-        <div class="toc">
-            <p><strong>Table of Contents</strong></p>
-        </div>
         {{content}}
+        
     </div>
 {{/post}}
 
@@ -36,7 +34,7 @@
             {{#if related}}
 
 <header class="header">
-    <h2>Next Course</h2>
+    <h2>What&apos;s Next</h2>
     <div class="header__line"></div>
 </header>
 
@@ -50,16 +48,4 @@
             {{/if}}
         {{/get}}
 
-    <script>
-        const headings = document.querySelectorAll
-        ('h2, h3, h4, h5, h6')
-        const toc = document.querySelector('.toc')
-        headings.forEach(el => {
-            
-            const a = document.createElement('a')
-            a.setAttribute("class", 'toc-' + el.tagName.toLowerCase())
-            a.setAttribute('href', '#'+el.id)
-            a.textContent = el.textContent;
-            toc.append(a)
-        })
-    </script>
+    

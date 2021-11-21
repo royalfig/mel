@@ -14,14 +14,14 @@
   height: 22rem;
   padding: 1rem;
   overflow: hidden;
-  border: 1px solid var(--base-300);
+  border: 1px solid var(--mid-light);
   /* border-radius: var(--radius-small); */
   /* box-shadow: var(--shadow-on-home); */
   transition: background-color var(--transition);
 }
 
 .card:hover {
-  background-color: var(--base-50);
+  background-color: var(--surface-light);
 }
 
 .card:hover .card__title::after {

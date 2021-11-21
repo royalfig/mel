@@ -10,7 +10,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-weight: var(--wgt-700);
+  font-weight: 700;
   line-height: 1.2;
 }
 

@@ -8,8 +8,46 @@
 }
 
 figcaption {
+  font-size: var(--small);
+  font-weight: 100;
   /* text-align: center; */
   text-transform: uppercase;
-  font-weight: 100;
-  font-size: var(--small);
+}
+
+.post ul,
+.post li {
+  margin-left: 2rem;
+}
+
+.post a:not(.kg-bookmark-container) {
+  text-decoration: underline;
+}
+
+.post a:hover {
+  color: var(--blue);
+}
+
+blockquote {
+  padding: 3rem 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '\00201c';
+  color: var(--blue);
+  opacity: 0.65;
+  margin-right: 1px;
+}
+
+blockquote::after {
+  content: '\00201D';
+  margin-left: 1px;
+}
+
+.post > blockquote {
+  margin: 1rem 0 2rem;
 }

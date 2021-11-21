@@ -16,7 +16,6 @@
   width: 100%;
   height: 1px;
   content: '';
-  background: linear-gradient(to right, transparent, var(--blue), var(--pink));
-  background: linear-gradient(to right, transparent, var(--base-300) 25%);
-  opacity: 0.35;
+  background: linear-gradient(to right, transparent, var(--mid-light) 25%);
+  /* opacity: 0.35; */
 }

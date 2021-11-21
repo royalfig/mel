@@ -7,8 +7,8 @@ html {
     1.1875rem
   );
   line-height: 1.6;
-  color: var(--base-900);
-  background-color: var(--base-100);
+  color: var(--text);
+  background-color: var(--surface);
 }
 
 body {
