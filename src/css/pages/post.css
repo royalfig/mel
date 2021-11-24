@@ -58,6 +58,7 @@
 
 .post__feature-image {
   width: 100%;
+  max-width: var(--md);
   height: 20rem;
   box-shadow: var(--shadow-on-home);
   grid-column: 4 / -1;

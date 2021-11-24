@@ -7,19 +7,20 @@
   letter-spacing: var(--letter-spacing);
   border: 1px solid;
   border-radius: var(--radius);
+  cursor: pointer;
 }
 
 .btn--solid {
+  color: var(--surface);
   background-color: var(--blue);
   border-color: var(--blue);
   transition: background-color var(--transition), border-color var(--transition);
-  color: var(--surface);
 }
 
 .btn--solid:hover {
+  color: var(--surface-light);
   background-color: var(--blue);
   border-color: var(--blue);
-  color: var(--surface-light);
 }
 
 .btn-outline {
@@ -27,6 +28,6 @@
 }
 
 .btn--outline:hover {
-  border-color: var(--blue);
   color: var(--blue);
+  border-color: var(--blue);
 }

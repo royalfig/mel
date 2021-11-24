@@ -18,7 +18,7 @@
     "posts_per_page": 15,
     "images_sizes": {
       "xxs": {
-        "width": 30
+        "width": 50
       },
       "xs": {
         "width": 100
@@ -27,12 +27,15 @@
         "width": 300
       },
       "m": {
-        "width": 740
+        "width": 500
       },
       "l": {
-        "width": 1024
+        "width": 700
       },
       "xl": {
+        "width": 1000
+      },
+      "xxl": {
         "width": 2000
       }
     }

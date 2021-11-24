@@ -3,7 +3,8 @@
 }
 
 .footer__grid {
-  display: grid;
+  display: flex;
+  align-items: center;
   font-size: var(--small);
   font-weight: 100;
   color: var(--text-light);
@@ -11,17 +12,21 @@
   letter-spacing: var(--letter-spacing);
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .footer__grid--center {
-  justify-self: center;
 }
 
-.footer__grid--right {
-  justify-self: end;
+.footer__power {
+  margin-right: 0.25em;
 }
 
 .footer__grid--right > a:not(:last-child) {
   margin-right: 0.25em;
+}
+
+.footer__grid svg {
+  height: 1em;
+  width: 1em;
 }

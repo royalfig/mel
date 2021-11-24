@@ -1,9 +1,15 @@
 .header {
+  grid-template-columns: max(1rem, calc((100% - var(--lg)) / 2)) auto 1fr;
   display: grid;
   align-items: center;
-  grid-template-columns: max(1rem, calc((100% - var(--lg)) / 2)) max-content 1fr;
-  /* grid-template-columns: calc(100vw - 992px) 1fr 1fr; */
 }
+@media (min-width: 768px) {
+  .header {
+    grid-template-columns: max(1rem, calc((100% - var(--lg)) / 2)) max-content 1fr;
+    /* grid-template-columns: calc(100vw - 992px) 1fr 1fr; */
+  }
+}
+
 .header h2 {
   position: relative;
   font-weight: 100;

@@ -66,11 +66,11 @@
   display: flex;
   width: 100%;
   width: 100%;
+  height: 150px;
   overflow: hidden;
   text-decoration: none;
-  border: 1px solid var(--surface-light);
+  border: 1px solid var(--mid-light);
   transition: background-color var(--transition);
-  height: 150px;
 }
 
 .kg-bookmark-container:hover {
@@ -78,27 +78,27 @@
 }
 
 .kg-bookmark-content {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  width: 60%;
-  padding: 0.5rem 1rem;
+  width: 70%;
+  padding: 1rem;
 }
 
 .kg-bookmark-title {
   margin-bottom: 0.5rem;
+  overflow: hidden;
   font-weight: 700;
   line-height: 1.2;
-  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 .kg-bookmark-metadata {
   display: inline-flex;
   align-items: center;
-  line-height: 1.2;
   margin-top: auto;
+  line-height: 1.2;
 }
 
 .kg-bookmark-description {
@@ -118,15 +118,15 @@
 }
 
 .kg-bookmark-thumbnail {
-  width: 40%;
+  width: 30%;
   height: 100%;
   background-color: var(--surface-light);
   /* flex-shrink: 0; */
 }
 
 .kg-bookmark-thumbnail img {
-  min-width: 100px;
   width: 100%;
+  min-width: 100px;
   height: 100%;
   object-fit: cover;
 }

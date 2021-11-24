@@ -5,22 +5,30 @@
         <div class="post__header-banner"></div>
         <div class="post__header-left">
             <h1 class="post__title">{{title}}</h1>
-            <p class="post__excerpt">{{excerpt}}</p>
-            {{#primary_author}}
-                <div class="post__author">
-                <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
-                <div class="post__author-right">
-                    
-                    <a class="post__author--name" href="{{url}}">{{name}}</a>
-                    <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
-                    
-                </div>
-                </div>
-            {{/primary_author}}
-            
+            {{#if excerpt}}<p class="post__excerpt">{{excerpt}}</p>{{/if}}
+            {{^is "page"}}
+                {{#primary_author}}
+                    <div class="post__author">
+                    <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
+                    <div class="post__author-right">
+                        
+                        <a class="post__author--name" href="{{url}}">{{name}}</a>
+                        <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
+                        
+                    </div>
+                    </div>
+                {{/primary_author}}
+            {{/is}}
         </div>
         <div class="post__header-right">
-            <img class="post__feature-image" src="{{feature_image}}" alt="" >
+            <img class="post__feature-image"
+            srcset="
+            {{img_url feature_image size="m"}} 500w,
+            {{img_url feature_image size="l"}} 700w,
+            {{img_url feature_image size="xl"}} 1000w"
+            sizes="(max-width: 1000px) 500px, 768px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
         </div>
     </header>
     <div class="post__grid {{post_class}}">

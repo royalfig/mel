@@ -38,3 +38,34 @@ input + .btn {
   transform: translateX(-2rem);
   /* color: var(--surface); */
 }
+
+.input__container .loader,
+.input__container .success {
+  display: none;
+}
+
+.loading .default,
+.success .default,
+.success .loader {
+  display: none;
+}
+
+.success .success {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading .loader {
+  display: initial;
+}
+
+.loader > svg {
+  height: 1em;
+  width: 4em;
+}
+
+.success > svg {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5em;
+}

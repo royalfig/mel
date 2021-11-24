@@ -8,13 +8,42 @@
                 <p class="hero__description">
                     {{@site.description}}
                 </p>
-                <div class="input__container">
-                    <input />
-                    <a class="btn btn--outline" href="#">Sign Up</a>
-                </div>
+                <form class="input__container" data-members-form>
+                    <input data-members-email type="email" required />
+                    <button class="btn btn--outline" type="submit">
+                        <span class="default">Sign up</span>
+                        <span class="loader">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 30" fill="var(--mid)">
+                                <circle cx="15" cy="15" r="15">
+                                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"/>
+                                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"/>
+                                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="105" cy="15" r="15">
+                                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"/>
+                                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                        </span>
+                        <span class="success">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                            </svg> sent</span>
+                    </button>
+                </form>
             </div>
             <div class="hero__right">
-                <img class="hero__img" src="{{@site.cover_image}}" alt="{{@site.title}}">
+                <img class="hero__img" 
+                 srcset="
+                {{img_url @site.cover_image size="s"}} 300w,
+                {{img_url @site.cover_image size="m"}} 500w"
+                sizes="(min-width: 768px) 500px, 300px"
+                src="{{img_url @site.cover_image size="m"}}"
+                alt="{{@site.title}}">
+
             </div>
         </div>
     </div>
