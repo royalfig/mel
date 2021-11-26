@@ -1,5 +1,5 @@
 {
-  "name": "ghost-starter-with-rollup",
+  "name":"mel", 
   "version": "1.0.0",
   "description": "A Ghost custom theme starter with Rollup and SCSS",
   "engines": {
