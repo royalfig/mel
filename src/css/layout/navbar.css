@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-after);
+  padding-top: 1rem;
 }
 .navbar__left {
   flex-shrink: 0;

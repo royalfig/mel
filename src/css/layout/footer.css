@@ -5,6 +5,7 @@
 .footer__grid {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: var(--small);
   font-weight: 100;
   color: var(--text-light);
@@ -12,7 +13,6 @@
   letter-spacing: var(--letter-spacing);
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  justify-content: space-between;
 }
 
 .footer__grid--center {
@@ -27,6 +27,6 @@
 }
 
 .footer__grid svg {
-  height: 1em;
   width: 1em;
+  height: 1em;
 }

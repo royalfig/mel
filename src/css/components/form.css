@@ -60,12 +60,12 @@ input + .btn {
 }
 
 .loader > svg {
-  height: 1em;
   width: 4em;
+  height: 1em;
 }
 
 .success > svg {
-  height: 1em;
   width: 1em;
+  height: 1em;
   margin-right: 0.5em;
 }

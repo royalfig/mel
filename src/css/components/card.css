@@ -17,29 +17,31 @@
   justify-content: space-between;
   height: 22rem;
   padding: 1rem;
-  /* overflow: hidden; */
   border: 1px solid var(--mid-light);
-  /* border-radius: var(--radius-small); */
   transition: background-color var(--transition);
 }
+
 .card::after {
-  content: '';
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  content: '';
   box-shadow: var(--shadow-on-home);
   opacity: 0;
   transition: opacity var(--transition);
 }
+
 .card:hover {
-  background-color: var(--surface-light);
   cursor: pointer;
+  background-color: var(--surface-light);
 }
+
 .card:hover::after {
   opacity: 1;
 }
+
 .card:hover .card__title::after {
   opacity: 1;
   transform: scale(1.5);
@@ -78,13 +80,11 @@
 
 .card__title {
   position: relative;
+  display: box;
+  overflow: hidden;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
-  /* stylelint-disable */
-  display: -webkit-box;
-  /* stylelint-enable */
-  overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

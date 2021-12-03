@@ -5,9 +5,9 @@
   line-height: inherit;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
+  cursor: pointer;
   border: 1px solid;
   border-radius: var(--radius);
-  cursor: pointer;
 }
 
 .btn--solid {

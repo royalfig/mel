@@ -25,18 +25,13 @@
 
   /* Radius  */
   --radius: 1em;
-  --radius-small: 0.25em;
+  --radius-small: 4px;
 
   /* Transition */
   --transition: 0.3s;
 
   /* Color */
   /* Light Mode Default */
-  --base-100: #f8fafc;
-  --base-200: #f1f5f9;
-  --base-300: #e2e8f0;
-  --base-400: #cbd5e1;
-  --base-500: #94a3b8;
 
   --text-light: #1e293b;
   --text: #0f172a;
@@ -49,12 +44,6 @@
   --mid-light: #e2e8f0;
   --mid: #65758b;
   --mid-dark: #475569;
-
-  --text-100: #65758b;
-  --text-200: #475569;
-  --text-300: #334155;
-  --text-400: #1e293b;
-  --text-500: #0f172a;
 
   --pink: hsl(329, 69%, 43%);
   --blue: #1167df;
@@ -74,18 +63,9 @@
     30px 40px 80px rgba(15, 23, 42, 0.07);
 
   @media (prefers-color-scheme: dark) {
-    --text-500: #f8fafc;
-    --text-400: #f1f5f9;
-    --text-300: #e2e8f0;
-    --text-200: #cbd5e1;
-
     --mid-light: #334155;
     --mid: #65758b;
     --mid-dark: #94a3b8;
-
-    --base-300: #334155;
-    --base-200: #1e293b;
-    --base-100: #0f172a;
 
     --surface-light: #1e293b;
     --surface: #0f172a;

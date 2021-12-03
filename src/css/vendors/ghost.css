@@ -1,17 +1,13 @@
 .kg-card {
   margin: 1rem 0 2rem;
 }
-/* .kg-width-wide {
-  grid-column: 2 / 5;
-  transform: translateX(calc((100vw - var(--lg)) / -4));
-} */
 
-.kg-width-full {
-  grid-column: 1 / -1;
+.kg-width-wide {
+  grid-column: 2 / 5;
 }
 
-.kg-width-full figcaption {
-  transform: translateX(calc((100% - var(--lg)) / 2));
+.kg-width-full {
+  grid-column: 1 / 6;
 }
 
 .kg-embed-card {

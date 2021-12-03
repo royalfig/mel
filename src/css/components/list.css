@@ -25,13 +25,13 @@
 }
 
 .list__container::after {
-  box-shadow: var(--shadow-on-home);
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   content: '';
+  box-shadow: var(--shadow-on-home);
   opacity: 0;
   transition: opacity var(--transition);
 }

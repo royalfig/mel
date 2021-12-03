@@ -13,3 +13,12 @@ a,
   color: currentColor;
   text-decoration: inherit;
 }
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: var(--radius-small);
+}
