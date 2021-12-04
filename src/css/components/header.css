@@ -2,6 +2,7 @@
   grid-template-columns: max(1rem, calc((100% - var(--lg)) / 2)) auto 1fr;
   display: grid;
   align-items: center;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .header {

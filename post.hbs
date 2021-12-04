@@ -51,6 +51,9 @@
                 <svg class="not-copied" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4V2h10v2h3.007c.548 0 .993.445.993.993v16.014a.994.994 0 0 1-.993.993H3.993A.994.994 0 0 1 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7zm0 2H5v14h14V6h-2v2H7V6zm2-2v2h6V4H9z"/></svg>
                 <svg class="copied" fill="green" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6 4v4h12V4h2.007c.548 0 .993.445.993.993v16.014a.994.994 0 0 1-.993.993H3.993A.994.994 0 0 1 3 21.007V4.993C3 4.445 3.445 4 3.993 4H6zm2-2h8v4H8V2z"/></svg>
             </button>
+            <button class="share__link up-button">
+                <svg viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 12v8h-2v-8H4l8-8 8 8z"/></svg>
+            </button>
         </aside>
         
     </div>
@@ -106,4 +109,20 @@
         const copyBtn = document.querySelector('#copy-button');
 
         copyBtn.addEventListener('click', copy)
+
+            const upButton = document.querySelector('.up-button')
+        document.addEventListener('scroll', e => {
+            const scrollPos = window.scrollY;
+            const scrollHeight = document.body.clientHeight;
+
+            if (scrollPos / scrollHeight > .15) {
+                upButton.classList.add('show-up-button')
+            } else {
+                upButton.classList.remove('show-up-button')
+            }
+        })
+
+        upButton.addEventListener('click', () => {
+            window.scrollTo(0,0) 
+        })
     </script>

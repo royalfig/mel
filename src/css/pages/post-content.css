@@ -23,7 +23,7 @@ figcaption {
   text-decoration: underline;
 }
 
-.post a:not(.share__link):hover {
+.post a:not(.share__link):not(.kg-bookmark-container):hover {
   color: var(--blue);
 }
 

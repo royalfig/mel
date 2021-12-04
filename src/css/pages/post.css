@@ -8,6 +8,7 @@
   opacity: 0.5;
   grid-column: 3 / 5;
   grid-row: 1 / 2;
+  border-radius: var(--radius-small);
 }
 
 .post__header-banner::before,
@@ -53,6 +54,8 @@
   height: 20rem;
   box-shadow: var(--shadow-on-home);
   object-fit: cover;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .post__header-right {
@@ -106,16 +109,18 @@
   position: sticky;
   height: min-content;
   top: calc(50% - 4.5rem);
+  margin-left: 0.25rem;
 }
 
 .share__link {
-  padding: 0.75rem;
+  padding: 0.5rem;
   background-color: var(--mid-light);
   border-radius: 50%;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--transition);
 }
 
 .share__link:not(:last-child) {
@@ -129,10 +134,11 @@
 
 .share__link svg {
   flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: inherit;
   fill: inherit;
+  transition: fill var(--transition);
 }
 
 .share__link:hover svg {
@@ -148,6 +154,17 @@
 
 .copied-success .not-copied {
   display: none;
+}
+
+.up-button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.show-up-button {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* Toc */
