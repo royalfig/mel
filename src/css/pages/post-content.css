@@ -16,7 +16,7 @@ figcaption {
 
 .post ul,
 .post li {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .post a:not(.kg-bookmark-container) {
@@ -27,6 +27,13 @@ figcaption {
   color: var(--blue);
 }
 
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-radius: var(--radius-small);
+  height: 1px;
+  background-color: var(--mid-light);
+}
 blockquote {
   padding: 3rem 2rem;
   font-size: 2rem;
