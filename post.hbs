@@ -1,21 +1,12 @@
-{{!< default}} {{#post}} <header class="container--header">
+{{!< default}} 
+
+{{#post}} 
+<header class="container--header">
     <div class="post__header-banner"></div>
     <div class="post__header-left">
         <h1 class="post__title">{{title}}</h1>
         {{#if excerpt}}<p class="post__excerpt">{{excerpt}}</p>{{/if}}
-        {{^is "page"}}
-        {{#primary_author}}
-        <div class="post__author">
-            <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
-            <div class="post__author-right">
-
-                <a class="post__author--name" href="{{url}}">{{name}}</a>
-                <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
-
-            </div>
-        </div>
-        {{/primary_author}}
-        {{/is}}
+        
     </div>
     <div class="post__header-right">
         <img class="post__feature-image" srcset="
@@ -23,38 +14,42 @@
             size="xl" }} 1000w" sizes="(max-width: 1000px) 500px, 768px" src="{{img_url feature_image size=" m"}}"
             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
     </div>
-    </header>
-    <div class="container--post {{post_class}}">
+    {{^is "page"}}
+    {{#primary_author}}
+        <div class="post__author--container">
+            <div class="post__author">
+                <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
+                <div class="post__author-right">
+
+                    <a class="post__author--name" href="{{url}}">{{name}}</a>
+                    <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
+
+                </div>
+            </div>
+            <div class="post__author--divider"></div>
+        </div>
+    {{/primary_author}}
+    {{/is}}
+</header>
+
+<div class="container--post {{post_class}}">
        
         <div class="post__item">
             {{content}}
         </div>
         <aside class="share">
             <a href="https://www.facebook.com/sharer.php?u={{url absolute='true'}}" class="share__link">
-                <svg fill="currentColor" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                </svg>
+               <svg viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
             </a>
             <a href="https://twitter.com/share?url={{url absolute='true'}}&text={{encode excerpt}}&via=TheRoyalFig" class="share__link">
-                <svg fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                </svg>
+                <svg viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"/></svg>
             </a>
             <a href="https://www.linkedin.com/shareArticle?url={{url absolute='true'}}&title={{title}}" class="share__link">
-                <svg fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/></svg>
             </a>
             <button class="share__link share-button" id="copy-button" data-url="{{url absolute='true'}}">
-                <svg fill="currentColor" viewBox="0 0 16 16" class="not-copied">
-                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                </svg>
-                <svg fill="currentColor" viewBox="0 0 16 16" class="copied">
-                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                </svg>
+                <svg class="not-copied" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4V2h10v2h3.007c.548 0 .993.445.993.993v16.014a.994.994 0 0 1-.993.993H3.993A.994.994 0 0 1 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7zm0 2H5v14h14V6h-2v2H7V6zm2-2v2h6V4H9z"/></svg>
+                <svg class="copied" fill="green" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6 4v4h12V4h2.007c.548 0 .993.445.993.993v16.014a.994.994 0 0 1-.993.993H3.993A.994.994 0 0 1 3 21.007V4.993C3 4.445 3.445 4 3.993 4H6zm2-2h8v4H8V2z"/></svg>
             </button>
         </aside>
         
@@ -81,7 +76,7 @@
     {{/get}}
 
     <script>
-        const headings = document.querySelectorAll(".post__title, .post h2, .post h3, .post h4, .post h5, .post h6");
+        {{!-- const headings = document.querySelectorAll(".post__title, .post h2, .post h3, .post h4, .post h5, .post h6");
         const toc = document.querySelector('.toc__content')
 
         headings.forEach(el => {
@@ -92,7 +87,7 @@
             a.href = '#' + el.id;
             p.append(a)
             toc.append(p)
-        })
+        }) --}}
 
         function copy(e) {
             const btn = e.currentTarget

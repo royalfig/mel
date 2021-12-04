@@ -29,31 +29,25 @@
 
   .container--post {
     grid-template-columns:
-      1rem
-      1fr
-      16px
-      100px
-      20px
-      720px
-      20px
-      100px
-      16px
-      1fr
-      1rem;
+      1rem 1fr calc((var(--lg) - 720px) / 2) 720px calc((var(--lg) - 720px) / 2)
+      1fr 1rem;
   }
+
+  /* 1rem 1fr    calc((var(--lg) - 720px) / 2)  720px calc((var(--lg) - 720px) / 2)     1fr 1rem*/
 
   .container--header {
     display: grid;
     grid-template-columns:
       1rem 1fr calc(var(--lg) * 0.6) calc(var(--lg) * 0.4)
       1fr 1rem;
-    margin-bottom: var(--space-after);
+    margin-bottom: 1rem;
   }
 
   .post__item {
-    grid-column: 6 / 7;
+    grid-column: 4 / 5;
     display: grid;
     grid-template-columns: 40px 20px 600px 20px 40px;
+    margin-top: 2rem;
   }
 }
 

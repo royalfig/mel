@@ -1,14 +1,5 @@
 /* Post Header */
-.post__header {
-  display: grid;
-  padding: 1rem 0 1rem 1rem;
-  /* gap: 1rem; */
-  margin-bottom: var(--space-after);
-  grid-template-columns:
-    calc((100vw - var(--lg)) / 2) calc((var(--lg)) / 3)
-    calc((var(--lg)) / 3) calc((var(--lg)) / 3) 1fr;
-  grid-template-rows: auto auto;
-}
+
 .post__header-banner {
   position: relative;
   z-index: -1;
@@ -65,12 +56,17 @@
 }
 
 .post__header-right {
-  grid-column: 4 /5;
+  grid-column: 4 / -1;
   grid-row: 1 / -1;
   margin-top: 1rem;
 }
 
 /* Post author */
+.post__author--container {
+  grid-column: 3 / 5;
+  display: flex;
+  align-items: center;
+}
 .post__author {
   display: flex;
   align-items: center;
@@ -79,7 +75,7 @@
   width: 3rem;
   height: 3rem;
   margin-right: 0.75rem;
-  border: 3px solid var(--pink);
+  border: 3px solid var(--mid-light);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -94,19 +90,27 @@
   text-transform: uppercase;
 }
 
+.post__author--divider {
+  height: 3px;
+  background-image: linear-gradient(to right, transparent, var(--mid-light));
+  flex: 1;
+  border-radius: var(--small-radius);
+}
+
 .share {
-  grid-column: 4 / 5;
+  grid-column: 3 / 4;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   position: sticky;
   height: min-content;
   top: calc(50% - 4.5rem);
 }
+
 .share__link {
-  padding: 15px;
-  background-color: var(--surface-dark);
+  padding: 0.75rem;
+  background-color: var(--mid-light);
   border-radius: 50%;
   line-height: 1;
   display: flex;
@@ -115,19 +119,25 @@
 }
 
 .share__link:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .share__link:hover {
-  background-color: var(--surface-light);
-}
-.share__link svg {
-  flex-shrink: 0;
-  width: 25px;
-  height: 25px;
-  color: var(--text-light);
+  background-color: var(--mid-dark);
+  color: var(--surface);
 }
 
+.share__link svg {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: inherit;
+  fill: inherit;
+}
+
+.share__link:hover svg {
+  fill: var(--surface);
+}
 .copied {
   display: none;
 }

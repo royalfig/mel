@@ -7,9 +7,8 @@
 }
 
 a,
-:link,
-:visited,
-.link {
+a:hover,
+a:visited {
   color: currentColor;
   text-decoration: inherit;
 }
