@@ -10,6 +10,7 @@ html {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--surface);
+  scroll-behavior: smooth;
 }
 
 body {

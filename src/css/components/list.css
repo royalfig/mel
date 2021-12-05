@@ -2,11 +2,11 @@
   position: relative;
   display: grid;
   padding: 1rem 0;
+  border-radius: var(--radius-small);
+  transition: all var(--transition);
   /* gap: 1rem; */
   /* align-items: center; */
   grid-template-columns: max-content 1fr max-content;
-  transition: all var(--transition);
-  border-radius: var(--radius-small);
 }
 
 .list__container:not(:first-child) {

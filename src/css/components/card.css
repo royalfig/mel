@@ -18,8 +18,8 @@
   height: 22rem;
   padding: 1rem;
   border: 1px solid var(--mid-light);
-  transition: background-color var(--transition);
   border-radius: var(--radius-small);
+  transition: background-color var(--transition);
 }
 
 .card::after {

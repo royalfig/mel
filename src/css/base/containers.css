@@ -1,26 +1,66 @@
-/* Post Body */
+/* Breakpoints reference
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+*/
+
 .container,
-.container--post {
-  display: grid;
-  grid-template-columns: 1rem auto 1rem;
+.container--post,
+.container--header {
+  padding: 1rem;
   margin-bottom: var(--space-after);
 }
 
-.container__inner,
 .post__item {
-  grid-column: 2 / 3;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-self: center;
 }
 
-@media (min-width: 768px) {
-  .container,
+@media (min-width: 808px) {
+  .container {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 20px 1fr var(--md) 1fr 20px;
+  }
+
+  .container__inner {
+    grid-column: 3 / 4;
+  }
+
   .container--post {
-    grid-template-columns: 2rem auto 2rem;
+    display: grid;
+    grid-template-columns:
+      20px 1fr calc((var(--md) - 720px) / 2) 720px calc((var(--md) - 720px) / 2)
+      1fr 1rem;
+  }
+
+  .container--header {
+    display: grid;
+    grid-template-columns:
+      20px 1fr calc(var(--md) * 0.6) calc(var(--md) * 0.4)
+      1fr 20px;
+    margin-bottom: 1rem;
+  }
+
+  .post__item {
+    display: grid;
+    max-width: initial;
+    margin: 2rem 0 0;
+    grid-column: 4 / 5;
+    grid-template-columns: 40px 20px 600px 20px 40px;
+  }
+
+  .post__item > * {
+    grid-column: 3 / 4;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: calc(1032px)) {
   .container {
-    grid-template-columns: 1rem 1fr var(--lg) 1fr 1rem;
+    grid-template-columns: 20px 1fr var(--lg) 1fr 20px;
   }
 
   .container__inner {
@@ -29,17 +69,15 @@
 
   .container--post {
     grid-template-columns:
-      1rem 1fr calc((var(--lg) - 720px) / 2) 720px calc((var(--lg) - 720px) / 2)
+      20px 1fr calc((var(--lg) - 720px) / 2) 720px calc((var(--lg) - 720px) / 2)
       1fr 1rem;
   }
-
-  /* 1rem 1fr    calc((var(--lg) - 720px) / 2)  720px calc((var(--lg) - 720px) / 2)     1fr 1rem*/
 
   .container--header {
     display: grid;
     grid-template-columns:
-      1rem 1fr calc(var(--lg) * 0.6) calc(var(--lg) * 0.4)
-      1fr 1rem;
+      20px 1fr calc(var(--lg) * 0.6) calc(var(--lg) * 0.4)
+      1fr 20px;
     margin-bottom: 1rem;
   }
 
@@ -49,13 +87,4 @@
     grid-template-columns: 40px 20px 600px 20px 40px;
     margin-top: 2rem;
   }
-}
-
-.post__item > * {
-  margin-bottom: 1rem;
-  grid-column: 3 / 4;
-}
-
-.post__item > *:last-child {
-  margin-bottom: 0;
 }

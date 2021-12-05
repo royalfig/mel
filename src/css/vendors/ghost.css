@@ -66,8 +66,8 @@
   overflow: hidden;
   text-decoration: none;
   border: 1px solid var(--mid-light);
-  transition: background-color var(--transition);
   border-radius: var(--radius-small);
+  transition: background-color var(--transition);
 }
 
 .kg-bookmark-container:hover {
@@ -122,10 +122,10 @@
 }
 
 .kg-bookmark-thumbnail img {
-  border-radius: 0;
   width: 100%;
   min-width: 100px;
   height: 100%;
+  border-radius: 0;
   object-fit: cover;
 }
 

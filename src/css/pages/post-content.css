@@ -10,13 +10,14 @@
 figcaption {
   font-size: var(--small);
   font-weight: 100;
-  /* text-align: center; */
+  text-align: center;
   text-transform: uppercase;
 }
 
 .post ul,
-.post li {
+.post ol {
   margin-left: 1rem;
+  list-style-position: inside;
 }
 
 .post a:not(.kg-bookmark-container) {
@@ -28,12 +29,13 @@ figcaption {
 }
 
 hr {
+  height: 1px;
   margin: 1rem 0;
+  background-color: var(--mid-light);
   border: none;
   border-radius: var(--radius-small);
-  height: 1px;
-  background-color: var(--mid-light);
 }
+
 blockquote {
   padding: 3rem 2rem;
   font-size: 2rem;
@@ -57,4 +59,14 @@ blockquote::after {
 
 .post > blockquote {
   margin: 1rem 0 2rem;
+}
+
+.kg-code-card {
+  grid-column: 2 / 5;
+  overflow: hidden;
+  font-size: var(--small);
+}
+
+.kg-code-card code {
+  border-radius: var(--radius-small);
 }

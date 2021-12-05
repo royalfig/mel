@@ -5,10 +5,10 @@
   z-index: -1;
   height: 10rem;
   background: var(--mid-light);
+  border-radius: var(--radius-small);
   opacity: 0.5;
   grid-column: 3 / 5;
   grid-row: 1 / 2;
-  border-radius: var(--radius-small);
 }
 
 .post__header-banner::before,
@@ -52,10 +52,10 @@
   width: 100%;
   max-width: var(--md);
   height: 20rem;
-  box-shadow: var(--shadow-on-home);
-  object-fit: cover;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  box-shadow: var(--shadow-on-home);
+  object-fit: cover;
 }
 
 .post__header-right {
@@ -94,32 +94,32 @@
 }
 
 .post__author--divider {
+  flex: 1;
   height: 3px;
   background-image: linear-gradient(to right, transparent, var(--mid-light));
-  flex: 1;
   border-radius: var(--small-radius);
 }
 
 .share {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+  position: sticky;
+  top: calc(50% - 4.5rem);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: sticky;
   height: min-content;
-  top: calc(50% - 4.5rem);
   margin-left: 0.25rem;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
 }
 
 .share__link {
-  padding: 0.5rem;
-  background-color: var(--mid-light);
-  border-radius: 50%;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
+  line-height: 1;
+  background-color: var(--mid-light);
+  border-radius: 50%;
   transition: background-color var(--transition);
 }
 
@@ -128,8 +128,8 @@
 }
 
 .share__link:hover {
-  background-color: var(--mid-dark);
   color: var(--surface);
+  background-color: var(--mid-dark);
 }
 
 .share__link svg {
@@ -137,8 +137,8 @@
   width: 1.25rem;
   height: 1.25rem;
   color: inherit;
-  fill: inherit;
   transition: fill var(--transition);
+  fill: inherit;
 }
 
 .share__link:hover svg {
@@ -157,14 +157,14 @@
 }
 
 .up-button {
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
   transition: opacity var(--transition);
 }
 
 .show-up-button {
-  opacity: 1;
   pointer-events: all;
+  opacity: 1;
 }
 
 /* Toc */
@@ -192,4 +192,9 @@
   line-height: 1;
   text-decoration: none;
   border-radius: var(--radius-small);
+}
+
+/* Post Content */
+.post__item > *:not(:last-child) {
+  margin-bottom: 1rem;
 }
