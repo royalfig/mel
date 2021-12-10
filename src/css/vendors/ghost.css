@@ -1,4 +1,4 @@
-.kg-card {
+.post .kg-card {
   margin: 1rem 0 2rem;
 }
 
@@ -52,6 +52,10 @@
 
 .kg-gallery-image:not(:first-of-type) {
   margin: 0 0 0 0.75em;
+}
+
+.kg-gallery-card .kg-card {
+  margin: 0;
 }
 
 /* Bookmark Cards
