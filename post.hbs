@@ -10,9 +10,11 @@
     </div>
     <div class="post__header-right">
         <img class="post__feature-image" srcset="
-            {{img_url feature_image size=" m"}} 500w, {{img_url feature_image size="l" }} 700w, {{img_url feature_image
-            size="xl" }} 1000w" sizes="(max-width: 1000px) 500px, 768px" src="{{img_url feature_image size=" m"}}"
+            {{img_url feature_image size="m" }} 500w, {{img_url feature_image size="l" }} 700w, {{img_url feature_image
+            size="xl" }} 1000w" sizes="(max-width: 828px) 500px, 768px" src="{{img_url feature_image size=" m"}}"
             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+
+           
     </div>
     {{^is "page"}}
     {{#primary_author}}
