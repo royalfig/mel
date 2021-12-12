@@ -5,13 +5,26 @@
   --xl: 1200px;
   --xxl: 1400px;
 */
-
+/* 
 .container,
 .container--post,
 .container--header {
   padding: 1rem;
   margin-bottom: var(--space-after);
   position: relative;
+} */
+
+.container,
+.container--post,
+.container--header {
+  display: grid;
+  grid-template-columns: 1rem 1fr minmax(auto, var(--lg)) 1fr 1rem;
+  margin-bottom: var(--space-after);
+  position: relative;
+}
+
+.container__inner {
+  grid-column: 3 / 4;
 }
 
 .post__item {
@@ -19,7 +32,7 @@
   margin: 0 auto;
   justify-self: center;
 }
-
+/* 
 @media (min-width: 828px) {
   .container {
     display: grid;
@@ -92,4 +105,4 @@
     grid-template-columns: 40px 20px 600px 20px 40px;
     margin-top: 2rem;
   }
-}
+} */
