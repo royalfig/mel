@@ -76,8 +76,8 @@
 .navbar__button svg {
   width: 1.5rem;
   height: 1.5rem;
-  fill: var(--text);
   transition: fill var(--transition);
+  fill: var(--text);
 }
 
 .navbar__button:hover svg {

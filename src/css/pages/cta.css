@@ -1,6 +1,6 @@
 .cta {
-  background-color: var(--surface-dark);
   padding: 1rem;
+  background-color: var(--surface-dark);
   border-radius: var(--radius-small);
 }
 
