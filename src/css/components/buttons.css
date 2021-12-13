@@ -8,6 +8,7 @@
   cursor: pointer;
   border: 1px solid;
   border-radius: var(--radius);
+  color: currentColor;
 }
 
 .btn--solid {
