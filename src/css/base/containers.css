@@ -31,8 +31,15 @@
 }
 
 .container.post {
-  grid-template-columns: 1rem 1fr 3rem minmax(auto, calc(var(--lg) - 6rem)) 3rem 1fr 1rem;
+  grid-template-columns: 1rem 1fr 1fr minmax(auto, calc(var(--lg))) 1fr 1fr 1rem;
   grid-auto-flow: column;
+}
+
+@media (min-width: 48rem) {
+  .container.post {
+    grid-template-columns: 1rem 1fr 3rem minmax(auto, calc(var(--lg) - 6rem)) 3rem 1fr 1rem;
+    grid-auto-flow: column;
+  }
 }
 
 .container.post__header {
