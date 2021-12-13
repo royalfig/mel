@@ -16,21 +16,21 @@
 
            
     </div>
-    {{^is "page"}}
-    {{#primary_author}}
-        <div class="post__author--container">
-            <div class="post__author">
-                <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
-                <div class="post__author-right">
+    {{#is "post"}}
+        {{#primary_author}}
+            <div class="post__author--container">
+                <div class="post__author">
+                    <img class="post__author--image" src="{{profile_image}}" alt="{{name}}">
+                    <div class="post__author-right">
 
-                    <a class="post__author--name" href="{{url}}">{{name}}</a>
-                    <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
+                        <a class="post__author--name" href="{{url}}">{{name}}</a>
+                        <p class="post__date">{{date}} &bull; {{../reading_time}} min read</p>
 
+                    </div>
                 </div>
+                <div class="post__author--divider"></div>
             </div>
-            <div class="post__author--divider"></div>
-        </div>
-    {{/primary_author}}
+        {{/primary_author}}
     {{/is}}
 </header>
 

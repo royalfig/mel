@@ -11,7 +11,8 @@
   color: currentColor;
 }
 
-.btn--solid {
+.btn--solid,
+.btn--solid:visited {
   color: var(--surface);
   background-color: var(--blue);
   border-color: var(--blue);
@@ -20,8 +21,8 @@
 
 .btn--solid:hover {
   color: var(--surface-light);
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--mid);
+  border-color: var(--mid);
 }
 
 .btn-outline {
