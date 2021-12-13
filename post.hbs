@@ -1,7 +1,7 @@
 {{!< default}} 
 
 {{#post}} 
-<header class="container--header">
+<header class="container post__header">
     <div class="post__header-banner"></div>
     <div class="post__header-left">
         <h1 class="post__title">{{title}}</h1>
@@ -34,11 +34,12 @@
     {{/is}}
 </header>
 
-<div class="container--post {{post_class}}">
+<div class="container {{post_class}}">
        
         <div class="post__item">
             {{content}}
         </div>
+
         <aside class="share">
             <a href="https://www.facebook.com/sharer.php?u={{url absolute='true'}}" class="share__link">
                <svg viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
@@ -79,6 +80,8 @@
     </div>
     {{/if}}
     {{/get}}
+
+    {{> "cta"}}
 
     <script>
         {{!-- const headings = document.querySelectorAll(".post__title, .post h2, .post h3, .post h4, .post h5, .post h6");

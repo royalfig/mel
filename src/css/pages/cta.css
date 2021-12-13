@@ -1,0 +1,10 @@
+.cta {
+  background-color: var(--surface-dark);
+  padding: 1rem;
+  border-radius: var(--radius-small);
+}
+
+.cta__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

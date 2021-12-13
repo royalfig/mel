@@ -21,6 +21,7 @@
 
 @import './pages/post-content.css';
 @import './pages/post.css';
+@import './pages/cta.css';
 
 /* Vendor */
 @import './vendors/ghost.css';

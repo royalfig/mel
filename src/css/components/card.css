@@ -1,13 +1,15 @@
-.card__container {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: minmax(250px, 18.75rem);
+.card__container--overflow {
+  border-radius: var(--radius-small);
+  overflow: hidden;
 }
-
-@media (min-width: 768px) {
-  .card__container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.card__container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--mid-light);
+  border-radius: var(--radius-small);
+  background-color: var(--surface-dark);
 }
 
 .card {
@@ -18,8 +20,10 @@
   height: 22rem;
   padding: 1rem;
   border: 1px solid var(--mid-light);
+  background-color: var(--surface);
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
+  width: 16.5rem;
 }
 
 .card::after {

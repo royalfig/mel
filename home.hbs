@@ -54,17 +54,19 @@
     <div class="header__line"></div>
 </header>
 
-<div class="container">
-    <div class="container__inner">
-        <div class="card__container">
-            {{#foreach posts}}
-                {{#if featured}}
-                    {{> "card"}}    
-                {{/if}}
-            {{/foreach}}
+{{#get "posts" filter="featured:true" as |featured|}}
+    {{#if featured}}
+        <div class="container">
+            <div class="container__inner card__container--overflow">
+                <div class="card__container">
+                    {{#foreach featured}}
+                        {{> "card"}}
+                    {{/foreach}}
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    {{/if}}
+{{/get}}
 
 <header class="header">
     <h2>What&apos;s Fresh</h2>
@@ -81,3 +83,14 @@
         {{pagination}}
     </div>
 </div>
+
+<script>
+    const scrollContainer = document.querySelector('.card__container');
+
+    if (scrollContainer) {
+        scrollContainer.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            scrollContainer.scrollLeft += e.deltaY;
+        })
+    }
+</script>
