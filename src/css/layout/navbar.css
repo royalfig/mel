@@ -89,10 +89,10 @@
 }
 
 .logo-letters {
+  padding: 0 3px;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.1;
-  padding: 0 3px;
   color: #fff;
 
   text-shadow: -1px -1px 2px #000;

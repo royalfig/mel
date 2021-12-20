@@ -31,12 +31,12 @@ input + .btn:focus-visible {
 input + .btn {
   display: inline-flex;
   flex-grow: 0;
-  /* background-color: var(--mid); */
-  transform: translateX(-2rem);
+  align-items: center;
+  justify-content: center;
   /* color: var(--surface); */
   width: 8rem;
-  justify-content: center;
-  align-items: center;
+  /* background-color: var(--mid); */
+  transform: translateX(-2rem);
 }
 
 .input__container .btn svg {
@@ -48,9 +48,9 @@ input + .btn {
 }
 
 .input__container .default {
-  line-height: 0;
   display: inline-flex;
   align-items: center;
+  line-height: 0;
 }
 
 .input__container .loader,
@@ -67,9 +67,9 @@ input + .btn {
 
 .loading .loader,
 .success .success {
-  line-height: 0;
   display: inline-flex;
   align-items: center;
+  line-height: 0;
 }
 
 .loader > svg {

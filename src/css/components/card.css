@@ -1,17 +1,17 @@
 .card__container--overflow {
+  overflow-x: auto;
   /* overflow: hidden; */
   border-radius: var(--radius-small);
-  overflow-x: auto;
 }
 
 .card__container {
   display: grid;
+  justify-content: space-between;
   padding: 2rem 0;
 
   /* border: 1px solid var(--mid-light); */
 
   gap: 1rem;
-  justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr;
 }
 

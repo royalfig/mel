@@ -1,15 +1,15 @@
 .mel-overlay {
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  padding: 1rem 0;
+  margin: 0;
   background: var(--surface-90);
   backdrop-filter: blur(8px);
-  margin: 0;
-  padding: 1rem 0;
-  z-index: 100;
 }
 
 .mel-overlay.open {
@@ -24,23 +24,23 @@
 }
 
 .mel-overlay__inner .btn svg {
-  fill: var(--text);
-  height: 100%;
   width: 100%;
+  height: 100%;
+  fill: var(--text);
 }
 
 .mel-overlay__close-btn {
+  float: right;
   width: 2rem;
   height: 2rem;
-  float: right;
-  border-radius: 50%;
   padding: 5px;
+  border-radius: 50%;
 }
 
 .mel-search__title {
-  font-weight: 700;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .mel-search__form {
@@ -67,16 +67,16 @@
 .mel-search__clear,
 .mel-search__icon {
   position: absolute;
-  height: 1rem;
-  width: 1rem;
-  fill: var(--text);
   top: 50%;
-  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
   line-height: 0;
+  transform: translateY(-50%);
+  fill: var(--text);
 }
 .mel-search__input-container input {
-  padding-left: 1.75rem;
   padding-right: 1.75rem;
+  padding-left: 1.75rem;
   background-color: transparent;
 }
 .search__result--loading {
@@ -88,11 +88,11 @@
 }
 
 .search__result--line {
+  max-width: 70ch;
   height: 1rem;
   margin-bottom: 1rem;
-  max-width: 70ch;
-  animation: loading 1s ease infinite;
   border-radius: var(--radius-small);
+  animation: loading 1s ease infinite;
 }
 
 .search__result--line:last-child {

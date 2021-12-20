@@ -3,12 +3,12 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  color: currentColor;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   cursor: pointer;
   border: 1px solid;
   border-radius: var(--radius);
-  color: currentColor;
 }
 
 .btn--solid,
