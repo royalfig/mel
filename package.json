@@ -1,5 +1,5 @@
 {
-  "name":"mel", 
+  "name": "mel",
   "version": "1.0.0",
   "description": "A Ghost custom theme starter with Rollup and SCSS",
   "engines": {
@@ -71,5 +71,9 @@
     "stylelint": "^14.0.1",
     "stylelint-order": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tryghost/content-api": "^1.5.16",
+    "@tryghost/helpers": "^1.1.54",
+    "js-search": "^2.0.0"
+  }
 }

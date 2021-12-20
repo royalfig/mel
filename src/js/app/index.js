@@ -1,6 +1,5 @@
 import '../../css/app.css';
 
-const test = () => 'value';
+import { initSearch } from './search';
 
-test();
-console.log('hi');
+initSearch();

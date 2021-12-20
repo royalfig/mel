@@ -16,13 +16,15 @@
   color: var(--surface);
   background-color: var(--blue);
   border-color: var(--blue);
-  transition: background-color var(--transition), border-color var(--transition);
+  transition: background-color var(--transition), border-color var(--transition),
+    fill var(--transition);
 }
 
 .btn--solid:hover {
   color: var(--surface-light);
   background-color: var(--mid);
   border-color: var(--mid);
+  fill: var(--surface-light);
 }
 
 .btn-outline {
@@ -32,4 +34,5 @@
 .btn--outline:hover {
   color: var(--blue);
   border-color: var(--blue);
+  fill: var(--blue);
 }

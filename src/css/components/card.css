@@ -1,15 +1,18 @@
 .card__container--overflow {
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: var(--radius-small);
-}
-.card__container {
-  display: flex;
-  padding: 1rem;
   overflow-x: auto;
-  background-color: var(--surface-dark);
-  border: 1px solid var(--mid-light);
-  border-radius: var(--radius-small);
+}
+
+.card__container {
+  display: grid;
+  padding: 2rem 0;
+
+  /* border: 1px solid var(--mid-light); */
+
   gap: 1rem;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card {
@@ -17,13 +20,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 16.5rem;
-  height: 22rem;
+  width: 18.5rem;
+  height: 25rem;
   padding: 1rem;
   background-color: var(--surface);
-  border: 1px solid var(--mid-light);
+
+  background-color: var(--surface-dark);
+
+  /* border: 1px solid var(--mid-light); */
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
+  justify-self: center;
 }
 
 .card::after {
@@ -50,6 +57,21 @@
 .card:hover .card__title::after {
   opacity: 1;
   transform: scale(1.5);
+}
+.card:first-child {
+  justify-self: flex-start;
+}
+.card:last-child {
+  justify-self: flex-end;
+}
+
+.card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .card__title::after {

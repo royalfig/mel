@@ -11,41 +11,21 @@
                 <form class="input__container" data-members-form>
                     <input data-members-email type="email" required />
                     <button class="btn btn--outline" type="submit">
-                        <span class="default">Sign up</span>
+                        <span class="default"><svg  viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/></svg>Sign up</span>
                         <span class="loader">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 30" fill="var(--blue)">
-                                <circle cx="15" cy="15" r="15">
-                                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"/>
-                                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"/>
-                                </circle>
-                                <circle cx="60" cy="15" r="9" fill-opacity="0.3">
-                                    <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"/>
-                                    <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"/>
-                                </circle>
-                                <circle cx="105" cy="15" r="15">
-                                    <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"/>
-                                    <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"/>
-                                </circle>
-                            </svg>
+                          <svg  viewBox="0 0 24 24" ><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 1-1zm10-5a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1zM7 12a1 1 0 0 1-1 1H3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1zm12.071 7.071a1 1 0 0 1-1.414 0l-2.121-2.121a1 1 0 0 1 1.414-1.414l2.121 2.12a1 1 0 0 1 0 1.415zM8.464 8.464a1 1 0 0 1-1.414 0L4.93 6.344a1 1 0 0 1 1.414-1.415L8.464 7.05a1 1 0 0 1 0 1.414zM4.93 19.071a1 1 0 0 1 0-1.414l2.121-2.121a1 1 0 1 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0zM15.536 8.464a1 1 0 0 1 0-1.414l2.12-2.121a1 1 0 0 1 1.415 1.414L16.95 8.464a1 1 0 0 1-1.414 0z"/></svg> loading
                         </span>
                         <span class="success">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                            </svg> sent</span>
+                           <svg viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20.007a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V19h18V7.3l-8 7.2-10-9V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v16.007zM4.434 5L12 11.81 19.566 5H4.434zM0 15h8v2H0v-2zm0-5h5v2H0v-2z"/></svg> sent</span>
                         <span class="error">
-                            Error
+                            Error 
                         </span>
                     </button>
                 </form>
             </div>
             <div class="hero__right">
-                <img class="hero__img" 
-                 srcset="
-                {{img_url @site.cover_image size="s"}} 300w,
-                {{img_url @site.cover_image size="m"}} 500w"
-                sizes="(min-width: 768px) 500px, 300px"
-                src="{{img_url @site.cover_image size="m"}}"
-                alt="{{@site.title}}">
+                <img class="hero__img" src="{{@site.cover_image}}" alt="">
+               
 
             </div>
         </div>
@@ -63,14 +43,15 @@
             <div class="container__inner card__container--overflow">
                 <div class="card__container">
                     {{#foreach featured}}
-                        {{> "card"}}
+        {{> "card"}}
+                      
                     {{/foreach}}
                 </div>
             </div>
         </div>
-    {{/if}}
+    
+{{/if}}
 {{/get}}
-
 <header class="header">
     <h2>What&apos;s Fresh</h2>
     <div class="header__line"></div>
@@ -88,12 +69,12 @@
 </div>
 
 <script>
-    const scrollContainer = document.querySelector('.card__container');
+    {{!-- const scrollContainer = document.querySelector('.card__container--overflow');
 
     if (scrollContainer) {
         scrollContainer.addEventListener('wheel', (e) => {
             e.preventDefault();
             scrollContainer.scrollLeft += e.deltaY;
         })
-    }
+    } --}}
 </script>

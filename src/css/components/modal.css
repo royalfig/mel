@@ -1,0 +1,147 @@
+.mel-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--surface-90);
+  backdrop-filter: blur(8px);
+  margin: 0;
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+.mel-overlay.open {
+  display: grid;
+}
+
+.mel-overlay__inner .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.mel-overlay__inner .btn svg {
+  fill: var(--text);
+  height: 100%;
+  width: 100%;
+}
+
+.mel-overlay__close-btn {
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.mel-search__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mel-search__form {
+  margin-bottom: var(--space-after);
+}
+
+.mel-search__input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.mel-search__input-container:focus-within .mel-search__icon {
+  fill: var(--blue);
+}
+
+.mel-search__icon {
+  left: 0.35rem;
+}
+
+.mel-search__clear {
+  right: 0.35rem;
+}
+
+.mel-search__clear,
+.mel-search__icon {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  fill: var(--text);
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 0;
+}
+.mel-search__input-container input {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  background-color: transparent;
+}
+.search__result--loading {
+  opacity: 0;
+}
+
+.searching .search__result--loading {
+  opacity: 1;
+}
+
+.search__result--line {
+  height: 1rem;
+  margin-bottom: 1rem;
+  max-width: 70ch;
+  animation: loading 1s ease infinite;
+  border-radius: var(--radius-small);
+}
+
+.search__result--line:last-child {
+  max-width: 35ch;
+}
+
+@keyframes loading {
+  0% {
+    background: linear-gradient(
+      to right,
+      var(--surface-light),
+      var(--surface-dark),
+      var(--surface-dark)
+    );
+  }
+
+  25% {
+    background: linear-gradient(
+      to right,
+      var(--surface-light),
+      var(--surface-light),
+      var(--surface-dark)
+    );
+  }
+
+  50% {
+    background: linear-gradient(
+      to right,
+      var(--surface-dark),
+      var(--surface-light),
+      var(--surface-dark)
+    );
+  }
+
+  75% {
+    background: linear-gradient(
+      to right,
+      var(--surface-dark),
+      var(--surface-dark),
+      var(--surface-light)
+    );
+  }
+
+  100% {
+    background: linear-gradient(
+      to right,
+      var(--surface-dark),
+      var(--surface-light),
+      var(--surface-light)
+    );
+  }
+}

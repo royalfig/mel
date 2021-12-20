@@ -22,25 +22,40 @@ input,
   padding-right: 2rem;
 }
 
-input:focus-visible {
+input:focus-visible,
+input + .btn:focus-visible {
   border-color: var(--blue);
   outline: none;
 }
 
-input:focus-visible + .btn {
-  border-color: var(--blue);
-}
-
 input + .btn {
-  display: inline-block;
+  display: inline-flex;
   flex-grow: 0;
   /* background-color: var(--mid); */
   transform: translateX(-2rem);
   /* color: var(--surface); */
+  width: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__container .btn svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  fill: currentColor;
+  stroke-width: 2;
+}
+
+.input__container .default {
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
 }
 
 .input__container .loader,
-.input__container .success {
+.input__container .success,
+.input__container .error {
   display: none;
 }
 
@@ -50,22 +65,19 @@ input + .btn {
   display: none;
 }
 
+.loading .loader,
 .success .success {
+  line-height: 0;
   display: inline-flex;
   align-items: center;
 }
 
-.loading .loader {
-  display: initial;
-}
-
 .loader > svg {
-  width: 3em;
-  height: 0.8em;
+  animation: rotate 1s linear infinite;
 }
 
-.success > svg {
-  width: 1em;
-  height: 1em;
-  margin-right: 0.5em;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
