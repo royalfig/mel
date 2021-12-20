@@ -1,29 +1,29 @@
-.hero {
+.mel-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.hero__title {
+.mel-hero__title {
   text-transform: uppercase;
 }
 
-.hero__description {
+.mel-hero__description {
   margin: 1rem 0;
   font-size: var(--h6);
   color: var(--text-light);
 }
 
-.hero__description:last-of-type {
+.mel-hero__description:last-of-type {
   margin-bottom: var(--space-after);
 }
 
-.hero__right {
+.mel-hero__right {
   position: relative;
   /* z-index: -1; */
 }
 
-.hero__img {
+.mel-hero__img {
   /* width: 125%; */
   width: 100%;
   height: auto;

@@ -4,39 +4,33 @@
   --lg: 62rem;
   --xl: 75rem;
   --xxl: 87.5rem; */
-.navbar {
+.mel-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
 }
 
-.navbar__left {
+.mel-navbar__left {
   flex-shrink: 0;
 }
 
-.navbar__logo {
+.mel-navbar__logo {
 }
 
-.mel-logo {
-  width: auto;
-  height: 30px;
-  margin-right: 0.25rem;
-}
-
-.navbar__right {
+.mel-navbar__right {
   display: inline-flex;
   align-items: center;
 }
 
 @media (min-width: 36rem) {
-  .navbar__burger {
+  .mel-navbar__burger {
     display: none;
   }
 }
 
 /* Ghost navigation styles */
-.navbar__right .nav {
+.mel-navbar__right .nav {
   display: none;
   font-size: var(--small);
   font-weight: 100;
@@ -49,52 +43,52 @@
 }
 
 @media (min-width: 36rem) {
-  .navbar__right .nav {
+  .mel-navbar__right .nav {
     display: inline-flex;
   }
 }
 
-.navbar__right .nav li {
+.mel-navbar__right .nav li {
   margin-right: 1rem;
 }
 
-.navbar__right .nav a:hover {
+.mel-navbar__right .nav a:hover {
   color: var(--blue);
 }
 
-.navbar .btn {
+.mel-navbar .btn {
   font-size: var(--small);
 }
 
-.navbar__button {
+.mel-navbar__button {
   padding: 0.5rem;
   line-height: 0;
 }
 
-.navbar__button svg {
+.mel-navbar__button svg {
   width: 1.5rem;
   height: 1.5rem;
   transition: fill var(--transition);
   fill: var(--text);
 }
 
-.navbar__button:hover svg {
+.mel-navbar__button:hover svg {
   fill: var(--blue);
 }
 
-.logo {
-  display: inline-flex;
-  background: linear-gradient(to right, var(--blue), var(--pink));
+.mel-logo {
   border-radius: var(--radius-small);
+  background-color: var(--surface-dark);
 }
 
-.logo-letters {
-  padding: 0 3px;
-  font-size: 1.5rem;
+.mel-logo-letters {
+  padding: 0.2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.1;
   color: #fff;
+  display: inline-block;
 
-  text-shadow: -1px -1px 2px #000;
+  text-shadow: -1px -1px #000, 2px 2px var(--blue), 3px 3px var(--pink);
   letter-spacing: var(--letter-spacing);
 }

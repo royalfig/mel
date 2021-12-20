@@ -56,7 +56,8 @@
   --mid-dark: #475569;
 
   --pink: hsl(329, 69%, 43%);
-  --blue: #1167df;
+  --blue: hsl(215, 86%, 47%);
+  --blue-light: hsl(215, 86%, 37%);
 
   --shadow-on-home: 0.7px 0.7px 2.2px rgba(15, 23, 42, 0.02),
     1.7px 1.7px 5.3px rgba(15, 23, 42, 0.028),
@@ -79,7 +80,7 @@
 
     --surface-light: hsl(217, 13%, 17%);
     --surface: hsl(222, 16%, 11%);
-    --surface-dark: hsl(222, 17%, 3%);
+    --surface-dark: hsl(222, 13%, 8%);
     --surface-90: hsl(22, 16%, 11%, 0.9);
 
     --text-light: hsl(210, 40%, 100%);
@@ -88,6 +89,7 @@
 
     --pink: hsl(329, 69%, 73%);
     --blue: hsl(215, 86%, 77%);
+    --blue-light: hsl(215, 86%, 87%);
 
     --shadow-on-home: 0.7px 0.7px 2.2px rgba(0, 0, 0, 0.02),
       1.7px 1.7px 5.3px rgba(0, 0, 0, 0.028),

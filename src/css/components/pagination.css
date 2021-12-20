@@ -1,12 +1,12 @@
-.pagination {
+.mel-pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* position: relative; */
 }
 
-.pagination__link--newer,
-.pagination__link--older {
+.mel-pagination__link--newer,
+.mel-pagination__link--older {
   display: inline-flex;
   align-items: center;
 }

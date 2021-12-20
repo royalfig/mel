@@ -1,4 +1,4 @@
-.btn {
+.mel-btn {
   padding: 0.15em 1em;
   font-family: inherit;
   font-size: inherit;
@@ -11,8 +11,8 @@
   border-radius: var(--radius);
 }
 
-.btn--solid,
-.btn--solid:visited {
+.mel-btn--solid,
+.mel-btn--solid:visited {
   color: var(--surface);
   background-color: var(--blue);
   border-color: var(--blue);
@@ -20,18 +20,18 @@
     fill var(--transition);
 }
 
-.btn--solid:hover {
+.mel-btn--solid:hover {
   color: var(--surface-light);
-  background-color: var(--mid);
-  border-color: var(--mid);
+  background-color: var(--blue-light);
+  border-color: var(--blue-light);
   fill: var(--surface-light);
 }
 
-.btn-outline {
+.mel-btn-outline {
   transition: color var(--transition);
 }
 
-.btn--outline:hover {
+.mel-btn--outline:hover {
   color: var(--blue);
   border-color: var(--blue);
   fill: var(--blue);

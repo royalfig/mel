@@ -1,8 +1,8 @@
-.footer {
+.mel-footer {
   margin-bottom: 1rem;
 }
 
-.footer__grid {
+.mel-footer__grid {
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
@@ -15,18 +15,18 @@
   gap: 0.5rem;
 }
 
-.footer__grid--right {
+.mel-footer__grid--right {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.footer__grid svg {
+.mel-footer__grid svg {
   width: 1em;
   height: 1em;
   fill: var(--text);
 }
 
-.footer__grid--right a:not(.footer__powered) {
+.mel-footer__grid--right a:not(.mel-footer__powered) {
   line-height: 0;
 }

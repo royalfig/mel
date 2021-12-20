@@ -1,11 +1,11 @@
-.input__container {
+.mel-input__container {
   display: inline-flex;
   width: 100%;
 }
 
 input,
-.input,
-input + .btn {
+.mel-input,
+input + .mel-btn {
   padding: 0.5rem;
   font-family: inherit;
   font-size: inherit;
@@ -17,18 +17,18 @@ input + .btn {
 }
 
 input,
-.input {
+.mel-input {
   flex-grow: 1;
   padding-right: 2rem;
 }
 
 input:focus-visible,
-input + .btn:focus-visible {
+input + .mel-btn:focus-visible {
   border-color: var(--blue);
   outline: none;
 }
 
-input + .btn {
+input + .mel-btn {
   display: inline-flex;
   flex-grow: 0;
   align-items: center;
@@ -39,7 +39,7 @@ input + .btn {
   transform: translateX(-2rem);
 }
 
-.input__container .btn svg {
+.mel-input__container .mel-btn svg {
   width: 1em;
   height: 1em;
   margin-right: 0.5em;
@@ -47,32 +47,32 @@ input + .btn {
   stroke-width: 2;
 }
 
-.input__container .default {
+.mel-input__container .mel-default {
   display: inline-flex;
   align-items: center;
   line-height: 0;
 }
 
-.input__container .loader,
-.input__container .success,
-.input__container .error {
+.mel-input__container .mel-loader,
+.mel-input__container .mel-success,
+.mel-input__container .mel-error {
   display: none;
 }
 
-.loading .default,
-.success .default,
-.success .loader {
+.loading .mel-default,
+.success .mel-default,
+.success .mel-loader {
   display: none;
 }
 
-.loading .loader,
-.success .success {
+.loading .mel-loader,
+.success .mel-success {
   display: inline-flex;
   align-items: center;
   line-height: 0;
 }
 
-.loader > svg {
+.mel-loader > svg {
   animation: rotate 1s linear infinite;
 }
 

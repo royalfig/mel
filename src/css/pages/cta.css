@@ -1,10 +1,10 @@
-.cta {
+.mel-cta {
   padding: 1rem;
   background-color: var(--surface-dark);
   border-radius: var(--radius-small);
 }
 
-.cta__title {
+.mel-cta__title {
   font-size: 1.5rem;
   font-weight: 700;
 }

@@ -1,10 +1,10 @@
-.card__container--overflow {
+.mel-card__container--overflow {
   overflow-x: auto;
   /* overflow: hidden; */
   border-radius: var(--radius-small);
 }
 
-.card__container {
+.mel-card__container {
   display: grid;
   justify-content: space-between;
   padding: 2rem 0;
@@ -15,7 +15,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card {
+.mel-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,39 +33,24 @@
   justify-self: center;
 }
 
-.card::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  box-shadow: var(--shadow-on-home);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.card:hover {
+.mel-card:hover {
   cursor: pointer;
   background-color: var(--surface-light);
 }
 
-.card:hover::after {
-  opacity: 1;
-}
-
-.card:hover .card__title::after {
+.mel-card:hover .mel-card__title::after {
   opacity: 1;
   transform: scale(1.5);
 }
-.card:first-child {
+
+.mel-card:first-child {
   justify-self: flex-start;
 }
-.card:last-child {
+.mel-card:last-child {
   justify-self: flex-end;
 }
 
-.card__link {
+.mel-card__link {
   position: absolute;
   top: 0;
   right: 0;
@@ -74,7 +59,7 @@
   z-index: 2;
 }
 
-.card__title::after {
+.mel-card__title::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -88,24 +73,54 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card__title::after {
+  .mel-card__title::after {
     mix-blend-mode: darken;
   }
 }
 
-.card__bg {
+.mel-card__bg-container {
   width: 100%;
   height: 45%;
+  position: relative;
+  transition: var(--transition);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.mel-card__bg-container::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  box-shadow: var(--shadow-on-home);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.mel-card:hover .mel-card__bg-container::after {
+  opacity: 1;
+}
+
+.mel-card:hover .mel-card__bg-container {
+  transform: translateY(-3px);
+}
+
+.mel-card__bg {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  .card__bg {
+  .mel-card__bg {
     filter: brightness(0.8);
   }
 }
 
-.card__title {
+.mel-card__title {
   position: relative;
   display: box;
   overflow: hidden;

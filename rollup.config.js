@@ -1,10 +1,10 @@
-import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import atImport from 'postcss-import';
 import postcssPresetEnv from 'postcss-preset-env';
 import cssnano from 'cssnano';
 import { terser } from 'rollup-plugin-terser';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default [
   {
@@ -15,7 +15,7 @@ export default [
       sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
     },
     plugins: [
-      resolve(),
+      nodeResolve(),
       babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
       postcss({
         extract: true,

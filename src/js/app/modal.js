@@ -1,4 +1,5 @@
 export function launchModal(whichModal) {
+  console.log(whichModal);
   document.body.style.overflowY = 'hidden';
 
   whichModal.classList.add('open');
@@ -6,7 +7,7 @@ export function launchModal(whichModal) {
 
   if (input) input.focus();
   whichModal
-    .querySelector('.btn')
+    .querySelector('.mel-btn')
     .addEventListener('click', closeModal.bind(whichModal));
 
   document.documentElement.addEventListener(

@@ -7,7 +7,7 @@
 --xl: 75rem;
 --xxl: 87.5rem; */
 
-.post__header-banner {
+.mel-post__header-banner {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -23,37 +23,37 @@
     position: relative;
   } */
 
-.post__header-left {
+.mel-post__header-left {
   grid-column: 3 / 4;
   grid-row: 1 / -1;
 
   margin-top: 2rem;
 }
 
-.post__header-right {
+.mel-post__header-right {
   grid-column: 3 / 4;
 }
 
 @media (min-width: 48rem) {
-  .post__header-left {
+  .mel-post__header-left {
     max-width: 80%;
   }
 
-  .post__header-right {
+  .mel-post__header-right {
     grid-column: 4 / -1;
     margin-top: 1rem;
   }
 }
 
 /* Post author */
-.post__author--container {
+.mel-post__author--container {
   grid-column: 3 / 5;
   display: flex;
   align-items: center;
 }
 
-.post__header-banner::before,
-.post__header-banner::after {
+.mel-post__header-banner::before,
+.mel-post__header-banner::after {
   position: absolute;
   top: 0;
   width: 1rem;
@@ -62,28 +62,28 @@
   background-color: inherit;
 }
 
-.post__header-banner::before {
+.mel-post__header-banner::before {
   left: -1rem;
 }
 
-.post__header-banner::after {
+.mel-post__header-banner::after {
   right: -1rem;
 }
 
-.post__title {
+.mel-post__title {
   max-width: 70ch;
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
-.post__excerpt {
+.mel-post__excerpt {
   max-width: 70ch;
   margin-bottom: 2rem;
   font-size: 105%;
   color: var(--text-light);
 }
 
-.post__feature-image {
+.mel-post__feature-image {
   width: 100%;
   max-width: 100%;
   height: 20rem;
@@ -93,15 +93,17 @@
 }
 
 @media (min-width: 48rem) {
-  .post__feature-image {
+  .mel-post__feature-image {
     max-width: var(--sm);
   }
 }
-.post__author {
+
+.mel-post__author {
   display: flex;
   align-items: center;
 }
-.post__author--image {
+
+.mel-post__author--image {
   width: 3rem;
   height: 3rem;
   margin-right: 0.75rem;
@@ -110,24 +112,24 @@
   object-fit: cover;
 }
 
-.post__author--name {
+.mel-post__author--name {
   font-size: 105%;
 }
 
-.post__date {
+.mel-post__date {
   font-size: var(--small);
   font-weight: 100;
   text-transform: uppercase;
 }
 
-.post__author--divider {
+.mel-post__author--divider {
   flex: 1;
   height: 3px;
   background-image: linear-gradient(to right, transparent, var(--mid-light));
   border-radius: var(--small-radius);
 }
 
-.share {
+.mel-share {
   display: flex;
   align-items: center;
   align-items: center;
@@ -139,7 +141,7 @@
 }
 
 @media (min-width: 62rem) {
-  .share {
+  .mel-share {
     position: sticky;
     top: calc(50% - 7.625rem);
     flex-direction: column;
@@ -169,7 +171,7 @@
   }
 } */
 
-.share__link {
+.mel-share__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,12 +182,12 @@
   transition: background-color var(--transition);
 }
 
-.share__link:hover {
+.mel-share__link:hover {
   color: var(--surface);
   background-color: var(--mid-dark);
 }
 
-.share__link svg {
+.mel-share__link svg {
   flex-shrink: 0;
   width: 1.25rem;
   height: 1.25rem;
@@ -194,50 +196,51 @@
   fill: var(--text);
 }
 
-.share__link:hover svg {
+.mel-share__link:hover svg {
   fill: var(--surface);
 }
-.copied {
+
+.mel-copied {
   display: none;
 }
 
-.copied-success .copied {
+.mel-copied-success .copied {
   display: initial;
 }
 
-.copied-success .not-copied {
+.mel-copied-success .not-copied {
   display: none;
 }
 
-.up-button {
+.mel-up-button {
   pointer-events: none;
   opacity: 0;
   transition: opacity var(--transition);
 }
 
-.show-up-button {
+.mel-show-up-button {
   pointer-events: all;
   opacity: 1;
 }
 
 /* Toc */
-.toc {
+.mel-toc {
   padding: 1rem;
   border-radius: var(--radius-small);
   grid-column: 4 / 5;
 }
 
-.toc__content p {
+.mel-toc__content p {
   margin-bottom: 0.5em;
   font-size: var(--small);
 }
 
-.post .toc .toc__link {
+.post .mel-toc .mel-toc__link {
   line-height: 1.2;
   text-decoration: none;
 }
 
-.post .toc .toc__share-link {
+.post .mel-toc .mel-toc__share-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -248,6 +251,6 @@
 }
 
 /* Post Content */
-.post__item > *:not(:last-child) {
+.mel-post__item > *:not(:last-child) {
   margin-bottom: 1rem;
 }

@@ -1,6 +1,6 @@
 import GhostContentAPI from '@tryghost/content-api';
 import * as JsSearch from 'js-search';
-import { readingTime } from '@tryghost/helpers';
+import readingTime from '@tryghost/helpers/lib/reading-time';
 
 import { formatTime, setState, debounce } from './utils';
 import { launchModal } from './modal';
@@ -22,10 +22,10 @@ export function initSearch() {
   index.addIndex('plaintext');
 
   // HTML Elements
-  const searchBtn = document.querySelector('.navbar__search');
+  const searchBtn = document.querySelector('.mel-navbar__search');
   const searchInput = document.querySelector('#search');
-  const searchModal = document.querySelector('.mel-overlay');
-  const searchResult = document.querySelector('.search__result');
+  const searchModal = document.querySelector('.mel-search__modal');
+  const searchResult = document.querySelector('.mel-search__result');
   const clearSearchBtn = document.querySelector('.mel-search__clear');
 
   let cachedPosts;
@@ -112,10 +112,10 @@ export function initSearch() {
       minute: '1 min read',
       minutes: '% min read',
     });
-    return `<a class="list__container" href="${post.url}">
-      <time class="list__date" datetime="${post.iso}">${date.local}</time>
-      <h2 class="list__title">${post.title}</h2>
-      <p class="list__read-time">
+    return `<a class="mel-list__container" href="${post.url}">
+      <time class="mel-list__date" datetime="${post.iso}">${date.local}</time>
+      <h2 class="mel-list__title">${post.title}</h2>
+      <p class="mel-list__read-time">
           ${readTime}
       </p>
   </a>`;
@@ -124,5 +124,13 @@ export function initSearch() {
   clearSearchBtn.addEventListener('click', () => {
     searchInput.value = '';
     searchResult.innerHTML = '';
+  });
+}
+
+export function menu() {
+  const burger = document.querySelector('.mel-navbar__burger');
+  const menu = document.querySelector('.mel-menu__modal');
+  burger.addEventListener('click', () => {
+    launchModal(menu);
   });
 }

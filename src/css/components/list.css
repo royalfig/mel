@@ -1,4 +1,4 @@
-.list__container {
+.mel-list__container {
   position: relative;
   display: grid;
   padding: 1rem 0;
@@ -8,16 +8,16 @@
   grid-template-columns: max-content 1fr max-content;
 }
 
-.list__container:not(:first-child) {
+.mel-list__container:not(:first-child) {
   border-top: 1px solid var(--mid-light);
 }
 
-.list__container:last-of-type {
+.mel-list__container:last-of-type {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--mid-light);
 }
 
-.list__container:hover {
+.mel-list__container:hover {
   /* padding: 1rem; */
   background-color: var(--surface-light);
   border-color: transparent;
@@ -25,7 +25,7 @@
   /* border-radius: var(--radius-small); */
 }
 
-.list__container::after {
+.mel-list__container::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -37,21 +37,22 @@
   transition: opacity var(--transition);
 }
 
-.list__container:hover::after {
+.mel-list__container:hover::after {
   opacity: 1;
 }
-.list__container:hover .list__date {
+
+.mel-list__container:hover .mel-list__date {
   transform: translateX(1rem);
 }
 
-.list__container:hover .list__read-time {
+.mel-list__container:hover .mel-list__read-time {
   transform: translateX(-1rem);
 }
-.list__container:hover + .list__container {
+.mel-list__container:hover + .mel-list__container {
   border-color: transparent;
 }
 
-.list__date {
+.mel-list__date {
   padding-right: 2rem;
   font-size: var(--small);
   font-weight: 100;
@@ -61,7 +62,7 @@
   transition: transform var(--transition);
 }
 
-.list__title {
+.mel-list__title {
   padding-right: 2rem;
   overflow: hidden;
   font-size: 1rem;
@@ -69,7 +70,7 @@
   white-space: nowrap;
 }
 
-.list__read-time {
+.mel-list__read-time {
   font-size: var(--small);
   font-weight: 100;
   text-transform: uppercase;
