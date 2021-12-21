@@ -60,6 +60,9 @@
 
 /* Bookmark Cards
 /* ---------------------------------------------------------- */
+/* For gscan */
+.kg-bookmark-card {
+}
 
 .kg-bookmark-container {
   position: relative;

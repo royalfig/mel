@@ -13,7 +13,6 @@ export function toc() {
       const a = document.createElement('a');
       a.setAttribute('class', 'mel-toc__link');
 
-      console.log(el.tagName);
       a.textContent = el.textContent;
       a.href = '#' + el.id;
       p.append(a);

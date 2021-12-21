@@ -1,7 +1,7 @@
 {
   "name": "mel",
   "version": "1.0.0",
-  "description": "A Ghost custom theme starter with Rollup and SCSS",
+  "description": "Mel is a theme for Ghost",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
@@ -11,7 +11,7 @@
     "watch": "NODE_ENV=development npx rollup -c -w",
     "build": "NODE_ENV=production npx rollup -c",
     "zip": "npm run build && node zip",
-    "check": "gscan smart.zip -z",
+    "check": "gscan .",
     "css": "npx stylelint 'src/css/**/*.css' --fix"
   },
   "config": {
@@ -41,7 +41,7 @@
     }
   },
   "keywords": [
-    "Ghost"
+    "ghost-theme"
   ],
   "author": {
     "name": "Ryan Feigenbaum",
@@ -59,7 +59,7 @@
     "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.2",
-    "gscan": "^4.10.0",
+    "gscan": "^4.20.0",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",

@@ -29,6 +29,7 @@ export function initSearch() {
   const clearSearchBtn = document.querySelector('.mel-search__clear');
 
   let cachedPosts;
+  let posts;
   let searchResults;
 
   searchBtn.addEventListener('click', () => {
@@ -42,29 +43,30 @@ export function initSearch() {
 
   searchInput.addEventListener('keyup', debounce(search));
 
-  if (cachedPosts) {
-    index.addDocuments(cachedPosts);
-  }
+  async function fetchPosts() {
+    if (cachedPosts) {
+      index.addDocuments(cachedPosts);
+      return new Promise((fulfilled) => fulfilled());
+    }
 
-  // Hydrate cachedPosts in memory if available in localStorage
-  if (!cachedPosts && isLocalCacheAvailable()) {
-    cachedPosts = JSON.parse(localStorage.getItem('posts'));
-    index.addDocuments(cachedPosts);
-  }
+    // Hydrate cachedPosts in memory if available in localStorage
+    if (isLocalCacheAvailable()) {
+      cachedPosts = JSON.parse(localStorage.getItem('posts'));
+      index.addDocuments(cachedPosts);
+      return new Promise((fulfilled) => fulfilled());
+    }
 
-  if (!cachedPosts) {
-    console.log('fetching new posts');
-    api.posts
-      .browse({
+    if (!cachedPosts) {
+      const posts = await api.posts.browse({
         limit: 'all',
         formats: ['plaintext', 'html'],
         fields: ['id', 'published_at', 'title', 'url'],
-      })
-      .then((posts) => {
-        cachedPosts = posts;
-        createLocalCache(posts);
-        index.addDocuments(posts);
       });
+      cachedPosts = posts;
+      createLocalCache(posts);
+      index.addDocuments(posts);
+      return posts;
+    }
   }
 
   function createLocalCache(docs) {
@@ -72,37 +74,38 @@ export function initSearch() {
     localStorage.setItem('posts', JSON.stringify(docs));
   }
 
+  10 - 8 > 2;
+
   function isLocalCacheAvailable() {
     const timestamp = Date.now();
     const previousTimestamp = localStorage.getItem('timestamp');
     if (
       previousTimestamp &&
-      timestamp - +previousTimestamp > 1000 * 60 * 60 * 24
+      timestamp - +previousTimestamp < 1000 * 60 * 60 * 24
     ) {
-      return false;
-    } else {
       return true;
+    } else {
+      return false;
     }
   }
 
   function search(input) {
-    console.log('searching');
-    setState('remove', 'mel-searching');
+    fetchPosts().then(() => {
+      setState('remove', 'mel-searching');
 
-    searchResult.innerHTML = '';
+      searchResult.innerHTML = '';
 
-    const res = index.search(input.target.value);
+      const res = index.search(input.target.value);
+      if (!res.length && input.target.value) {
+        searchResult.innerHTML = '<p>🤷‍♀️ No results</p>';
+      } else {
+        const els = res.map((post) => {
+          return renderResultTemplate(post);
+        });
 
-    if (!res.length && input.target.value) {
-      searchResult.innerHTML = '<p>🤷‍♀️ No results</p>';
-    } else {
-      const els = res.map((post) => {
-        console.log(post);
-        return renderResultTemplate(post);
-      });
-
-      searchResult.innerHTML = els.join('');
-    }
+        searchResult.innerHTML = els.join('');
+      }
+    });
   }
 
   const renderResultTemplate = (post) => {

@@ -13,7 +13,6 @@ export function copyHandler() {
       () => btn.classList.remove('mel-copied-success'),
       5000,
     );
-    console.log('copied');
   }
 
   const copyBtn = document.querySelector('#copy-button');

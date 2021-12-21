@@ -1,5 +1,4 @@
 export function launchModal(whichModal) {
-  console.log(whichModal);
   document.body.style.overflowY = 'hidden';
 
   whichModal.classList.add('open');
@@ -19,9 +18,8 @@ export function launchModal(whichModal) {
 function closeModalByEsc(e) {
   if (e.key === 'Escape') closeModal.apply(this);
 }
-// debounce
+
 export function closeModal(e) {
-  console.log(e, this);
   this.classList.remove('open');
   document.body.style.overflowY = 'auto';
   if (e) e.currentTarget.removeEventListener('click', closeModal);
