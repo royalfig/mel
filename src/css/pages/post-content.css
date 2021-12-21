@@ -71,3 +71,55 @@ blockquote::after {
 .kg-code-card code {
   border-radius: var(--radius-small);
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mel-post__item > table,
+.mel-post__item > .mel-table-wrapper {
+  grid-column: 2 / 5;
+}
+
+.mel-table-wrapper {
+  border-radius: var(--radius-small);
+  overflow: hidden;
+  border: 1px solid var(--blue);
+}
+
+th {
+  font-family: inherit;
+  font-size: var(--small);
+  font-weight: 700;
+  color: var(--surface);
+  background-color: var(--blue);
+  line-height: 1.4;
+  padding: 0.5em 0;
+  text-align: left;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 1em;
+}
+
+td {
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: var(--small);
+  padding: 0.5em 0;
+  text-align: left;
+}
+
+tbody tr:not(:nth-child(odd)) {
+  background-color: var(--surface-dark);
+}
+
+tbody tr {
+  border: 1px solid transparent;
+}
+
+tbody tr:hover {
+  background-color: var(--surface-light);
+}
