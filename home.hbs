@@ -4,29 +4,19 @@
         <div class="mel-hero">
             <div class="mel-hero__left">
                 <h1 class="mel-hero__title">{{@site.title}}</h1>
-                <p class="mel-hero__description">Everything is fine.</p>
+                <p class="mel-hero__description">I code, create, and teach.</p>
                 <p class="mel-hero__description">
-                    {{@site.description}}
+                   It&apos;s usually with some Cincinnati chili and craft beer&nbsp;🍻, beside a little canine called Mel&nbsp;🐩, and in an old can factory&nbsp;🥫.
                 </p>
-                <form class="mel-input__container" data-members-form>
-                    <input data-members-email type="email" required />
-                    <button class="mel-btn mel-btn--outline" type="submit">
-                        <span class="mel-default"><svg  viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/></svg>Sign up</span>
-                        <span class="mel-loader">
-                          <svg  viewBox="0 0 24 24" ><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0v-3a1 1 0 0 1 1-1zm10-5a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1zM7 12a1 1 0 0 1-1 1H3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1zm12.071 7.071a1 1 0 0 1-1.414 0l-2.121-2.121a1 1 0 0 1 1.414-1.414l2.121 2.12a1 1 0 0 1 0 1.415zM8.464 8.464a1 1 0 0 1-1.414 0L4.93 6.344a1 1 0 0 1 1.414-1.415L8.464 7.05a1 1 0 0 1 0 1.414zM4.93 19.071a1 1 0 0 1 0-1.414l2.121-2.121a1 1 0 1 1 1.414 1.414l-2.12 2.121a1 1 0 0 1-1.415 0zM15.536 8.464a1 1 0 0 1 0-1.414l2.12-2.121a1 1 0 0 1 1.415 1.414L16.95 8.464a1 1 0 0 1-1.414 0z"/></svg> loading
-                        </span>
-                        <span class="mel-success">
-                           <svg viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20.007a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V19h18V7.3l-8 7.2-10-9V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v16.007zM4.434 5L12 11.81 19.566 5H4.434zM0 15h8v2H0v-2zm0-5h5v2H0v-2z"/></svg> sent</span>
-                        <span class="mel-error">
-                            Error 
-                        </span>
-                    </button>
-                </form>
+                 <p class="mel-hero__description">
+                   Sign up and join us on our coding adventures&nbsp;😍
+                </p>
+                {{> "inline-signup"}}
             </div>
             <div class="mel-hero__right">
-                <img class="mel-hero__img" src="{{@site.cover_image}}" alt="">
-               
-
+                <img class="mel-hero__img" 
+                srcset="{{img_url @site.cover_image size="m"}}, {{img_url feature_image size="l"}} 2x"
+                src="{{img_url @site.cover_image size="m"}}" alt="{{@site.title}}">
             </div>
         </div>
     </div>
@@ -39,19 +29,16 @@
 
 {{#get "posts" filter="featured:true" as |featured|}}
     {{#if featured}}
-        <div class="mel-container">
-            <div class="mel-container__inner mel-card__container--overflow">
-                <div class="mel-card__container">
-                    {{#foreach featured}}
-        {{> "card"}}
-                      
-                    {{/foreach}}
-                </div>
+        <div class="mel-container mel-cards">
+            <div class="mel-card__container">
+                {{#foreach featured}}
+                    {{> "card"}}
+                {{/foreach}}
             </div>
         </div>
-    
-{{/if}}
+    {{/if}}
 {{/get}}
+
 <header class="mel-header">
     <h2>What&apos;s Fresh</h2>
     <div class="mel-header__line"></div>

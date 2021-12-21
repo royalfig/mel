@@ -47,3 +47,7 @@ h6,
 .mel-font-weight-normal {
   font-weight: 400;
 }
+
+.mel-lowercase {
+  text-transform: lowercase;
+}

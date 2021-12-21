@@ -1,6 +1,6 @@
 .mel-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1rem;
 }
 
@@ -19,7 +19,6 @@
 }
 
 .mel-hero__right {
-  position: relative;
   /* z-index: -1; */
 }
 
@@ -27,6 +26,9 @@
   /* width: 125%; */
   width: 100%;
   height: auto;
+  max-width: 21.875rem;
+  margin: 0 auto;
+  display: block;
 
   /* transform: translateX(-25%); */
 }

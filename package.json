@@ -24,7 +24,7 @@
         "width": 100
       },
       "s": {
-        "width": 300
+        "width": 350
       },
       "m": {
         "width": 500
@@ -74,6 +74,7 @@
   "dependencies": {
     "@tryghost/content-api": "^1.5.16",
     "@tryghost/helpers": "^1.1.54",
-    "js-search": "^2.0.0"
+    "js-search": "^2.0.0",
+    "reframe.js": "^3.0.3"
   }
 }

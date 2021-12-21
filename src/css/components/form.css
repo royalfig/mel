@@ -61,12 +61,14 @@ input + .mel-btn {
 
 .loading .mel-default,
 .success .mel-default,
+.error .mel-default,
 .success .mel-loader {
   display: none;
 }
 
 .loading .mel-loader,
-.success .mel-success {
+.success .mel-success,
+.error .mel-error {
   display: inline-flex;
   align-items: center;
   line-height: 0;

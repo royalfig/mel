@@ -6,14 +6,18 @@
   left: 0;
   z-index: 100;
   display: none;
-  padding: 1rem 0;
-  margin: 0;
   background: var(--surface-90);
-  backdrop-filter: blur(8px);
+  overflow-y: auto;
+}
+
+@supports (backdrop-filter: blur(8px)) {
+  .mel-overlay {
+    backdrop-filter: blur(8px);
+  }
 }
 
 .mel-overlay.open {
-  display: grid;
+  display: initial;
 }
 
 .mel-overlay__inner .btn {
@@ -29,12 +33,26 @@
   fill: var(--text);
 }
 
+.mel-overlay__btn-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
 .mel-overlay__close-btn {
-  float: right;
   width: 2rem;
   height: 2rem;
   padding: 5px;
   border-radius: 50%;
+  fill: var(--text);
+  transition: fill var(--transition), color var(--transition);
+}
+
+.mel-overlay__close-btn:hover,
+.mel-overlay__close-btn:focus {
+  fill: var(--pink);
+  color: var(--pink);
+  outline: none;
 }
 
 .mel-search__title {
@@ -52,11 +70,13 @@
   display: inline-block;
 }
 
-.mel-search__input-container:focus-within .mel-search__icon {
+.mel-search__input-container:focus-within .mel-search__icon,
+.mel-search__input-container:focus-within .mel-search__icon--loading {
   fill: var(--blue);
 }
 
-.mel-search__icon {
+.mel-search__icon,
+.mel-search__icon--loading {
   left: 0.35rem;
 }
 
@@ -65,7 +85,8 @@
 }
 
 .mel-search__clear,
-.mel-search__icon {
+.mel-search__icon,
+.mel-search__icon--loading {
   position: absolute;
   top: 50%;
   width: 1rem;
@@ -73,22 +94,32 @@
   line-height: 0;
   transform: translateY(-50%);
   fill: var(--text);
+  transition: opacity var(--transition);
 }
+
 .mel-search__input-container input {
   padding-right: 1.75rem;
   padding-left: 1.75rem;
   background-color: transparent;
 }
-.mel-search__result--loading {
-  opacity: 0;
+
+.mel-search__result--loading,
+.mel-search__icon--loading,
+.mel-searching .mel-search__icon {
+  display: none;
 }
 
-.mel-searching .mel-search__result--loading {
-  opacity: 1;
+.mel-searching .mel-search__result--loading,
+.mel-searching {
+  display: initial;
+}
+
+.mel-search__icon--loading > svg {
+  animation: rotate 1s linear infinite;
 }
 
 .mel-search__result--line {
-  max-width: 70ch;
+  max-width: var(--lg);
   height: 1.25rem;
   margin-bottom: 1rem;
   border-radius: var(--radius-small);
@@ -98,7 +129,7 @@
 }
 
 .mel-search__result--line:last-child {
-  max-width: 35ch;
+  max-width: var(--md);
 }
 
 .mel-search__result--line::after {

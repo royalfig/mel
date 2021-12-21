@@ -42,12 +42,12 @@
   }
 }
 
-.mel-container.post__header {
-  margin-bottom: 1rem;
+.mel-container.mel-post__header {
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 48rem) {
-  .mel-container.post__header {
+  .mel-container.mel-post__header {
     grid-template-columns:
       1rem 1fr minmax(auto, calc(var(--lg) * 0.6)) minmax(
         auto,
@@ -63,7 +63,7 @@
 
 .mel-post__item {
   display: grid;
-  margin: 2rem 0 0;
+  /* margin: 2rem 0 0; */
   grid-column: 4 / 5;
   grid-template-columns: 2fr 1fr minmax(250px, 600px) 1fr 2fr;
 }

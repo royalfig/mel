@@ -59,19 +59,26 @@
   --blue: hsl(215, 86%, 47%);
   --blue-light: hsl(215, 86%, 37%);
 
-  --shadow-on-home: 0.7px 0.7px 2.2px rgba(15, 23, 42, 0.02),
-    1.7px 1.7px 5.3px rgba(15, 23, 42, 0.028),
-    3.1px 3.1px 10px rgba(15, 23, 42, 0.035),
-    5.6px 5.6px 17.9px rgba(15, 23, 42, 0.042),
-    10.4px 10.4px 33.4px rgba(15, 23, 42, 0.05),
-    25px 25px 80px rgba(15, 23, 42, 0.07);
+  --shadow-on-surface: 0.7px 0.7px 2.2px hsla(222, 47%, 11%, 0.02),
+    1.7px 1.7px 5.3px hsla(222, 47%, 11%, 0.028),
+    3.1px 3.1px 10px hsla(222, 47%, 11%, 0.035),
+    5.6px 5.6px 17.9px hsla(222, 47%, 11%, 0.042),
+    10.4px 10.4px 33.4px hsla(222, 47%, 11%, 0.05),
+    25px 25px 80px hsla(222, 47%, 11%, 0.07);
 
-  --shadow-on-home-lg: 0.8px 1.1px 2.2px rgba(15, 23, 42, 0.02),
-    2px 2.7px 5.3px rgba(15, 23, 42, 0.028),
-    3.8px 5px 10px rgba(15, 23, 42, 0.035),
-    6.7px 8.9px 17.9px rgba(15, 23, 42, 0.042),
-    12.5px 16.7px 33.4px rgba(15, 23, 42, 0.05),
-    30px 40px 80px rgba(15, 23, 42, 0.07);
+  --shadow-on-surface-dark: 0.7px 0.7px 2.2px hsla(222, 47%, 5%, 0.02),
+    1.7px 1.7px 5.3px hsla(222, 47%, 5%, 0.028),
+    3.1px 3.1px 10px hsla(222, 47%, 5%, 0.035),
+    5.6px 5.6px 17.9px hsla(222, 47%, 5%, 0.042),
+    10.4px 10.4px 33.4px hsla(222, 47%, 5%, 0.05),
+    25px 25px 80px hsla(222, 47%, 5%, 0.07);
+
+  --shadow-on-surface-light: 0.7px 0.7px 2.2px hsla(222, 47%, 21%, 0.02),
+    1.7px 1.7px 5.3px hsla(222, 47%, 21%, 0.028),
+    3.1px 3.1px 10px hsla(222, 47%, 21%, 0.035),
+    5.6px 5.6px 17.9px hsla(222, 47%, 21%, 0.042),
+    10.4px 10.4px 33.4px hsla(222, 47%, 21%, 0.05),
+    25px 25px 80px hsla(222, 47%, 21%, 0.07);
 
   @media (prefers-color-scheme: dark) {
     --mid-light: #334155;
@@ -91,17 +98,25 @@
     --blue: hsl(215, 86%, 77%);
     --blue-light: hsl(215, 86%, 87%);
 
-    --shadow-on-home: 0.7px 0.7px 2.2px rgba(0, 0, 0, 0.02),
-      1.7px 1.7px 5.3px rgba(0, 0, 0, 0.028),
-      3.1px 3.1px 10px rgba(0, 0, 0, 0.035),
-      5.6px 5.6px 17.9px rgba(0, 0, 0, 0.042),
-      10.4px 10.4px 33.4px rgba(0, 0, 0, 0.05),
-      25px 25px 80px rgba(0, 0, 0, 0.07);
+    --shadow-on-surface: 0.7px 0.7px 2.2px hsla(0, 0%, 0%, 0.02),
+      1.7px 1.7px 5.3px hsla(0, 0%, 0%, 0.028),
+      3.1px 3.1px 10px hsla(0, 0%, 0%, 0.035),
+      5.6px 5.6px 17.9px hsla(0, 0%, 0%, 0.042),
+      10.4px 10.4px 33.4px hsla(0, 0%, 0%, 0.05),
+      25px 25px 80px hsla(0, 0%, 0%, 0.07);
 
-    --shadow-on-home-lg: 0.8px 1.1px 2.2px rgba(0, 0, 0, 0.02),
-      2px 2.7px 5.3px rgba(0, 0, 0, 0.028), 3.8px 5px 10px rgba(0, 0, 0, 0.035),
-      6.7px 8.9px 17.9px rgba(0, 0, 0, 0.042),
-      12.5px 16.7px 33.4px rgba(0, 0, 0, 0.05),
-      30px 40px 80px rgba(0, 0, 0, 0.07);
+    --shadow-on-surface-light: 0.7px 0.7px 2.2px hsla(0, 0%, 5%, 0.02),
+      1.7px 1.7px 5.3px hsla(0, 0%, 5%, 0.028),
+      3.1px 3.1px 10px hsla(0, 0%, 5%, 0.035),
+      5.6px 5.6px 17.9px hsla(0, 0%, 5%, 0.042),
+      10.4px 10.4px 33.4px hsla(0, 0%, 5%, 0.05),
+      25px 25px 80px hsla(0, 0%, 5%, 0.07);
+
+    --shadow-on-surface-dark: 0.7px 0.7px 2.2px hsla(0, 0%, 0%, 0.03),
+      1.7px 1.7px 5.3px hsla(0, 0%, 0%, 0.038),
+      3.1px 3.1px 10px hsla(0, 0%, 0%, 0.045),
+      5.6px 5.6px 17.9px hsla(0, 0%, 0%, 0.052),
+      10.4px 10.4px 33.4px hsla(0, 0%, 0%, 0.06),
+      25px 25px 80px hsla(0, 0%, 0%, 0.08);
   }
 }

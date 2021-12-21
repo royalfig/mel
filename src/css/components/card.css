@@ -1,18 +1,19 @@
-.mel-card__container--overflow {
+.mel-cards {
   overflow-x: auto;
-  /* overflow: hidden; */
-  border-radius: var(--radius-small);
+  overflow-y: visible;
 }
 
 .mel-card__container {
+  padding: 2rem 0;
   display: grid;
   justify-content: space-between;
-  padding: 2rem 0;
+
+  grid-column: 3 / 4;
 
   /* border: 1px solid var(--mid-light); */
 
   gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(18.5rem, 22.5rem));
 }
 
 .mel-card {
@@ -31,6 +32,28 @@
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
   justify-self: center;
+}
+
+.mel-card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  box-shadow: var(--shadow-on-surface);
+  border-radius: var(--radius-small);
+
+  transition: opacity var(--transition);
+}
+
+.mel-card:hover::after {
+  opacity: 1;
+}
+
+.mel-card:hover .mel-card__bg-container::after {
+  opacity: 1;
 }
 
 .mel-card:hover {
@@ -85,22 +108,6 @@
   transition: var(--transition);
   border-radius: var(--radius-small);
   overflow: hidden;
-}
-
-.mel-card__bg-container::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  box-shadow: var(--shadow-on-home);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.mel-card:hover .mel-card__bg-container::after {
-  opacity: 1;
 }
 
 .mel-card:hover .mel-card__bg-container {

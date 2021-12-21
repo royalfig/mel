@@ -36,9 +36,8 @@ export function initSearch() {
   });
 
   searchInput.addEventListener('input', () => {
-    if (!searchResults) {
-      setState('add', 'searching');
-    }
+    searchResult.innerHTML = '';
+    setState('add', 'mel-searching');
   });
 
   searchInput.addEventListener('keyup', debounce(search));
@@ -88,12 +87,14 @@ export function initSearch() {
 
   function search(input) {
     console.log('searching');
+    setState('remove', 'mel-searching');
+
     searchResult.innerHTML = '';
 
     const res = index.search(input.target.value);
 
-    if (!res.length) {
-      searchResult.innerHTML = '<p>No results</p>';
+    if (!res.length && input.target.value) {
+      searchResult.innerHTML = '<p>🤷‍♀️ No results</p>';
     } else {
       const els = res.map((post) => {
         console.log(post);
@@ -102,8 +103,6 @@ export function initSearch() {
 
       searchResult.innerHTML = els.join('');
     }
-    searchResults = true;
-    setState('remove', 'searching');
   }
 
   const renderResultTemplate = (post) => {

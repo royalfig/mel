@@ -67,15 +67,30 @@
   width: 100%;
   width: 100%;
   height: 150px;
-  overflow: hidden;
   text-decoration: none;
   background-color: var(--surface-dark);
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
 }
 
+.kg-bookmark-container::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  box-shadow: var(--shadow-on-surface);
+  transition: opacity var(--transition);
+}
+
 .kg-bookmark-container:hover {
   background-color: var(--surface-light);
+}
+
+.kg-bookmark-container:hover::after {
+  opacity: 1;
 }
 
 .kg-bookmark-content {
@@ -130,6 +145,8 @@
   min-width: 100px;
   height: 100%;
   border-radius: 0;
+  border-top-right-radius: var(--radius-small);
+  border-bottom-right-radius: var(--radius-small);
   object-fit: cover;
 }
 

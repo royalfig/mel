@@ -29,4 +29,26 @@ export default [
       process.env.NODE_ENV === 'production' && terser(),
     ],
   },
+  {
+    input: 'src/js/post/index.js',
+    output: {
+      file: 'assets/built/post.js',
+      format: 'iife',
+      sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
+    },
+    plugins: [
+      nodeResolve(),
+      babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
+      postcss({
+        extract: true,
+        plugins: [
+          atImport,
+          postcssPresetEnv({ features: { 'nesting-rules': true } }),
+          process.env.NODE_ENV === 'production' &&
+            cssnano({ preset: 'default' }),
+        ],
+      }),
+      process.env.NODE_ENV === 'production' && terser(),
+    ],
+  },
 ];
