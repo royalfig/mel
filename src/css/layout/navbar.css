@@ -34,7 +34,7 @@
 .mel__menu .nav {
   display: none;
   font-size: var(--small);
-  font-weight: 100;
+  font-weight: 300;
   color: var(--text-dark);
   text-decoration: none;
   text-transform: uppercase;

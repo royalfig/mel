@@ -1,6 +1,7 @@
 {{!< default}}
 
 <header class="mel-header">
+    {{log meta_title}}
     <h2>{{#is "tag"}}
             {{#tag}}{{name}}{{/tag}}
         {{/is}}
@@ -8,7 +9,7 @@
             {{@site.title}}
         {{/is}}
         {{#is "author"}}
-            {{#primary_author}}{{name}}{{/primary_author}}
+            {{#author}}{{name}}{{/author}}
         {{/is}}
         {{#is "paged"}}{{pagination.page}}{{/is}}
     </h2>
@@ -24,4 +25,4 @@
         {{/foreach}}
         {{pagination}}
     </div>
-</div>
+</div>  

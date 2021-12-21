@@ -13,7 +13,7 @@
 
 .mel-header h2 {
   position: relative;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   grid-column: 2 / 3;

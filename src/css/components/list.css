@@ -55,7 +55,7 @@
 .mel-list__date {
   padding-right: 2rem;
   font-size: var(--small);
-  font-weight: 100;
+  font-weight: 300;
   color: var(--blue);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
@@ -72,7 +72,7 @@
 
 .mel-list__read-time {
   font-size: var(--small);
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   transition: transform var(--transition);
