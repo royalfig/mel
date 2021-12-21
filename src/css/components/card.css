@@ -10,9 +10,9 @@
 }
 
 .mel-card__container {
-  padding: 2rem 0;
   display: grid;
   justify-content: space-between;
+  padding: 2rem 0;
 
   grid-column: 3 / 4;
 
@@ -47,9 +47,9 @@
   bottom: 0;
   left: 0;
   content: '';
-  opacity: 0;
-  box-shadow: var(--shadow-on-surface);
   border-radius: var(--radius-small);
+  box-shadow: var(--shadow-on-surface);
+  opacity: 0;
 
   transition: opacity var(--transition);
 }
@@ -108,12 +108,12 @@
 }
 
 .mel-card__bg-container {
+  position: relative;
   width: 100%;
   height: 45%;
-  position: relative;
-  transition: var(--transition);
-  border-radius: var(--radius-small);
   overflow: hidden;
+  border-radius: var(--radius-small);
+  transition: var(--transition);
 }
 
 .mel-card:hover .mel-card__bg-container {

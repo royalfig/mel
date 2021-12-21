@@ -1,8 +1,8 @@
 .mel-cta {
+  display: grid;
   padding: 2rem;
   background-color: var(--surface-dark);
   border-radius: var(--radius-small);
-  display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 }

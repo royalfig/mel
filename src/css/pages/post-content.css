@@ -83,20 +83,20 @@ table {
 }
 
 .mel-table-wrapper {
-  border-radius: var(--radius-small);
   overflow: hidden;
   border: 1px solid var(--blue);
+  border-radius: var(--radius-small);
 }
 
 th {
+  padding: 0.5em 0;
   font-family: inherit;
   font-size: var(--small);
   font-weight: 700;
-  color: var(--surface);
-  background-color: var(--blue);
   line-height: 1.4;
-  padding: 0.5em 0;
+  color: var(--surface);
   text-align: left;
+  background-color: var(--blue);
 }
 
 th:first-child,
@@ -105,10 +105,10 @@ td:first-child {
 }
 
 td {
-  color: var(--text-light);
+  padding: 0.5em 0;
   font-family: inherit;
   font-size: var(--small);
-  padding: 0.5em 0;
+  color: var(--text-light);
   text-align: left;
 }
 

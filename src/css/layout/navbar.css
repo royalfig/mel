@@ -89,25 +89,25 @@
 }
 
 .mel-logo {
-  border-radius: var(--radius-small);
   background-color: var(--surface-dark);
+  border-radius: var(--radius-small);
 }
 
 .mel-logo-letters {
+  display: inline-block;
   padding: 0.2rem;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.1;
   color: #fff;
-  display: inline-block;
 
   text-shadow: -1px -1px #000, 2px 2px var(--blue), 3px 3px var(--pink);
   letter-spacing: var(--letter-spacing);
 }
 
 .nav-current a::after {
-  content: '\002022';
+  position: absolute;
 
   color: var(--pink);
-  position: absolute;
+  content: '\002022';
 }
