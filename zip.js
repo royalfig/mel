@@ -15,5 +15,4 @@ zip.addLocalFile('./index.hbs');
 zip.addLocalFile('./package.json');
 zip.addLocalFile('./post.hbs');
 zip.addLocalFile('./README.md');
-zip.addLocalFile('./tag.hbs');
-zip.writeZip('./smart.zip');
+zip.writeZip('./mel.zip');
