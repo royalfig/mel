@@ -12,8 +12,8 @@
   color: var(--text-light);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .mel-footer__grid--right {

@@ -34,9 +34,15 @@ input + .mel-btn {
   align-items: center;
   justify-content: center;
   /* color: var(--surface); */
-  width: 8rem;
   /* background-color: var(--mid); */
   transform: translateX(-2rem);
+  font-size: var(--small);
+}
+
+input + .mel-btn span {
+  /* min-width: 7rem; */
+  width: max-content;
+  /* justify-content: center; */
 }
 
 .mel-input__container .mel-btn svg {

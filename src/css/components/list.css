@@ -3,7 +3,7 @@
   display: grid;
   padding: 1rem 0;
   transition: all var(--transition);
-  /* gap: 1rem; */
+  gap: 1rem;
   /* align-items: center; */
   grid-template-columns: max-content 1fr max-content;
 }
@@ -66,8 +66,6 @@
   padding-right: 2rem;
   overflow: hidden;
   font-size: 1rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .mel-list__read-time {

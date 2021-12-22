@@ -105,9 +105,6 @@
   letter-spacing: var(--letter-spacing);
 }
 
-.nav-current a::after {
-  position: absolute;
-
+.nav-current a {
   color: var(--pink);
-  content: '\002022';
 }

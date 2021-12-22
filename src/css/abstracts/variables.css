@@ -48,15 +48,15 @@
 
   --surface-light: hsl(210, 40%, 100%);
   --surface: hsl(210, 40%, 98%);
-  --surface-dark: hsl(210, 30%, 93%);
+  --surface-dark: #e8edf3;
   --surface-90: hsla(210, 40%, 98%, 0.9);
 
   --mid-light: hsl(214, 32%, 91%);
   --mid: #65758b;
   --mid-dark: #475569;
 
-  --pink: hsl(329, 69%, 43%);
-  --blue: hsl(215, 86%, 47%);
+  --pink: #b92270;
+  --blue: #1167df;
   --blue-light: hsl(215, 86%, 37%);
 
   --shadow-on-surface: 0.7px 0.7px 2.2px hsla(222, 47%, 11%, 0.02),

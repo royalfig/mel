@@ -3,8 +3,15 @@ export function toc() {
     '.post h2, .post h3, .post h4, .post h5, .post h6',
   );
   const toc = document.querySelector('.mel-toc__content');
+  const post = document.querySelector('.mel-post__item');
+  const details = document.createElement('details');
+  details.setAttribute('class', 'mel-toc__content');
+  const summary = document.createElement('summary');
 
-  if (!headings.length) {
+  summary.innerHTML = '<strong>What&apos;s Inside</strong>';
+  details.append(summary);
+
+  if (headings.length < 2) {
     toc.style.display = 'none';
   } else {
     headings.forEach((el) => {
@@ -16,7 +23,9 @@ export function toc() {
       a.textContent = el.textContent;
       a.href = '#' + el.id;
       p.append(a);
-      toc.append(p);
+      details.append(p);
     });
+
+    post.prepend(details);
   }
 }

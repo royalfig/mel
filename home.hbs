@@ -1,26 +1,6 @@
 {{!< default}}
-<div class="mel-container">
-    <div class="mel-container__inner">
-        <div class="mel-hero">
-            <div class="mel-hero__left">
-                <h1 class="mel-hero__title">{{@site.title}}</h1>
-                <p class="mel-hero__description">I code, create, and teach.</p>
-                <p class="mel-hero__description">
-                   It&apos;s usually with some Cincinnati chili and craft beer&nbsp;🍻, beside a little canine called Mel&nbsp;🐩, and in an old can factory&nbsp;🥫.
-                </p>
-                 <p class="mel-hero__description">
-                   Sign up and join us on our coding adventures&nbsp;😍
-                </p>
-                {{> "inline-signup"}}
-            </div>
-            <div class="mel-hero__right">
-                <img class="mel-hero__img" 
-                srcset="{{img_url @site.cover_image size="m"}}, {{img_url feature_image size="l"}} 2x"
-                src="{{img_url @site.cover_image size="m"}}" alt="{{@site.title}}">
-            </div>
-        </div>
-    </div>
-</div>
+
+{{> "hero"}}
 
 <header class="mel-header">
     <h2>What&apos;s On Special</h2>

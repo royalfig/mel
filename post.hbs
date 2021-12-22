@@ -37,9 +37,6 @@
 <div class="mel-container {{post_class}}">
        
         <div class="mel-post__item">
-            <details id="mel-toc" class="mel-toc__content">
-                <summary><strong>What&apos;s Inside</strong></summary>
-            </details>
             {{content}}
         </div>
 
@@ -84,9 +81,12 @@
     {{/if}}
     {{/get}}
 
-    {{#is 'post'}}
-        {{> "cta"}}
-    {{/is}}
+    {{^if @member}}
+        {{#is 'post'}}
+            {{> "cta"}}
+        {{/is}}
+    {{/if}}
+
 
     {{#contentFor 'scripts'}}
         <script src="{{asset 'built/post.js'}}"></script>
