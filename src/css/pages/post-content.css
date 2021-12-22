@@ -8,11 +8,11 @@
 }
 
 figcaption {
+  margin-top: 3px;
   font-size: var(--small);
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 3px;
 }
 
 .post ul,
@@ -25,7 +25,7 @@ figcaption {
   text-decoration: underline;
 }
 
-.post a:not(.share__link):not(.kg-bookmark-container):hover {
+.post a:not(.mel-share__link):not(.kg-bookmark-container):hover {
   color: var(--blue);
 }
 
@@ -70,4 +70,68 @@ blockquote::after {
 
 .kg-code-card code {
   border-radius: var(--radius-small);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mel-post__item > table,
+.mel-post__item > .mel-table-wrapper {
+  grid-column: 2 / 5;
+}
+
+.mel-table-wrapper {
+  overflow: hidden;
+  border: 1px solid var(--blue);
+  border-radius: var(--radius-small);
+}
+
+th {
+  padding: 0.5em 0;
+  font-family: inherit;
+  font-size: var(--small);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--surface);
+  text-align: left;
+  background-color: var(--blue);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 1em;
+}
+
+td {
+  padding: 0.5em 0;
+  font-family: inherit;
+  font-size: var(--small);
+  color: var(--text-light);
+  text-align: left;
+}
+
+tbody tr:not(:nth-child(odd)) {
+  background-color: var(--surface-dark);
+}
+
+tbody tr {
+  border: 1px solid transparent;
+}
+
+tbody tr:hover {
+  background-color: var(--surface-light);
+}
+
+code {
+  font-family: var(--f-mono);
+}
+
+code:not(.hljs) {
+  background-color: var(--surface-dark);
+  border-radius: var(--radius-small);
+  padding: 0 0.15em;
+  font-size: var(--small);
+  color: var(--pink);
 }

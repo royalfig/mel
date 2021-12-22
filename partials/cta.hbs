@@ -1,0 +1,15 @@
+<aside class="mel-container">
+    {{#post}}
+        <section class="mel-cta mel-container__inner">
+            <div class="mel-cta--left">
+            <p class="mel-cta__title">Hiya, Buddy <span class="mel-font-weight-normal">🌭</span></p>
+            <p>Did you like <em>{{title}}</em>? Be the first to hear about other <span class="mel-lowercase">{{primary_tag.name}}</span> posts  by subscribing to my free newsletter.</p>
+            <p>Just enter your email, click sign up, and check your inbox.</p>
+            {{> "inline-signup"}}
+            </div>  
+            <div class="mel-cta--right">
+                <img src="{{asset "img/mel.jpg"}}" alt="Mel looking cute">
+            </div>
+        </section>
+    {{/post}}
+</aside>

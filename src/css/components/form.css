@@ -1,11 +1,11 @@
-.input__container {
+.mel-input__container {
   display: inline-flex;
   width: 100%;
 }
 
 input,
-.input,
-input + .btn {
+.mel-input,
+input + .mel-btn {
   padding: 0.5rem;
   font-family: inherit;
   font-size: inherit;
@@ -17,55 +17,75 @@ input + .btn {
 }
 
 input,
-.input {
+.mel-input {
   flex-grow: 1;
   padding-right: 2rem;
 }
 
-input:focus-visible {
+input:focus-visible,
+input + .mel-btn:focus-visible {
   border-color: var(--blue);
   outline: none;
 }
 
-input:focus-visible + .btn {
-  border-color: var(--blue);
-}
-
-input + .btn {
-  display: inline-block;
+input + .mel-btn {
+  display: inline-flex;
   flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--small);
+  /* color: var(--surface); */
   /* background-color: var(--mid); */
   transform: translateX(-2rem);
-  /* color: var(--surface); */
 }
 
-.input__container .loader,
-.input__container .success {
-  display: none;
+input + .mel-btn span {
+  /* min-width: 7rem; */
+  width: max-content;
+  /* justify-content: center; */
 }
 
-.loading .default,
-.success .default,
-.success .loader {
-  display: none;
-}
-
-.success .success {
-  display: inline-flex;
-  align-items: center;
-}
-
-.loading .loader {
-  display: initial;
-}
-
-.loader > svg {
-  width: 4em;
-  height: 1em;
-}
-
-.success > svg {
+.mel-input__container .mel-btn svg {
   width: 1em;
   height: 1em;
   margin-right: 0.5em;
+  fill: currentColor;
+  stroke-width: 2;
+}
+
+.mel-input__container .mel-default {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.mel-input__container .mel-loader,
+.mel-input__container .mel-success,
+.mel-input__container .mel-error {
+  display: none;
+}
+
+.loading .mel-default,
+.success .mel-default,
+.error .mel-default,
+.success .mel-loader {
+  display: none;
+}
+
+.loading .mel-loader,
+.success .mel-success,
+.error .mel-error {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.mel-loader > svg {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }

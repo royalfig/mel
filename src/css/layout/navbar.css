@@ -1,30 +1,40 @@
-.navbar {
+/* 
+  --sm: 36rem;
+  --md: 48rem;
+  --lg: 62rem;
+  --xl: 75rem;
+  --xxl: 87.5rem; */
+.mel-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
 }
-.navbar__left {
+
+.mel-navbar__left {
   flex-shrink: 0;
 }
 
-.navbar__logo {
-  display: flex;
+.mel-navbar__logo {
+}
+
+.mel-navbar__right {
+  display: inline-flex;
   align-items: center;
 }
 
-.navbar__logo > img {
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-  margin-right: 0.25rem;
+@media (min-width: 36rem) {
+  .mel-navbar__burger {
+    display: none;
+  }
 }
 
 /* Ghost navigation styles */
-.nav {
-  display: inline-flex;
+.mel-navbar__right .nav,
+.mel__menu .nav {
+  display: none;
   font-size: var(--small);
-  font-weight: 100;
+  font-weight: 300;
   color: var(--text-dark);
   text-decoration: none;
   text-transform: uppercase;
@@ -33,14 +43,68 @@
   transition: color var(--transition);
 }
 
-.nav li {
+.mel__menu .nav {
+  display: block;
+  font-size: 2rem;
+}
+
+@media (min-width: 36rem) {
+  .mel-navbar__right .nav {
+    display: inline-flex;
+  }
+}
+
+.mel-navbar__right .nav li {
   margin-right: 1rem;
 }
 
-.nav a:hover {
+.mel-navbar__right .nav a,
+.mel__menu .nav a {
+  position: relative;
+}
+
+.mel-navbar__right .nav a:hover,
+.mel__menu .nav a:hover {
   color: var(--blue);
 }
 
-.navbar .btn {
+.mel-navbar .btn {
   font-size: var(--small);
+}
+
+.mel-navbar__button {
+  padding: 0.5rem;
+  line-height: 0;
+}
+
+.mel-navbar__button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: fill var(--transition);
+  fill: var(--text);
+}
+
+.mel-navbar__button:hover svg {
+  fill: var(--blue);
+}
+
+.mel-logo {
+  background-color: var(--surface-dark);
+  border-radius: var(--radius-small);
+}
+
+.mel-logo-letters {
+  display: inline-block;
+  padding: 0.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+
+  text-shadow: -1px -1px #000, 2px 2px var(--blue), 3px 3px var(--pink);
+  letter-spacing: var(--letter-spacing);
+}
+
+.nav-current a {
+  color: var(--pink);
 }

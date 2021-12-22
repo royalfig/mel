@@ -4,7 +4,11 @@
   --icon: 0.25em;
 
   /* Typography */
-  --f-family: 'IBM Plex Sans';
+  --f-family: 'IBM Plex Sans', system-ui, -apple-system, blinkmacsystemfont,
+    'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  --f-mono: sfmono-regular, menlo, monaco, consolas, 'Liberation Mono',
+    'Courier New', monospace;
 
   --h1: 3.052rem;
   --h2: 2.441rem;
@@ -14,7 +18,7 @@
   --h6: 1.15rem;
   --p: 1rem;
   --small: 0.8rem;
-  --letter-spacing: 2px;
+  --letter-spacing: 1.5px;
 
   /* Breakpoints */
   --sm: 576px;
@@ -22,6 +26,12 @@
   --lg: 992px;
   --xl: 1200px;
   --xxl: 1400px;
+
+  --sm: 36rem;
+  --md: 48rem;
+  --lg: 62rem;
+  --xl: 75rem;
+  --xxl: 87.5rem;
 
   /* Radius  */
   --radius: 1em;
@@ -39,28 +49,37 @@
 
   --surface-light: hsl(210, 40%, 100%);
   --surface: hsl(210, 40%, 98%);
-  --surface-dark: hsl(210, 40%, 96%);
+  --surface-dark: #e8edf3;
+  --surface-90: hsla(210, 40%, 98%, 0.9);
 
-  --mid-light: #e2e8f0;
+  --mid-light: hsl(214, 32%, 91%);
   --mid: #65758b;
   --mid-dark: #475569;
 
-  --pink: hsl(329, 69%, 43%);
+  --pink: #b92270;
   --blue: #1167df;
+  --blue-light: hsl(215, 86%, 37%);
 
-  --shadow-on-home: 0.7px 0.7px 2.2px rgba(15, 23, 42, 0.02),
-    1.7px 1.7px 5.3px rgba(15, 23, 42, 0.028),
-    3.1px 3.1px 10px rgba(15, 23, 42, 0.035),
-    5.6px 5.6px 17.9px rgba(15, 23, 42, 0.042),
-    10.4px 10.4px 33.4px rgba(15, 23, 42, 0.05),
-    25px 25px 80px rgba(15, 23, 42, 0.07);
+  --shadow-on-surface: 0.7px 0.7px 2.2px hsla(222, 47%, 11%, 0.02),
+    1.7px 1.7px 5.3px hsla(222, 47%, 11%, 0.028),
+    3.1px 3.1px 10px hsla(222, 47%, 11%, 0.035),
+    5.6px 5.6px 17.9px hsla(222, 47%, 11%, 0.042),
+    10.4px 10.4px 33.4px hsla(222, 47%, 11%, 0.05),
+    25px 25px 80px hsla(222, 47%, 11%, 0.07);
 
-  --shadow-on-home-lg: 0.8px 1.1px 2.2px rgba(15, 23, 42, 0.02),
-    2px 2.7px 5.3px rgba(15, 23, 42, 0.028),
-    3.8px 5px 10px rgba(15, 23, 42, 0.035),
-    6.7px 8.9px 17.9px rgba(15, 23, 42, 0.042),
-    12.5px 16.7px 33.4px rgba(15, 23, 42, 0.05),
-    30px 40px 80px rgba(15, 23, 42, 0.07);
+  --shadow-on-surface-dark: 0.7px 0.7px 2.2px hsla(222, 47%, 5%, 0.02),
+    1.7px 1.7px 5.3px hsla(222, 47%, 5%, 0.028),
+    3.1px 3.1px 10px hsla(222, 47%, 5%, 0.035),
+    5.6px 5.6px 17.9px hsla(222, 47%, 5%, 0.042),
+    10.4px 10.4px 33.4px hsla(222, 47%, 5%, 0.05),
+    25px 25px 80px hsla(222, 47%, 5%, 0.07);
+
+  --shadow-on-surface-light: 0.7px 0.7px 2.2px hsla(222, 47%, 21%, 0.02),
+    1.7px 1.7px 5.3px hsla(222, 47%, 21%, 0.028),
+    3.1px 3.1px 10px hsla(222, 47%, 21%, 0.035),
+    5.6px 5.6px 17.9px hsla(222, 47%, 21%, 0.042),
+    10.4px 10.4px 33.4px hsla(222, 47%, 21%, 0.05),
+    25px 25px 80px hsla(222, 47%, 21%, 0.07);
 
   @media (prefers-color-scheme: dark) {
     --mid-light: #334155;
@@ -69,7 +88,8 @@
 
     --surface-light: hsl(217, 13%, 17%);
     --surface: hsl(222, 16%, 11%);
-    --surface-dark: hsl(222, 17%, 6%);
+    --surface-dark: hsl(222, 13%, 8%);
+    --surface-90: hsl(22, 16%, 11%, 0.9);
 
     --text-light: hsl(210, 40%, 100%);
     --text: #f8fafc;
@@ -77,18 +97,27 @@
 
     --pink: hsl(329, 69%, 73%);
     --blue: hsl(215, 86%, 77%);
+    --blue-light: hsl(215, 86%, 87%);
 
-    --shadow-on-home: 0.7px 0.7px 2.2px rgba(0, 0, 0, 0.02),
-      1.7px 1.7px 5.3px rgba(0, 0, 0, 0.028),
-      3.1px 3.1px 10px rgba(0, 0, 0, 0.035),
-      5.6px 5.6px 17.9px rgba(0, 0, 0, 0.042),
-      10.4px 10.4px 33.4px rgba(0, 0, 0, 0.05),
-      25px 25px 80px rgba(0, 0, 0, 0.07);
+    --shadow-on-surface: 0.7px 0.7px 2.2px hsla(0, 0%, 0%, 0.02),
+      1.7px 1.7px 5.3px hsla(0, 0%, 0%, 0.028),
+      3.1px 3.1px 10px hsla(0, 0%, 0%, 0.035),
+      5.6px 5.6px 17.9px hsla(0, 0%, 0%, 0.042),
+      10.4px 10.4px 33.4px hsla(0, 0%, 0%, 0.05),
+      25px 25px 80px hsla(0, 0%, 0%, 0.07);
 
-    --shadow-on-home-lg: 0.8px 1.1px 2.2px rgba(0, 0, 0, 0.02),
-      2px 2.7px 5.3px rgba(0, 0, 0, 0.028), 3.8px 5px 10px rgba(0, 0, 0, 0.035),
-      6.7px 8.9px 17.9px rgba(0, 0, 0, 0.042),
-      12.5px 16.7px 33.4px rgba(0, 0, 0, 0.05),
-      30px 40px 80px rgba(0, 0, 0, 0.07);
+    --shadow-on-surface-light: 0.7px 0.7px 2.2px hsla(0, 0%, 5%, 0.02),
+      1.7px 1.7px 5.3px hsla(0, 0%, 5%, 0.028),
+      3.1px 3.1px 10px hsla(0, 0%, 5%, 0.035),
+      5.6px 5.6px 17.9px hsla(0, 0%, 5%, 0.042),
+      10.4px 10.4px 33.4px hsla(0, 0%, 5%, 0.05),
+      25px 25px 80px hsla(0, 0%, 5%, 0.07);
+
+    --shadow-on-surface-dark: 0.7px 0.7px 2.2px hsla(0, 0%, 0%, 0.03),
+      1.7px 1.7px 5.3px hsla(0, 0%, 0%, 0.038),
+      3.1px 3.1px 10px hsla(0, 0%, 0%, 0.045),
+      5.6px 5.6px 17.9px hsla(0, 0%, 0%, 0.052),
+      10.4px 10.4px 33.4px hsla(0, 0%, 0%, 0.06),
+      25px 25px 80px hsla(0, 0%, 0%, 0.08);
   }
 }

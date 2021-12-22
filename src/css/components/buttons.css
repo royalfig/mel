@@ -1,8 +1,9 @@
-.btn {
+.mel-btn {
   padding: 0.15em 1em;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  color: currentColor;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   cursor: pointer;
@@ -10,24 +11,28 @@
   border-radius: var(--radius);
 }
 
-.btn--solid {
+.mel-btn--solid,
+.mel-btn--solid:visited {
   color: var(--surface);
   background-color: var(--blue);
   border-color: var(--blue);
-  transition: background-color var(--transition), border-color var(--transition);
+  transition: background-color var(--transition), border-color var(--transition),
+    fill var(--transition);
 }
 
-.btn--solid:hover {
+.mel-btn--solid:hover {
   color: var(--surface-light);
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--blue-light);
+  border-color: var(--blue-light);
+  fill: var(--surface-light);
 }
 
-.btn-outline {
+.mel-btn-outline {
   transition: color var(--transition);
 }
 
-.btn--outline:hover {
+.mel-btn--outline:hover {
   color: var(--blue);
   border-color: var(--blue);
+  fill: var(--blue);
 }

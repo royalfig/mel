@@ -1,0 +1,18 @@
+{{!< default}}
+
+{{> "hero"}}
+
+
+<header class="mel-header">
+    <h2>Writing</h2>
+    <div class="mel-header__line"></div>
+</header>
+
+<div class="mel-container">
+    <div class="mel-container__inner">
+        {{#foreach posts}}
+            {{> "list"}}
+        {{/foreach}}
+        {{pagination}}
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.mel-cta {
+  display: grid;
+  padding: 2rem;
+  background-color: var(--surface-dark);
+  border-radius: var(--radius-small);
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+.mel-cta__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mel-cta p {
+  margin-bottom: 1rem;
+}
+
+.mel-cta--right {
+  padding: 1rem;
+}
+
+.mel-cta img {
+  display: block;
+  margin: 0 auto;
+}

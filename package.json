@@ -1,7 +1,7 @@
 {
-  "name":"mel", 
+  "name": "mel",
   "version": "1.0.0",
-  "description": "A Ghost custom theme starter with Rollup and SCSS",
+  "description": "Mel is a theme for Ghost",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
@@ -11,7 +11,7 @@
     "watch": "NODE_ENV=development npx rollup -c -w",
     "build": "NODE_ENV=production npx rollup -c",
     "zip": "npm run build && node zip",
-    "check": "gscan smart.zip -z",
+    "check": "gscan .",
     "css": "npx stylelint 'src/css/**/*.css' --fix"
   },
   "config": {
@@ -24,7 +24,7 @@
         "width": 100
       },
       "s": {
-        "width": 300
+        "width": 350
       },
       "m": {
         "width": 500
@@ -41,7 +41,7 @@
     }
   },
   "keywords": [
-    "Ghost"
+    "ghost-theme"
   ],
   "author": {
     "name": "Ryan Feigenbaum",
@@ -53,23 +53,28 @@
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.1",
     "adm-zip": "^0.5.9",
     "cssnano": "^5.0.10",
     "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.2",
-    "gscan": "^4.10.0",
+    "gscan": "^4.20.0",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
     "rollup": "^2.58.3",
     "rollup-plugin-postcss": "^4.0.1",
-    "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.43.4",
     "stylelint": "^14.0.1",
     "stylelint-order": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tryghost/content-api": "^1.5.16",
+    "@tryghost/helpers": "^1.1.54",
+    "highlight.js": "^11.3.1",
+    "js-search": "^2.0.0",
+    "reframe.js": "^3.0.3"
+  }
 }

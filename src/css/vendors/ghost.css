@@ -60,6 +60,9 @@
 
 /* Bookmark Cards
 /* ---------------------------------------------------------- */
+/* For gscan */
+.kg-bookmark-card {
+}
 
 .kg-bookmark-container {
   position: relative;
@@ -67,15 +70,30 @@
   width: 100%;
   width: 100%;
   height: 150px;
-  overflow: hidden;
   text-decoration: none;
-  border: 1px solid var(--mid-light);
+  background-color: var(--surface-dark);
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
 }
 
+.kg-bookmark-container::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  box-shadow: var(--shadow-on-surface);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
 .kg-bookmark-container:hover {
   background-color: var(--surface-light);
+}
+
+.kg-bookmark-container:hover::after {
+  opacity: 1;
 }
 
 .kg-bookmark-content {
@@ -116,6 +134,7 @@
   width: 16px;
   height: 16px;
   margin-right: 0.25em;
+  border-radius: 0;
 }
 
 .kg-bookmark-thumbnail {
@@ -130,6 +149,8 @@
   min-width: 100px;
   height: 100%;
   border-radius: 0;
+  border-top-right-radius: var(--radius-small);
+  border-bottom-right-radius: var(--radius-small);
   object-fit: cover;
 }
 
