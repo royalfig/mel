@@ -129,9 +129,9 @@ code {
 }
 
 code:not(.hljs) {
-  background-color: var(--surface-dark);
-  border-radius: var(--radius-small);
   padding: 0 0.15em;
   font-size: var(--small);
   color: var(--pink);
+  background-color: var(--surface-dark);
+  border-radius: var(--radius-small);
 }

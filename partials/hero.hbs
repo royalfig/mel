@@ -37,12 +37,12 @@
             <div class="mel-hero__right">
                 {{^is "author"}}
                     <img class="mel-hero__img" 
-                    srcset="{{img_url @site.cover_image size="m"}}, {{img_url feature_image size="l"}} 2x"
+                    srcset="{{img_url @site.cover_image size="m"}} 1x, {{img_url feature_image size="l"}} 2x"
                     src="{{img_url @site.cover_image size="m"}}" alt="{{@site.title}}">
                 {{else}}
                     {{#author}}
                         <img class="mel-hero__img" 
-                        srcset="{{img_url cover_image size="m"}}, {{img_url feature_image size="l"}} 2x"
+                        srcset="{{img_url cover_image size="m"}} 1x, {{img_url feature_image size="l"}} 2x"
                         src="{{img_url cover_image size="m"}}" alt="{{@site.title}}">
                     {{/author}}
                 {{/is}}

@@ -1,9 +1,11 @@
 <article class="mel-card">
     <a  class="mel-card__link" href="{{url}}" aria-label="{{title}}"></a>
     <div class="mel-card__bg-container">
-        <img class="mel-card__bg" src="{{feature_image}}" alt="{{title}}">
         <img class="mel-card__bg" 
-                srcset="{{img_url feature_image size="s"}} 350w, {{img_url feature_image size="m"}} 500w, {{img_url feature_image size="l"}} 700w" sizes="(min-width: 600px) 365px, 350px"
+                srcset="{{img_url feature_image size="s"}} 350w, 
+                        {{img_url feature_image size="m"}} 500w, 
+                        {{img_url feature_image size="l"}} 700w" 
+                        sizes="(min-width: 600px) 365px, 350px"
                 src="{{img_url feature_image size="m"}}" alt="{{@site.title}}">
     </div>
     <h3 class="mel-card__title">{{title}}</h3>
