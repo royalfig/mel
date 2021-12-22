@@ -7,7 +7,8 @@
   --f-family: 'IBM Plex Sans', system-ui, -apple-system, blinkmacsystemfont,
     'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
-  --f-mono: monospace;
+  --f-mono: sfmono-regular, menlo, monaco, consolas, 'Liberation Mono',
+    'Courier New', monospace;
 
   --h1: 3.052rem;
   --h2: 2.441rem;

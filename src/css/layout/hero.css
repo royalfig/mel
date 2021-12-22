@@ -27,8 +27,8 @@
   /* width: 125%; */
   width: 100%;
   max-width: 21.875rem;
-  max-height: 21.875rem;
   height: auto;
+  max-height: 21.875rem;
   margin: 0 auto;
   object-fit: cover;
 
@@ -42,8 +42,8 @@
 }
 
 .mel-author__location svg {
-  height: 1em;
   width: 1em;
+  height: 1em;
   margin: 0 0.15em;
   transform: translateY(0.15em);
 }
@@ -56,10 +56,10 @@
 
 .mel-hero__social-media-link svg,
 .mel-author__image {
-  height: 2rem;
   width: 2rem;
-  fill: var(--mid);
+  height: 2rem;
   line-height: 0;
+  fill: var(--mid);
 }
 
 .mel-hero__social-media-link:hover svg {

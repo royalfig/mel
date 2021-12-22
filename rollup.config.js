@@ -5,6 +5,7 @@ import postcssPresetEnv from 'postcss-preset-env';
 import cssnano from 'cssnano';
 import { terser } from 'rollup-plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 export default [
   {
@@ -15,6 +16,7 @@ export default [
       sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
     },
     plugins: [
+      commonjs(),
       nodeResolve(),
       babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
       postcss({
@@ -38,6 +40,7 @@ export default [
     },
     plugins: [
       nodeResolve(),
+      commonjs(),
       babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
       postcss({
         extract: true,

@@ -134,6 +134,7 @@
   width: 16px;
   height: 16px;
   margin-right: 0.25em;
+  border-radius: 0;
 }
 
 .kg-bookmark-thumbnail {

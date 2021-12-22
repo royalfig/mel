@@ -17,7 +17,7 @@ Watch for changes and compile JS and CSS assets
 Compile and minify JS and CSS assets
 
 `npm run css`
-Run stylelint to order CSS properties automatically
+Run stylelint to order CSS properties automatically and implement other auto fixes
 
 `npm run check`
 Use [gscan](https://gscan.ghost.org) to check for theme compatibility with Ghost v4

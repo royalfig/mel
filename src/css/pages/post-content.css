@@ -123,3 +123,15 @@ tbody tr {
 tbody tr:hover {
   background-color: var(--surface-light);
 }
+
+code {
+  font-family: var(--f-mono);
+}
+
+code:not(.hljs) {
+  background-color: var(--surface-dark);
+  border-radius: var(--radius-small);
+  padding: 0 0.15em;
+  font-size: var(--small);
+  color: var(--pink);
+}
