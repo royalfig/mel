@@ -38,6 +38,11 @@
       "xxl": {
         "width": 2000
       }
+    },
+    "custom": {
+      "api": {
+        "type": "text"
+      }
     }
   },
   "keywords": [

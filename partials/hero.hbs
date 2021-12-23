@@ -2,7 +2,7 @@
     <div class="mel-container__inner">
         <div class="mel-hero">
             <div class="mel-hero__left">
-                <h1 class="mel-hero__title">{{#is "author"}}{{#author}}{{name}}{{/author}}{{else}}{{@site.title}}{{/is}}</h1>
+                <h1 class="mel-hero__title">Hi, I&apos;m Ryan</h1>
                 {{^is "author"}}
                     <p class="mel-hero__description">I code, create, and teach.</p>
                     <p class="mel-hero__description">
@@ -37,13 +37,21 @@
             <div class="mel-hero__right">
                 {{^is "author"}}
                     <img class="mel-hero__img" 
-                    srcset="{{img_url @site.cover_image size="m"}} 1x, {{img_url feature_image size="l"}} 2x"
-                    src="{{img_url @site.cover_image size="m"}}" alt="{{@site.title}}">
+                    srcset="{{img_url @site.cover_image size="s"}} 350w, 
+                            {{img_url @site.cover_image size="m"}} 500w,
+                            {{img_url @site.cover_image size="l"}} 700w,
+                            {{img_url @site.cover_image size="xl"}} 1000w,"
+                            sizes="(min-width: 36rem) 500w, 100vw"
+                            src="{{img_url @site.cover_image size="m"}}" alt="{{@site.title}}">
                 {{else}}
                     {{#author}}
                         <img class="mel-hero__img" 
-                        srcset="{{img_url cover_image size="m"}} 1x, {{img_url feature_image size="l"}} 2x"
-                        src="{{img_url cover_image size="m"}}" alt="{{@site.title}}">
+                        srcset="{{img_url cover_image size="s"}} 350w, 
+                                {{img_url cover_image size="m"}} 500w,
+                                {{img_url cover_image size="l"}} 700w,
+                                {{img_url cover_image size="xl"}} 1000w,"
+                                sizes="(min-width: 36rem) 500w, 100vw"
+                                src="{{img_url cover_image size="m"}}" alt="{{name}}">
                     {{/author}}
                 {{/is}}
             </div>

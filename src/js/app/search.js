@@ -7,8 +7,8 @@ import { launchModal } from './modal';
 
 export function initSearch() {
   const api = new GhostContentAPI({
-    url: 'http://localhost:2368',
-    key: '002c1b3ae10e2b87ff4201ace8',
+    url: window.location.origin,
+    key: SEARCH_API,
     version: 'canary',
   });
 

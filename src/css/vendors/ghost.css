@@ -146,7 +146,6 @@
 
 .kg-bookmark-thumbnail img {
   width: 100%;
-  min-width: 100px;
   height: 100%;
   border-radius: 0;
   border-top-right-radius: var(--radius-small);

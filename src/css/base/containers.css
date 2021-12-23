@@ -26,18 +26,18 @@
 .mel-container {
   position: relative;
   display: grid;
-  grid-template-columns: 1rem 1fr minmax(auto, var(--lg)) 1fr 1rem;
+  grid-template-columns: 1rem 1fr minmax(230px, var(--lg)) 1fr 1rem;
   margin-bottom: var(--space-after);
 }
 
 .mel-container.post {
-  grid-template-columns: 1rem 1fr 1fr minmax(auto, calc(var(--lg))) 1fr 1fr 1rem;
+  grid-template-columns: 1rem 1fr 1fr minmax(230px, calc(var(--lg))) 1fr 1fr 1rem;
   grid-auto-flow: column;
 }
 
 @media (min-width: 48rem) {
   .mel-container.post {
-    grid-template-columns: 1rem 1fr 3rem minmax(auto, calc(var(--lg) - 6rem)) 3rem 1fr 1rem;
+    grid-template-columns: 1rem 1fr 3rem minmax(230px, calc(var(--lg) - 6rem)) 3rem 1fr 1rem;
     grid-auto-flow: column;
   }
 }
@@ -49,7 +49,7 @@
 @media (min-width: 48rem) {
   .mel-container.mel-post__header {
     grid-template-columns:
-      1rem 1fr minmax(auto, calc(var(--lg) * 0.6)) minmax(
+      1rem 1fr minmax(230px, calc(var(--lg) * 0.6)) minmax(
         auto,
         calc(var(--lg) * 0.4)
       )
@@ -65,7 +65,7 @@
   display: grid;
   /* margin: 2rem 0 0; */
   grid-column: 4 / 5;
-  grid-template-columns: 2fr 1fr minmax(250px, 600px) 1fr 2fr;
+  grid-template-columns: 2fr 1fr minmax(230px, 600px) 1fr 2fr;
 }
 
 .mel-post__item > * {

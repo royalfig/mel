@@ -5,7 +5,7 @@
   transition: all var(--transition);
   gap: 1rem;
   /* align-items: center; */
-  grid-template-columns: max-content 1fr max-content;
+  grid-template-columns: 1fr;
 }
 
 .mel-list__container:not(:first-child) {
@@ -53,6 +53,7 @@
 }
 
 .mel-list__date {
+  display: none;
   padding-right: 2rem;
   font-size: var(--small);
   font-weight: 300;
@@ -69,9 +70,20 @@
 }
 
 .mel-list__read-time {
+  display: none;
   font-size: var(--small);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
   transition: transform var(--transition);
+}
+
+@media (min-width: 48rem) {
+  .mel-list__container {
+    grid-template-columns: max-content 1fr max-content;
+  }
+  .mel-list__date,
+  .mel-list__read-time {
+    display: initial;
+  }
 }
