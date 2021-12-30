@@ -1,7 +1,8 @@
 .mel-hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
   gap: 1rem;
+  align-items: center;
 }
 
 .mel-hero__title {
@@ -12,14 +13,6 @@
   margin: 1rem 0;
   font-size: var(--h6);
   color: var(--text-light);
-}
-
-.mel-hero__description:last-of-type {
-  margin-bottom: var(--space-after);
-}
-
-.mel-hero__right {
-  /* z-index: -1; */
 }
 
 .mel-hero__img {
@@ -46,6 +39,7 @@
   height: 1em;
   margin: 0 0.15em;
   transform: translateY(0.15em);
+  fill: var(--pink);
 }
 
 .mel-hero__social-media {

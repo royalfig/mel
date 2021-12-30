@@ -3,17 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ibm-plex-sans-v9-latin-300.woff2" crossorigin />
+     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ibm-plex-sans-v9-latin-regular.woff2" crossorigin />
+     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ibm-plex-sans-v9-latin-700.woff2" crossorigin />
+
     <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" />
 
     <script src="{{asset "built/app.js"}}" defer></script>
     <script>
             const SEARCH_API = "{{@custom.api}}";
     </script>
+    {{{block "scripts"}}}
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
     <title>{{meta_title}}</title>
 
     {{ghost_head}}
@@ -22,8 +24,7 @@
 </head>
 <body class="{{body_class}}">
 
-
-<main id="main">
+<main id="mel-main">
 
     {{> "navbar"}}
 
@@ -39,6 +40,5 @@
 {{ghost_foot}}
 {{!-- Outputs important scripts - should always be included before closing body tag --}}
 
-{{{block "scripts"}}}
 </body>
 </html>

@@ -77,7 +77,7 @@
     <div class="mel-container">
         <div class="mel-container__inner">
             {{#foreach related}}
-            {{> "list"}}
+                {{> "list"}}
             {{/foreach}}
         </div>
     </div>
@@ -90,7 +90,6 @@
         {{/is}}
     {{/if}}
 
-
     {{#contentFor 'scripts'}}
-        <script src="{{asset 'built/post.js'}}"></script>
+        <script src="{{asset 'built/post.js'}}" defer></script>
     {{/contentFor}}

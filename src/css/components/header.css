@@ -1,12 +1,12 @@
 .mel-header {
-  grid-template-columns: max(1rem, calc((100% - var(--lg)) / 2)) auto 1fr;
+  grid-template-columns: max(var(--gap), calc((100% - var(--lg)) / 2)) auto 1fr;
   display: grid;
   align-items: center;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .mel-header {
-    grid-template-columns: max(1rem, calc((100% - var(--lg)) / 2)) max-content 1fr;
+    grid-template-columns: max(var(--gap), calc((100% - var(--lg)) / 2)) max-content 1fr;
     /* grid-template-columns: calc(100vw - 992px) 1fr 1fr; */
   }
 }

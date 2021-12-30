@@ -1,7 +1,6 @@
 html {
   font-family: var(--f-family);
   font-size: 1rem;
-  font-size: 1rem;
   font-size: clamp(
     1rem,
     0.8392857142857143rem + 0.4464285714285714vw,

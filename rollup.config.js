@@ -1,11 +1,33 @@
 import babel from '@rollup/plugin-babel';
+import { terser } from 'rollup-plugin-terser';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
+// CSS
 import postcss from 'rollup-plugin-postcss';
 import atImport from 'postcss-import';
 import postcssPresetEnv from 'postcss-preset-env';
 import cssnano from 'cssnano';
-import { terser } from 'rollup-plugin-terser';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+
+const plugins = [
+  commonjs(),
+  nodeResolve(),
+  babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
+  postcss({
+    extract: true,
+    sourceMap: true,
+    plugins: [
+      atImport,
+      postcssPresetEnv({ features: { 'nesting-rules': true } }),
+      process.env.NODE_ENV === 'production' && cssnano({ preset: 'default' }),
+    ],
+  }),
+  replace({
+    ENV: JSON.stringify(process.env.NODE_ENV || 'production'),
+    preventAssignment: true,
+  }),
+  process.env.NODE_ENV === 'production' && terser(),
+];
 
 export default [
   {
@@ -15,21 +37,7 @@ export default [
       format: 'iife',
       sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
     },
-    plugins: [
-      commonjs(),
-      nodeResolve(),
-      babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
-      postcss({
-        extract: true,
-        plugins: [
-          atImport,
-          postcssPresetEnv({ features: { 'nesting-rules': true } }),
-          process.env.NODE_ENV === 'production' &&
-            cssnano({ preset: 'default' }),
-        ],
-      }),
-      process.env.NODE_ENV === 'production' && terser(),
-    ],
+    plugins,
   },
   {
     input: 'src/js/post/index.js',
@@ -38,20 +46,6 @@ export default [
       format: 'iife',
       sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
     },
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-      babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
-      postcss({
-        extract: true,
-        plugins: [
-          atImport,
-          postcssPresetEnv({ features: { 'nesting-rules': true } }),
-          process.env.NODE_ENV === 'production' &&
-            cssnano({ preset: 'default' }),
-        ],
-      }),
-      process.env.NODE_ENV === 'production' && terser(),
-    ],
+    plugins,
   },
 ];

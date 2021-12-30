@@ -2,13 +2,13 @@
 
 {{> "hero"}}
 
-<header class="mel-header">
-    <h2>What&apos;s On Special</h2>
-    <div class="mel-header__line"></div>
-</header>
 
 {{#get "posts" filter="featured:true" as |featured|}}
     {{#if featured}}
+        <header class="mel-header">
+            <h2>What&apos;s On Special</h2>
+            <div class="mel-header__line"></div>
+        </header>
         <div class="mel-container mel-cards">
             <div class="mel-card__container">
                 {{#foreach featured}}
