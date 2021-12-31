@@ -95,7 +95,7 @@
     --text-dark: #f1f5f9;
 
     --pink: hsl(329, 69%, 73%);
-    --blue: hsl(215, 86%, 77%);
+    --blue: #92bcf7;
     --blue-light: hsl(215, 86%, 87%);
 
     --shadow-on-surface: 0.7px 0.7px 2.2px hsla(0, 0%, 0%, 0.02),
