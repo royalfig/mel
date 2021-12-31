@@ -1,14 +1,14 @@
 .mel-card__container {
   display: grid;
   justify-content: space-between;
+  width: calc(100% + 4rem);
   padding: 2rem;
+  overflow: auto;
+  border-right: 1px solid var(--surface-dark);
+  transform: translateX(-2rem);
   grid-column: 3 / 4;
   gap: 1rem;
   grid-template-columns: repeat(3, minmax(300px, 400px));
-  overflow: auto;
-  border-right: 1px solid var(--surface-dark);
-  width: calc(100% + 4rem);
-  transform: translateX(-2rem);
 }
 
 @media (min-width: 992px) {
