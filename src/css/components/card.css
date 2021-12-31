@@ -1,25 +1,21 @@
-.mel-cards {
-  overflow-x: auto;
-  overflow-y: visible;
-}
-
-@media (min-width: 1094px) {
-  .mel-cards {
-    overflow: visible;
-  }
-}
-
 .mel-card__container {
   display: grid;
   justify-content: space-between;
-  padding: 2rem 0;
-
+  padding: 2rem;
   grid-column: 3 / 4;
-
-  /* border: 1px solid var(--mid-light); */
-
   gap: 1rem;
-  grid-template-columns: repeat(3, minmax(18.5rem, 22.5rem));
+  grid-template-columns: repeat(3, minmax(300px, 400px));
+  overflow: auto;
+  border-right: 1px solid var(--surface-dark);
+  width: calc(100% + 4rem);
+  transform: translateX(-2rem);
+}
+
+@media (min-width: 992px) {
+  .mel-card__container {
+    overflow: visible;
+    border: none;
+  }
 }
 
 .mel-card {
@@ -31,10 +27,7 @@
   height: 25rem;
   padding: 1rem;
   background-color: var(--surface);
-
   background-color: var(--surface-dark);
-
-  /* border: 1px solid var(--mid-light); */
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
   justify-self: center;
@@ -110,7 +103,7 @@
 .mel-card__bg-container {
   position: relative;
   width: 100%;
-  height: 45%;
+  height: 200px;
   overflow: hidden;
   border-radius: var(--radius-small);
   transition: var(--transition);

@@ -17,19 +17,15 @@
 
 .mel-hero__img {
   display: block;
-  /* width: 125%; */
   width: 100%;
   max-width: 21.875rem;
   height: auto;
   max-height: 21.875rem;
   margin: 0 auto;
   object-fit: cover;
-
-  /* transform: translateX(-25%); */
 }
 
 /* Author */
-
 .mel-author__location {
   margin-top: 0;
 }

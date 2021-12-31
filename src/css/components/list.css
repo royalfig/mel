@@ -52,6 +52,10 @@
   border-color: transparent;
 }
 
+.mel-list__container:hover .mel-list__title {
+  transform: translateX(1rem);
+}
+
 .mel-list__date {
   display: none;
   padding-right: 2rem;
@@ -67,6 +71,7 @@
   padding-right: 2rem;
   overflow: hidden;
   font-size: 1rem;
+  transition: transform var(--transition);
 }
 
 .mel-list__read-time {
@@ -78,10 +83,15 @@
   transition: transform var(--transition);
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .mel-list__container {
     grid-template-columns: max-content 1fr max-content;
   }
+
+  .mel-list__container:hover .mel-list__title {
+    transform: none;
+  }
+
   .mel-list__date,
   .mel-list__read-time {
     display: initial;

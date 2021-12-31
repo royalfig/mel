@@ -1,9 +1,3 @@
-/* 
-  --sm: 36rem;
-  --md: 48rem;
-  --lg: 62rem;
-  --xl: 75rem;
-  --xxl: 87.5rem; */
 .mel-navbar {
   display: flex;
   align-items: center;
@@ -15,15 +9,12 @@
   flex-shrink: 0;
 }
 
-.mel-navbar__logo {
-}
-
 .mel-navbar__right {
   display: inline-flex;
   align-items: center;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 576px) {
   .mel-navbar__burger {
     display: none;
   }
@@ -48,7 +39,7 @@
   font-size: 2rem;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 576px) {
   .mel-navbar__right .nav {
     display: inline-flex;
   }

@@ -5,8 +5,6 @@
   --xl: 1200px;
   --xxl: 1400px;
 
-
-  
   --sm: 36rem;
   --md: 48rem;
   --lg: 62rem;
@@ -20,13 +18,13 @@
   --min: 100px;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 576px) {
   :root {
     --gap: 2rem;
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   :root {
     --gap: 3rem;
   }
@@ -48,7 +46,7 @@
   grid-auto-flow: column;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .mel-container.post {
     grid-template-columns:
       var(--gap) 1fr 3rem minmax(var(--min), calc(var(--lg) - 6rem))
@@ -61,7 +59,7 @@
   margin-bottom: 2rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .mel-container.mel-post__header {
     grid-template-columns:
       var(--gap) 1fr minmax(var(--min), calc(var(--lg) * 0.6)) minmax(
@@ -80,7 +78,7 @@
   display: grid;
   /* margin: 2rem 0 0; */
   grid-column: 4 / 5;
-  grid-template-columns: 2fr 1fr minmax(var(--min), 600px) 1fr 2fr;
+  grid-template-columns: 2fr 1fr minmax(var(--min), var(--content)) 1fr 2fr;
 }
 
 .mel-post__item > * {

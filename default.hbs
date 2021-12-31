@@ -4,10 +4,60 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ibm-plex-sans-v9-latin-300.woff2" crossorigin />
-     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ibm-plex-sans-v9-latin-regular.woff2" crossorigin />
-     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ibm-plex-sans-v9-latin-700.woff2" crossorigin />
+     <link rel="preload" as="font" type="font/woff2" href={{asset "fonts/ibm-plex-sans-v9-latin-300.woff2"}} crossorigin />
+     <link rel="preload" as="font" type="font/woff2" href={{asset "fonts/ibm-plex-sans-v9-latin-regular.woff2"}} crossorigin />
+     <link rel="preload" as="font" type="font/woff2" href={{asset "fonts/ibm-plex-sans-v9-latin-700.woff2"}} crossorigin />
 
+    <style>
+        /* ibm-plex-sans-300 - latin */
+        @font-face {
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 300;
+        src: local(''),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-300.woff2"}}) format('woff2'),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-300.woff"}}) format('woff');
+        }
+        /* ibm-plex-sans-regular - latin */
+        @font-face {
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-regular.woff2"}}) format('woff2'),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-regular.woff"}}) format('woff');
+        }
+        /* ibm-plex-sans-italic - latin */
+        @font-face {
+        font-family: 'IBM Plex Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: local(''),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-italic.woff2"}}) format('woff2'),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-italic.woff"}}) format('woff');
+        }
+        /* ibm-plex-sans-700 - latin */
+        @font-face {
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local(''),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-700.woff2"}}) format('woff2'),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-700.woff"}}) format('woff');
+        }
+        /* ibm-plex-sans-700italic - latin */
+        @font-face {
+        font-family: 'IBM Plex Sans';
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: local(''),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-700italic.woff2"}}) format('woff2'),
+            url({{asset "fonts/ibm-plex-sans-v9-latin-700italic.woff"}}) format('woff');
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="{{asset "built/app.css"}}" />
 
     <script src="{{asset "built/app.js"}}" defer></script>
@@ -18,9 +68,8 @@
     
     <title>{{meta_title}}</title>
 
-    {{ghost_head}}
     {{!-- Outputs important meta data and settings, should always be in <head> --}}
-
+    {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
@@ -28,8 +77,8 @@
 
     {{> "navbar"}}
 
-    {{{body}}}
     {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
 
 </main>
 
@@ -37,8 +86,7 @@
 
 {{> "modal"}}
 
-{{ghost_foot}}
 {{!-- Outputs important scripts - should always be included before closing body tag --}}
-
+{{ghost_foot}}
 </body>
 </html>

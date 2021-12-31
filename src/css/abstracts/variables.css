@@ -26,12 +26,7 @@
   --lg: 992px;
   --xl: 1200px;
   --xxl: 1400px;
-
-  --sm: 36rem;
-  --md: 48rem;
-  --lg: 62rem;
-  --xl: 75rem;
-  --xxl: 87.5rem;
+  --content: 600px;
 
   /* Radius  */
   --radius: 1rem;
@@ -42,7 +37,6 @@
 
   /* Color */
   /* Light Mode Default */
-
   --text-light: hsl(217, 13%, 17%);
   --text: hsl(222, 16%, 11%);
   --text-dark: hsl(222, 17%, 6%);
@@ -80,8 +74,12 @@
     5.6px 5.6px 17.9px hsla(222, 47%, 21%, 0.042),
     10.4px 10.4px 33.4px hsla(222, 47%, 21%, 0.05),
     25px 25px 80px hsla(222, 47%, 21%, 0.07);
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Color */
+    /* Dark Mode  */
     --mid-light: #334155;
     --mid: #65758b;
     --mid-dark: #94a3b8;
