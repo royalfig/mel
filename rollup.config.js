@@ -35,7 +35,7 @@ export default [
     output: {
       file: 'assets/built/app.js',
       format: 'iife',
-      sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
+      sourcemap: true,
     },
     plugins,
   },
@@ -44,7 +44,7 @@ export default [
     output: {
       file: 'assets/built/post.js',
       format: 'iife',
-      sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
+      sourcemap: true,
     },
     plugins,
   },

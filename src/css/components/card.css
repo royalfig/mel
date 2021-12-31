@@ -1,3 +1,7 @@
+.mel-cards {
+  overflow: hidden;
+}
+
 .mel-card__container {
   display: grid;
   justify-content: space-between;

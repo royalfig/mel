@@ -16,3 +16,5 @@ zip.addLocalFile('./package.json');
 zip.addLocalFile('./post.hbs');
 zip.addLocalFile('./README.md');
 zip.writeZip('./mel.zip');
+
+console.log('Your theme is all zipped up 🤐');
