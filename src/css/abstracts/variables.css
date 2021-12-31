@@ -1,6 +1,7 @@
 :root {
   /* Spacing */
   --space-after: 3rem;
+  --gap: 1rem;
   --icon: 0.25em;
 
   /* Typography */
@@ -118,5 +119,17 @@
       5.6px 5.6px 17.9px hsla(0, 0%, 0%, 0.052),
       10.4px 10.4px 33.4px hsla(0, 0%, 0%, 0.06),
       25px 25px 80px hsla(0, 0%, 0%, 0.08);
+  }
+}
+
+@media (min-width: 576px) {
+  :root {
+    --gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gap: 3rem;
   }
 }
