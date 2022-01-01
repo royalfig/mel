@@ -22,12 +22,18 @@
 
 @media (min-width: 768px) {
   .mel-post__header-left {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .mel-post__header-right {
     grid-column: 4 / -1;
     margin-top: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mel-post__header-left {
+    max-width: 80%;
   }
 }
 
@@ -73,7 +79,8 @@
 .mel-post__feature-image {
   width: 100%;
   max-width: 100%;
-  height: 450px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   margin: 2rem 0 0;
   box-shadow: var(--shadow-on-surface);
   object-fit: cover;
@@ -92,8 +99,8 @@
 }
 
 .mel-post__author--image {
-  width: 3rem;
-  height: 3rem;
+  width: 50px;
+  height: 50px;
   margin-right: 0.75rem;
   border: 3px solid var(--mid-light);
   border-radius: 50%;

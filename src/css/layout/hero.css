@@ -19,7 +19,8 @@
   display: block;
   width: 100%;
   max-width: 500px;
-  height: 500px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
   object-fit: cover;
 }

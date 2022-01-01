@@ -23,15 +23,6 @@ const plugins = [
   commonjs(),
   nodeResolve(),
   babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
-  postcss({
-    extract: true,
-    sourceMap: true,
-    plugins: [
-      atImport,
-      postcssPresetEnv({ features: { 'nesting-rules': true } }),
-      process.env.NODE_ENV === 'production' && cssnano({ preset: 'default' }),
-    ],
-  }),
   replace({
     ENV: JSON.stringify(process.env.NODE_ENV || 'production'),
     preventAssignment: true,
@@ -45,7 +36,7 @@ export default [
     output: {
       file: 'assets/built/app.js',
       format: 'iife',
-      sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
+      sourcemap: true,
     },
     plugins: [...plugins, postcssConfig],
   },
@@ -54,7 +45,7 @@ export default [
     output: {
       file: 'assets/built/post.js',
       format: 'iife',
-      sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline',
+      sourcemap: true,
     },
     plugins,
   },

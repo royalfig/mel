@@ -45,9 +45,9 @@
 @media (min-width: 768px) {
   .mel-container.mel-post__header {
     grid-template-columns:
-      var(--gap) 1fr minmax(var(--min), calc(var(--lg) * 0.5)) minmax(
-        auto,
-        calc(var(--lg) * 0.5)
+      var(--gap) 1fr minmax(var(--min), calc(var(--lg) * 0.4)) minmax(
+        var(--min),
+        calc(var(--lg) * 0.6)
       )
       1fr var(--gap);
   }
@@ -57,7 +57,7 @@
   .mel-container.mel-post__header {
     grid-template-columns:
       var(--gap) 1fr minmax(var(--min), calc(var(--lg) * 0.6)) minmax(
-        auto,
+        var(--min),
         calc(var(--lg) * 0.4)
       )
       1fr var(--gap);

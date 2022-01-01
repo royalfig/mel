@@ -88,28 +88,23 @@ table {
   border-radius: var(--radius-small);
 }
 
-th {
-  padding: 0.5em 0;
+th,
+td {
+  padding: 0.5em 1em;
   font-family: inherit;
   font-size: var(--small);
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--surface);
+  line-height: 1.3;
   text-align: left;
+}
+
+th {
+  font-weight: 700;
+  color: var(--surface);
   background-color: var(--blue);
 }
 
-th:first-child,
-td:first-child {
-  padding-left: 1em;
-}
-
 td {
-  padding: 0.5em 0;
-  font-family: inherit;
-  font-size: var(--small);
   color: var(--text-light);
-  text-align: left;
 }
 
 tbody tr:not(:nth-child(odd)) {

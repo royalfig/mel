@@ -3,13 +3,22 @@
         <section class="mel-cta mel-container__inner">
             <div class="mel-cta--left">
             <p class="mel-cta__title">Hiya, Buddy <span class="mel-font-weight-normal">🌭</span></p>
-            <p>Did you like <em>{{title}}</em>? Be the first to hear about other <span class="mel-lowercase">{{primary_tag.name}}</span> posts  by subscribing to my free newsletter.</p>
+            <p>Did you like <em>{{title}}</em>? Be the first to hear about other <a href="{{primary_tag.url}}">{{primary_tag.name}}</a> posts  by subscribing to my free newsletter.</p>
             <p>Just enter your email, click sign up, and check your inbox.</p>
             {{> "inline-signup"}}
             </div>  
             <div class="mel-cta--right">
-                <img src="{{asset "img/mel.jpg"}}" alt="Mel looking cute" height="200" width="250">
+                <img
+                srcset="
+                {{asset 'img/mel-cta-350.webp'}} 350w, 
+                {{asset 'img/mel-cta-500.webp'}} 500w, 
+                {{asset 'img/mel-cta-700.webp'}} 700w, 
+                {{asset 'img/mel-cta-1000.webp'}} 1000w" 
+                sizes="(min-width: 768) 500px, 80vw" 
+                src="{{asset 'img/mel-cta-500.webp'}}"
+                alt="Mel looking cute" width="1202" height="1202" loading="lazy">
             </div>
         </section>
     {{/post}}
 </aside>
+

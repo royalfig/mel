@@ -2,7 +2,8 @@
   margin: 1rem 0 2rem;
 }
 
-.kg-width-wide {
+.kg-width-wide,
+.kg-embed-card {
   grid-column: 2 / 5;
 }
 
