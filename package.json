@@ -1,6 +1,6 @@
 {
   "name": "mel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mel is a theme for Ghost",
   "engines": {
     "ghost": ">=4.0.0",
