@@ -14,4 +14,4 @@ jobs:
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
-          exclude: "*src/*"
+          exclude: "*src/* mel.zip .eslintrc.js .gitignore .prettierrc .stylintrc.json reload.js rollup.config.js zip.js"
