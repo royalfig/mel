@@ -70,9 +70,14 @@
 
 .mel-post__item {
   display: grid;
-  padding: 0 1rem;
   grid-column: 4 / 5;
   grid-template-columns: 2fr 1fr minmax(var(--min), var(--content)) 1fr 2fr;
+}
+
+@media (min-width: 768px) {
+  .mel-post__item {
+    padding: 0 1rem;
+  }
 }
 
 .mel-post__item > * {

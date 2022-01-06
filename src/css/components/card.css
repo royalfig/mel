@@ -28,13 +28,20 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 23rem;
+  height: auto;
   padding: 1rem;
   background-color: var(--surface);
   background-color: var(--surface-dark);
   border-radius: var(--radius-small);
   transition: background-color var(--transition);
   justify-self: center;
+  aspect-ratio: 1 / 1.5;
+}
+
+@supports not (aspect-ratio: 1 / 1.5) {
+  .mel-card {
+    height: 23rem;
+  }
 }
 
 .mel-card::after {

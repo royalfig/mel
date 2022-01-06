@@ -21,7 +21,10 @@
         {{#primary_author}}
             <div class="mel-post__author--container">
                 <div class="mel-post__author">
-                    <img class="mel-post__author--image" src="{{profile_image}}" alt="{{name}}" width="50" height="50">
+                    <img class="mel-post__author--image" 
+                    srcset="{{img_url profile_image size="xxs" }} 1x, 
+                    {{img_url profile_image size="xs" }} 2x, 
+                    src="{{img_url profile_image size="xxs"}}" alt="{{name}}" width="50" height="50">
                     <div class="mel-post__author-right">
                         <a class="mel-post__author--name" href="{{url}}">{{name}}</a>
                         <p class="mel-post__date">{{date}} &bull; {{../reading_time}} min read</p>
