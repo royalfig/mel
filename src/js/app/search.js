@@ -3,7 +3,6 @@ import * as JsSearch from 'js-search';
 import readingTime from '@tryghost/helpers/lib/reading-time';
 
 import { formatTime, setState, debounce } from './utils';
-import { launchModal } from './modal';
 
 export function initSearch() {
   const api = new GhostContentAPI({
@@ -22,19 +21,17 @@ export function initSearch() {
   index.addIndex('plaintext');
 
   // HTML Elements
-  const searchBtn = document.querySelector('.mel-navbar__search');
-  const searchInput = document.querySelector('#search');
-  const searchModal = document.querySelector('.mel-search__modal');
+  // const searchBtn = document.querySelector('.mel-navbar__search');
+  const searchInput = document.querySelector('#search-input');
+  // const searchModal = document.querySelector('.mel-search__modal');
   const searchResult = document.querySelector('.mel-search__result');
   const clearSearchBtn = document.querySelector('.mel-search__clear');
 
   let cachedPosts;
-  let posts;
-  let searchResults;
 
-  searchBtn.addEventListener('click', () => {
-    launchModal(searchModal);
-  });
+  // searchBtn.addEventListener('click', () => {
+  //   launchModal(searchModal);
+  // });
 
   searchInput.addEventListener('input', () => {
     searchResult.innerHTML = '';
@@ -129,10 +126,10 @@ export function initSearch() {
   });
 }
 
-export function menu() {
-  const burger = document.querySelector('.mel-navbar__burger');
-  const menu = document.querySelector('.mel-menu__modal');
-  burger.addEventListener('click', () => {
-    launchModal(menu);
-  });
-}
+// export function menu() {
+//   const burger = document.querySelector('.mel-navbar__burger');
+//   const menu = document.querySelector('.mel-menu__modal');
+//   burger.addEventListener('click', () => {
+//     launchModal(menu);
+//   });
+// }

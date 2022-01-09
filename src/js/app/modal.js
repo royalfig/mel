@@ -1,27 +1,42 @@
-export function launchModal(whichModal) {
-  document.body.style.overflowY = 'hidden';
+export function modalHandler() {
+  const openSearch = document.querySelector('#search-open');
+  const openMenu = document.querySelector('#menu-open');
+  const closeSearch = document.querySelector('#search-close');
+  const closeMenu = document.querySelector('#menu-close');
 
-  whichModal.classList.add('open');
-  const input = whichModal.querySelector('input');
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const openedModal = document.querySelector('.mel-overlay.open');
+      openedModal.classList.remove('open');
+    }
+  });
 
-  if (input) input.focus();
-  whichModal
-    .querySelector('.mel-btn')
-    .addEventListener('click', closeModal.bind(whichModal));
+  openSearch.addEventListener('click', launchModal);
+  openMenu.addEventListener('click', launchModal);
+  closeSearch.addEventListener('click', closeModal);
+  closeMenu.addEventListener('click', closeModal);
 
-  document.documentElement.addEventListener(
-    'keyup',
-    closeModalByEsc.bind(whichModal),
-  );
-}
+  function launchModal(e) {
+    document.body.style.overflowY = 'hidden';
+    const { targetModal } = getTargets(e);
+    e.currentTarget.setAttribute('aria-expanded', true);
+    targetModal.querySelector('input') &&
+      targetModal.querySelector('input').focus();
+    targetModal.classList.add('open');
+  }
 
-function closeModalByEsc(e) {
-  if (e.key === 'Escape') closeModal.apply(this);
-}
+  function closeModal(e) {
+    document.body.style.overflowY = 'auto';
+    const { targetModal, targetBtn } = getTargets(e);
+    targetModal.classList.remove('open');
+    targetBtn.setAttribute('aria-expanded', false);
+  }
 
-export function closeModal(e) {
-  this.classList.remove('open');
-  document.body.style.overflowY = 'auto';
-  if (e) e.currentTarget.removeEventListener('click', closeModal);
-  document.documentElement.removeEventListener('keyup', closeModalByEsc);
+  function getTargets(el) {
+    const targetId = el.currentTarget.id;
+    const id = targetId.split('-')[0];
+    const targetModal = document.querySelector(`#${id}`);
+    const targetBtn = document.querySelector(`#${id}-open`);
+    return { targetId, targetModal, targetBtn };
+  }
 }

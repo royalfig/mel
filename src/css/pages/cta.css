@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1rem;
+  padding: var(--gap);
   background-color: var(--surface-dark);
   border-radius: var(--radius-small);
   gap: 2rem;
@@ -11,12 +11,6 @@
 .mel-cta > div {
   flex: 1;
   min-width: 290px;
-}
-
-@media (min-width: 36rem) {
-  .mel-cta {
-    padding: 2rem;
-  }
 }
 
 .mel-cta__title {

@@ -10,6 +10,7 @@ if (ENV === 'development') {
 }
 
 import { initSearch } from './search';
-import { menu } from './search';
+import { modalHandler } from './modal';
+
 initSearch();
-menu();
+modalHandler();
