@@ -7,6 +7,7 @@
 }
 
 input,
+textarea,
 .mel-input {
   display: inline-flex;
   flex-grow: 1;
@@ -30,9 +31,14 @@ label {
 }
 
 input:focus-visible,
+textarea:focus-visible,
 input + .mel-btn:focus-visible {
   border-color: var(--blue);
   outline: none;
+}
+
+textarea {
+  min-height: 6rem;
 }
 
 input + .mel-btn {
@@ -87,4 +93,14 @@ input + .mel-btn svg {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.mel-input-group {
+  margin-bottom: 1rem;
+}
+
+.mel-input-group > * {
+  display: flex;
+  width: 100%;
+  max-width: 55ch;
 }

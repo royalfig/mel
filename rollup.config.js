@@ -14,7 +14,9 @@ const postcssConfig = postcss({
   sourceMap: true,
   plugins: [
     atImport,
-    postcssPresetEnv({ features: { 'nesting-rules': true } }),
+    postcssPresetEnv({
+      features: { 'custom-media-queries': true, 'nesting-rules': true },
+    }),
     process.env.NODE_ENV === 'production' && cssnano({ preset: 'default' }),
   ],
 });

@@ -1,3 +1,5 @@
+@custom-media --viewport-md (min-width: 768px);
+
 :root {
   /* Spacing */
   --space-after: 3rem;
