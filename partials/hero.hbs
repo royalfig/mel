@@ -8,10 +8,16 @@
                     <p class="mel-hero__description">
                     It&apos;s usually with some Cincinnati chili and craft beer&nbsp;🍻, beside a little canine called Mel&nbsp;🐩, and in an old can factory&nbsp;🥫.
                     </p>
-                    <p class="mel-hero__description">
-                    Sign up and join us on our coding adventures&nbsp;😍
-                    </p>
-                    {{> "inline-signup"}}
+                    {{^if @member}}
+                        <p class="mel-hero__description">
+                        Sign up and join us on our coding adventures&nbsp;😍
+                        </p>
+                        {{> "inline-signup"}}
+                    {{else}}
+                        <p class="mel-hero__description">
+                            Thanks for being a being member&nbsp;😍
+                        </p>
+                    {{/if}}
                 {{else}}
                     {{#author}}
                         <div class="mel-hero__social-media">
@@ -30,7 +36,6 @@
                         <p class="mel-hero__description mel-author__location">From a can factory in 
                             <svg aria-label="crown" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 19h20v2H2v-2zM2 5l5 3.5L12 2l5 6.5L22 5v12H2V5zm2 3.841V15h16V8.841l-3.42 2.394L12 5.28l-4.58 5.955L4 8.84z"/></svg>
                             {{location}}</p>
-                        
                     {{/author}}
                 {{/is}}
             </div>
