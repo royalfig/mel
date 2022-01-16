@@ -9,6 +9,7 @@ export function modalHandler() {
     if (e.key === 'Escape') {
       const openedModal = document.querySelector('.mel-overlay.open');
       openedModal.classList.remove('open');
+      document.body.style.overflowY = 'auto';
     }
   });
 
