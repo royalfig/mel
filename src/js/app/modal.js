@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/prefer-default-export
 export function modalHandler() {
   const openSearch = document.querySelector('#search-open');
   const openMenu = document.querySelector('#menu-open');
@@ -11,18 +12,12 @@ export function modalHandler() {
     }
   });
 
-  openSearch.addEventListener('click', launchModal);
-  openMenu.addEventListener('click', launchModal);
-  closeSearch.addEventListener('click', closeModal);
-  closeMenu.addEventListener('click', closeModal);
-
-  function launchModal(e) {
-    document.body.style.overflowY = 'hidden';
-    const { targetModal } = getTargets(e);
-    e.currentTarget.setAttribute('aria-expanded', true);
-    targetModal.querySelector('input') &&
-      targetModal.querySelector('input').focus();
-    targetModal.classList.add('open');
+  function getTargets(el) {
+    const targetId = el.currentTarget.id;
+    const id = targetId.split('-')[0];
+    const targetModal = document.querySelector(`#${id}`);
+    const targetBtn = document.querySelector(`#${id}-open`);
+    return { targetId, targetModal, targetBtn };
   }
 
   function closeModal(e) {
@@ -32,11 +27,19 @@ export function modalHandler() {
     targetBtn.setAttribute('aria-expanded', false);
   }
 
-  function getTargets(el) {
-    const targetId = el.currentTarget.id;
-    const id = targetId.split('-')[0];
-    const targetModal = document.querySelector(`#${id}`);
-    const targetBtn = document.querySelector(`#${id}-open`);
-    return { targetId, targetModal, targetBtn };
+  function launchModal(e) {
+    document.body.style.overflowY = 'hidden';
+    const { targetModal } = getTargets(e);
+    e.currentTarget.setAttribute('aria-expanded', true);
+    targetModal.classList.add('open');
+    const input = targetModal.querySelector('input');
+    if (input) {
+      input.focus();
+    }
   }
+
+  openSearch.addEventListener('click', launchModal);
+  openMenu.addEventListener('click', launchModal);
+  closeSearch.addEventListener('click', closeModal);
+  closeMenu.addEventListener('click', closeModal);
 }
