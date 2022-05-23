@@ -1,10 +1,9 @@
 {
   "name": "mel",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Mel is a theme for Ghost",
   "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v4"
+    "ghost": ">=4.0.0"
   },
   "scripts": {
     "reload": "node reload",
