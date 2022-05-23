@@ -1,6 +1,6 @@
 {
   "name": "mel",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mel is a theme for Ghost",
   "engines": {
     "ghost": ">=4.0.0"
@@ -83,5 +83,11 @@
     "highlight.js": "^11.4.0",
     "js-search": "^2.0.0",
     "reframe.js": "^3.0.3"
+  },
+  "card_assets": {
+    "exclude": [
+      "bookmark",
+      "gallery"
+    ]
   }
 }
