@@ -39,6 +39,12 @@
         "width": 2000
       }
     },
+    "card_assets": {
+      "exclude": [
+        "bookmark",
+        "gallery"
+      ]
+    },
     "custom": {
       "api": {
         "type": "text"
@@ -83,11 +89,5 @@
     "highlight.js": "^11.4.0",
     "js-search": "^2.0.0",
     "reframe.js": "^3.0.3"
-  },
-  "card_assets": {
-    "exclude": [
-      "bookmark",
-      "gallery"
-    ]
   }
 }
